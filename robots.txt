@@ -1,0 +1,10 @@
+# robots.txt — parcours-industrie.fr
+
+User-agent: *
+Allow: /
+
+# Pages sans intérêt pour l'indexation
+Disallow: /merci
+Disallow: /TEMPLATE-ARTICLE
+
+Sitemap: https://parcours-industrie.fr/sitemap.xml

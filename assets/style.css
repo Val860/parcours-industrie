@@ -1,0 +1,1008 @@
+/* ═══════════════════════════════════════════════════════════════════
+   PARCOURS INDUSTRIE — FEUILLE DE STYLE PARTAGÉE
+   ───────────────────────────────────────────────────────────────────
+   Ce fichier est chargé par les 53 pages du site.
+   Modifier une couleur ou un style ICI = modifié partout automatiquement.
+
+   Palette imposée (ne pas changer) :
+     navy #0d1b2a · orange #e8601c · orange clair #f07b3a
+     cream #f5f1eb · steel #1c3a52
+   Typographies imposées : Barlow Condensed (titres) · Lato (corps)
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --navy: #0d1b2a;
+  --steel: #1c3a52;
+  --orange: #e8601c;
+  --orange-light: #f07b3a;
+  --cream: #f5f1eb;
+  --gray: #8a9aaa;
+  --text: #1a2634;
+
+  --pi-nav-h: 70px;
+  --pi-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --pi-fast: 0.25s var(--pi-ease);
+  --pi-slow: 0.7s var(--pi-ease);
+}
+
+/* ═══════════════════════════════════════════════════
+   1. BARRE DE PROGRESSION DE LECTURE (haut de page)
+   ═══════════════════════════════════════════════════ */
+
+.pi-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 100%;
+  z-index: 200;
+  background: transparent;
+  pointer-events: none;
+}
+.pi-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--orange), var(--orange-light));
+  box-shadow: 0 0 12px rgba(232, 96, 28, 0.7);
+  transition: width 0.1s linear;
+}
+
+/* ═══════════════════════════════════════════════════
+   2. NAVIGATION — identique sur les 53 pages
+   ═══════════════════════════════════════════════════ */
+
+nav.pi-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 150;
+  height: var(--pi-nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1.1rem;
+  background: var(--navy);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  transition: background 0.35s ease, box-shadow 0.35s ease, height 0.35s var(--pi-ease);
+}
+
+/* État au scroll : fond semi-transparent + flou (demandé au brief §3.2) */
+nav.pi-nav.is-scrolled {
+  background: rgba(13, 27, 42, 0.82);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(232, 96, 28, 0.22);
+}
+
+/* — Logo — */
+.pi-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: transform var(--pi-fast);
+}
+@media (hover: hover) and (pointer: fine) {
+  .pi-nav__logo:hover { transform: translateY(-1px); }
+}
+.pi-nav__logo img {
+  height: clamp(44px, 4.2vw, 52px);
+  width: auto;
+  max-width: clamp(150px, 20vw, 210px);
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .pi-nav__logo img {
+    height: 42px;
+    max-width: 148px;
+  }
+}
+
+/* Les anciennes pages avaient parfois 62px écrit en dur dans leur hero.
+   On relie ces valeurs à la vraie hauteur de navigation. */
+.page-hero { padding-top: var(--pi-nav-h) !important; }
+.page-hero-overlay { inset: var(--pi-nav-h) 0 0 0 !important; }
+
+/* Badges orange des héros : largeur sur mesure du texte, jamais étirée. */
+.page-level {
+  display: inline-flex !important;
+  align-items: center;
+  width: fit-content !important;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+/* Image éditoriale ajoutée dans les fiches VAE : elle enrichit le contexte
+   sans modifier les textes ni l'ordre des informations. */
+.vae-context-visual {
+  margin-top: clamp(1.4rem, 3vw, 2.35rem);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--navy);
+  border: 1px solid rgba(13, 27, 42, 0.08);
+  box-shadow: 0 20px 48px rgba(13, 27, 42, 0.14);
+  position: relative;
+}
+.vae-context-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  pointer-events: none;
+}
+.vae-context-visual img {
+  display: block;
+  width: 100%;
+  height: clamp(230px, 30vw, 360px);
+  object-fit: cover;
+}
+@media (max-width: 640px) {
+  .vae-context-visual img { height: 220px; }
+}
+
+/* — Menu principal (desktop) — */
+.pi-nav__menu {
+  display: none;
+  align-items: center;
+  gap: 0.15rem;
+  margin-left: auto;
+  list-style: none;
+  padding: 0;
+  margin-block: 0;
+}
+.pi-nav__item {
+  position: relative;
+  height: var(--pi-nav-h);
+  display: flex;
+  align-items: center;
+}
+
+.pi-nav__link {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 0.94rem;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  padding: 0.45rem 0.6rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: color var(--pi-fast), background var(--pi-fast);
+}
+.pi-nav__link:hover,
+.pi-nav__item:hover > .pi-nav__link { color: #fff; }
+
+/* Soulignement orange animé */
+.pi-nav__link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  margin-top: 3px;
+  background: var(--orange);
+  transition: width 0.3s var(--pi-ease);
+}
+.pi-nav__link:hover::after,
+.pi-nav__item:hover > .pi-nav__link::after { width: 100%; }
+
+/* Page courante */
+.pi-nav__link.is-active { color: #fff; }
+.pi-nav__link.is-active::after { width: 100%; background: var(--orange); }
+
+/* — Sous-menus déroulants — */
+.pi-nav__item--has-sub > .pi-nav__link::before {
+  content: '';
+  display: inline-block;
+  width: 5px; height: 5px;
+  margin-right: 0.35rem;
+  border-right: 1.5px solid var(--orange);
+  border-bottom: 1.5px solid var(--orange);
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.3s var(--pi-ease);
+}
+.pi-nav__item--has-sub:hover > .pi-nav__link::before {
+  transform: translateY(0) rotate(225deg);
+}
+
+.pi-nav__sub {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  min-width: 260px;
+  background: #fff;
+  border-radius: 8px;
+  border-top: 3px solid var(--orange);
+  box-shadow: 0 18px 50px rgba(13, 27, 42, 0.28);
+  padding: 0.5rem;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.3s var(--pi-ease), visibility 0.25s;
+}
+/* Méga-menu (rubrique VAE : 19 diplômes) — centré sur la fenêtre */
+.pi-nav__sub--mega {
+  position: fixed;
+  top: var(--pi-nav-h);
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  width: min(940px, 94vw);
+  max-height: calc(100vh - var(--pi-nav-h) - 24px);
+  overflow-y: auto;
+  columns: 3;
+  column-gap: 1rem;
+  padding: 1rem 1.2rem 1.2rem;
+  border-radius: 0 0 10px 10px;
+}
+.pi-nav__item--has-sub:focus-within > .pi-nav__sub--mega { transform: translateX(-50%) translateY(0); }
+@media (hover: hover) and (pointer: fine) {
+  .pi-nav__item--has-sub:hover > .pi-nav__sub--mega { transform: translateX(-50%) translateY(0); }
+}
+.pi-nav__sub--mega::before { display: none; }
+/* Le sous-menu s'ouvre au survol (souris) ou au focus clavier.
+   Sur écran tactile, l'entrée de menu reste un lien qui mène à la page
+   de rubrique, et le panneau mobile prend le relais pour les sous-pages. */
+@media (hover: hover) and (pointer: fine) {
+  .pi-nav__item--has-sub:hover > .pi-nav__sub {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+.pi-nav__item--has-sub:focus-within > .pi-nav__sub {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+/* petite flèche */
+.pi-nav__sub::before {
+  content: '';
+  position: absolute;
+  top: -9px; left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: var(--orange);
+}
+.pi-nav__sub--wide::before { left: 50%; }
+
+.pi-nav__sub a {
+  display: block;
+  break-inside: avoid;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.83rem;
+  font-weight: 400;
+  color: var(--navy);
+  text-decoration: none;
+  border-radius: 4px;
+  border-left: 2px solid transparent;
+  transition: background var(--pi-fast), border-color var(--pi-fast), padding-left var(--pi-fast), color var(--pi-fast);
+}
+.pi-nav__sub a:hover {
+  background: var(--cream);
+  border-left-color: var(--orange);
+  padding-left: 0.95rem;
+  color: var(--orange);
+}
+.pi-nav__sub-title {
+  display: block;
+  break-inside: avoid;
+  padding: 0.55rem 0.7rem 0.25rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+.pi-nav__sub-all {
+  font-weight: 700 !important;
+  color: var(--orange) !important;
+}
+
+/* — Bouton CTA — */
+.pi-nav__cta {
+  display: none;
+  flex-shrink: 0;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.05rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--pi-fast), box-shadow var(--pi-fast), background var(--pi-fast);
+}
+.pi-nav__cta:hover {
+  background: var(--orange-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(232, 96, 28, 0.42);
+}
+.pi-nav__cta:active { transform: translateY(0); }
+
+/* — Burger mobile — */
+.pi-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px; height: 42px;
+  margin-left: auto;
+  padding: 0 9px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.pi-burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.32s var(--pi-ease), opacity 0.2s ease;
+}
+.pi-burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.pi-burger.is-open span:nth-child(2) { opacity: 0; }
+.pi-burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* — Panneau mobile — */
+.pi-mobile {
+  position: fixed;
+  top: var(--pi-nav-h);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 149;
+  width: 100%;
+  max-width: 100vw;
+  background:
+    radial-gradient(circle at top right, rgba(232, 96, 28, 0.16), transparent 260px),
+    var(--navy);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.8rem max(1rem, env(safe-area-inset-left)) max(2rem, env(safe-area-inset-bottom));
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: opacity 0.3s ease, transform 0.35s var(--pi-ease), visibility 0.3s;
+  overscroll-behavior: contain;
+}
+.pi-mobile.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+body.pi-menu-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.pi-mobile__group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+.pi-mobile__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  padding: 0.72rem 0.2rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.98rem, 0.9rem + 0.5vw, 1.08rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.15;
+  gap: 1rem;
+}
+.pi-mobile__head .chev {
+  width: 8px; height: 8px;
+  border-right: 2px solid var(--orange);
+  border-bottom: 2px solid var(--orange);
+  transform: rotate(45deg);
+  transition: transform 0.3s var(--pi-ease);
+  flex-shrink: 0;
+}
+.pi-mobile__group.is-open .pi-mobile__head .chev { transform: rotate(225deg); }
+
+.pi-mobile__sub {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--pi-ease);
+}
+.pi-mobile__group.is-open .pi-mobile__sub {
+  max-height: min(52vh, 460px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.1rem 0 0.45rem;
+}
+.pi-mobile__sub a {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0.48rem 0.3rem 0.48rem 0.9rem;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.76);
+  text-decoration: none;
+  border-left: 2px solid rgba(232, 96, 28, 0.32);
+  margin-bottom: 2px;
+  overflow-wrap: anywhere;
+}
+.pi-mobile__sub a:active,
+.pi-mobile__sub a:hover { color: var(--orange-light); }
+.pi-mobile__cta {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.9rem;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+@media (max-width: 380px) {
+  .pi-mobile { padding-inline: 0.9rem; }
+  .pi-mobile__head { min-height: 44px; padding-block: 0.62rem; }
+  .pi-mobile__sub a { min-height: 34px; font-size: 0.8rem; }
+  .pi-mobile__cta { font-size: 0.82rem; }
+}
+
+@media (min-width: 1060px) {
+  .pi-nav__menu { display: flex; }
+  .pi-nav__cta { display: inline-block; }
+  .pi-burger { display: none; }
+  .pi-mobile { display: none; }
+}
+@media (min-width: 1260px) {
+  .pi-nav__link { font-size: 1rem; padding: 0.45rem 0.78rem; }
+  .pi-nav__cta { padding: 0.6rem 1.25rem; font-size: 0.8rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   3. FIL D'ARIANE
+   ═══════════════════════════════════════════════════ */
+
+.pi-breadcrumb {
+  background: var(--cream);
+  border-bottom: 1px solid rgba(13, 27, 42, 0.07);
+  padding: 0.65rem 1.2rem;
+  font-size: 0.74rem;
+  color: var(--gray);
+}
+.pi-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1180px;
+}
+.pi-breadcrumb a { color: var(--gray); text-decoration: none; transition: color var(--pi-fast); }
+.pi-breadcrumb a:hover { color: var(--orange); }
+.pi-breadcrumb li + li::before { content: '›'; margin-right: 0.4rem; color: rgba(13, 27, 42, 0.28); }
+.pi-breadcrumb [aria-current] { color: var(--navy); font-weight: 700; }
+
+/* ═══════════════════════════════════════════════════
+   4. ANIMATIONS DE RÉVÉLATION AU SCROLL
+   ═══════════════════════════════════════════════════ */
+
+.pi-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s var(--pi-ease), transform 0.75s var(--pi-ease);
+  will-change: opacity, transform;
+}
+.pi-reveal.is-visible { opacity: 1; transform: none; }
+
+.pi-reveal--left  { transform: translateX(-32px); }
+.pi-reveal--right { transform: translateX(32px); }
+.pi-reveal--zoom  { transform: scale(0.94); }
+
+/* Décalage progressif pour les grilles de cartes */
+.pi-reveal[data-delay="1"] { transition-delay: 0.08s; }
+.pi-reveal[data-delay="2"] { transition-delay: 0.16s; }
+.pi-reveal[data-delay="3"] { transition-delay: 0.24s; }
+.pi-reveal[data-delay="4"] { transition-delay: 0.32s; }
+.pi-reveal[data-delay="5"] { transition-delay: 0.40s; }
+
+/* Titres de section : trait orange qui se déploie */
+.pi-underline { position: relative; }
+.pi-underline::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -10px;
+  height: 3px; width: 0;
+  background: var(--orange);
+  transition: width 0.9s var(--pi-ease) 0.2s;
+}
+.pi-underline.is-visible::after { width: 62px; }
+
+/* ═══════════════════════════════════════════════════
+   5. COMPTEURS ANIMÉS
+   ═══════════════════════════════════════════════════ */
+
+.pi-count { font-variant-numeric: tabular-nums; }
+
+/* ═══════════════════════════════════════════════════
+   6. EFFETS HOVER SUR LES CARTES
+   Propriétés volontairement limitées (transform / ombre /
+   bordure) pour ne casser aucune mise en page existante.
+   ═══════════════════════════════════════════════════ */
+
+/* .pi-card est posée automatiquement par assets/main.js sur tout
+   élément dont une classe vaut « card » ou se termine par « -card ».
+   Une nouvelle page hérite donc de l'effet sans retouche.
+
+   Volontairement : ni position, ni pseudo-élément, ni marge.
+   Le liseré orange est un box-shadow interne — il ne peut donc entrer
+   en conflit avec aucun ::after ni aucun positionnement des pages. */
+
+.pi-card,
+.niche-item,
+.step,
+.photo-strip-item {
+  transition: transform 0.4s var(--pi-ease),
+              box-shadow 0.4s var(--pi-ease),
+              border-color 0.35s ease;
+}
+
+/* Les effets de survol sont réservés aux appareils qui ont réellement
+   un pointeur. Sans cette condition, iOS conserve l'état « survolé »
+   après un appui : la carte reste soulevée tant qu'on ne touche pas
+   ailleurs. Le tactile a son propre retour visuel, plus bas. */
+@media (hover: hover) and (pointer: fine) {
+  .pi-card:hover,
+  .niche-item:hover {
+    transform: translateY(-6px);
+    box-shadow: inset 0 -3px 0 0 var(--orange),
+                0 18px 42px rgba(13, 27, 42, 0.16);
+  }
+  .pi-card:hover .service-icon,
+  .pi-card:hover .icon,
+  .niche-item:hover .icon { transform: scale(1.16) rotate(-6deg); }
+}
+
+/* Équivalent tactile : retour immédiat à l'appui, sur tous les appareils */
+.pi-card:active,
+.niche-item:active {
+  transform: translateY(-2px) scale(0.995);
+  box-shadow: inset 0 -3px 0 0 var(--orange), 0 8px 20px rgba(13, 27, 42, 0.14);
+}
+
+/* Icônes de carte : léger rebond */
+.service-icon,
+.niche-item .icon,
+.pi-card .icon {
+  display: inline-block;
+  transition: transform 0.45s var(--pi-ease);
+}
+
+/* ═══════════════════════════════════════════════════
+   7. BOUTONS — transitions fluides
+   ═══════════════════════════════════════════════════ */
+
+.btn-primary,
+.btn-secondary,
+.btn-white,
+.nav-cta,
+.submit-btn,
+.pi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform var(--pi-fast),
+              box-shadow var(--pi-fast),
+              background-color var(--pi-fast),
+              color var(--pi-fast),
+              border-color var(--pi-fast);
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover,
+  .btn-white:hover,
+  .submit-btn:hover,
+  .pi-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(13, 27, 42, 0.22);
+  }
+  .btn-secondary:hover { transform: translateY(-2px); }
+  /* Halo orange sur le CTA principal */
+  .btn-primary:hover,
+  .submit-btn:hover { box-shadow: 0 10px 30px rgba(232, 96, 28, 0.45); }
+}
+
+/* Retour à l'appui — fonctionne aussi au doigt */
+.btn-primary:active,
+.btn-secondary:active,
+.btn-white:active,
+.submit-btn:active,
+.pi-btn:active { transform: scale(0.975); }
+
+/* Lien texte : soulignement animé */
+a.pi-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--orange);
+}
+a.pi-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0; height: 1.5px;
+  background: currentColor;
+  transition: width 0.3s var(--pi-ease);
+}
+a.pi-link:hover::after { width: 100%; }
+
+/* ═══════════════════════════════════════════════════
+   8. PHOTOS — parallaxe léger + zoom au survol
+   ═══════════════════════════════════════════════════ */
+
+.pi-parallax { will-change: transform; }
+
+.photo-strip-item,
+.pi-photo {
+  overflow: hidden;
+  position: relative;
+}
+.photo-strip-item img,
+.pi-photo img {
+  transition: transform 0.9s var(--pi-ease), filter 0.5s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .photo-strip-item:hover img,
+  .pi-photo:hover img { transform: scale(1.07); }
+}
+/* Au doigt : même effet, déclenché à l'appui */
+.photo-strip-item:active img,
+.pi-photo:active img { transform: scale(1.05); }
+
+/* Voile navy dégradé sur les photos de section */
+.pi-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 27, 42, 0.55), transparent 60%);
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════
+   9. ÉLÉMENTS GRAPHIQUES DISCRETS
+   ═══════════════════════════════════════════════════ */
+
+/* Trame de points sur fond navy */
+.pi-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+}
+
+/* Liseré orange en haut de section */
+.pi-rule {
+  height: 3px;
+  width: 62px;
+  background: var(--orange);
+  border-radius: 2px;
+  margin: 0 0 1.1rem;
+}
+
+/* Séparateur diagonal discret entre deux sections */
+.pi-slant {
+  height: 46px;
+  background: inherit;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 55%);
+}
+
+/* ═══════════════════════════════════════════════════
+   10. FORMULAIRES — micro-interactions
+   ═══════════════════════════════════════════════════ */
+
+.pi-form .field { position: relative; margin-bottom: 1.05rem; }
+
+.pi-form input[type="text"],
+.pi-form input[type="email"],
+.pi-form input[type="tel"],
+.pi-form select,
+.pi-form textarea {
+  width: 100%;
+  padding: 0.72rem 0.85rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.92rem;
+  color: var(--text);
+  background: #fff;
+  border: 1.5px solid #dfe4ea;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color var(--pi-fast), box-shadow var(--pi-fast), background var(--pi-fast);
+}
+.pi-form textarea { min-height: 120px; resize: vertical; }
+
+.pi-form input:focus,
+.pi-form select:focus,
+.pi-form textarea:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 4px rgba(232, 96, 28, 0.13);
+  background: #fffdfb;
+}
+
+/* Champ rempli et valide → coche verte discrète */
+.pi-form input:valid:not(:placeholder-shown) { border-color: #b7d4b9; }
+
+/* Champ en erreur après tentative d'envoi */
+.pi-form.was-validated input:invalid,
+.pi-form.was-validated select:invalid,
+.pi-form.was-validated textarea:invalid {
+  border-color: #d9534f;
+  box-shadow: 0 0 0 4px rgba(217, 83, 79, 0.1);
+}
+.pi-form .field__error {
+  display: none;
+  margin-top: 0.3rem;
+  font-size: 0.76rem;
+  color: #d9534f;
+}
+.pi-form.was-validated :invalid ~ .field__error { display: block; }
+
+/* Cases à cocher / radios */
+.pi-form .radio-item,
+.pi-form .check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-width: 0;
+  padding: 0.62rem 0.75rem;
+  margin-bottom: 0.4rem;
+  border: 1.5px solid #e6eaee;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.87rem;
+  transition: border-color var(--pi-fast), background var(--pi-fast), transform var(--pi-fast);
+}
+.pi-form .radio-item span,
+.pi-form .check-item span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+/* Décalage au survol réservé à la souris : au doigt, la case resterait
+   décalée de 3 px après le tap, ce qui fait « bug » sur un formulaire. */
+@media (hover: hover) and (pointer: fine) {
+  .pi-form .radio-item:hover,
+  .pi-form .check-item:hover {
+    border-color: var(--orange-light);
+    background: #fffaf6;
+    transform: translateX(3px);
+  }
+}
+.pi-form .radio-item:active,
+.pi-form .check-item:active {
+  border-color: var(--orange-light);
+  background: #fffaf6;
+}
+.pi-form .radio-item input,
+.pi-form .check-item input { accent-color: var(--orange); margin-top: 0.15rem; flex-shrink: 0; }
+.pi-form .radio-item:has(input:checked),
+.pi-form .check-item:has(input:checked) {
+  border-color: var(--orange);
+  background: #fff4ed;
+}
+
+/* Barre de progression de remplissage du formulaire */
+.pi-form__progress {
+  height: 5px;
+  background: #eceff2;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1.4rem;
+}
+.pi-form__progress span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--orange), var(--orange-light));
+  transition: width 0.45s var(--pi-ease);
+}
+.pi-form__progress-label {
+  font-size: 0.74rem;
+  color: var(--gray);
+  margin: -1rem 0 1.2rem;
+  text-align: right;
+}
+
+/* Bouton d'envoi */
+.pi-form .submit-btn {
+  width: 100%;
+  padding: 0.95rem;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+.pi-form .submit-btn:hover { background: var(--orange-light); }
+.pi-form .submit-btn[disabled] { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
+
+/* Champ anti-spam (invisible pour l'humain) */
+.pi-hp { position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden; }
+
+/* ═══════════════════════════════════════════════════
+   11. PIED DE PAGE — identique sur les 53 pages
+   ═══════════════════════════════════════════════════ */
+
+footer.pi-footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.62);
+  padding: 3rem 1.2rem 1.8rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  position: relative;
+  overflow: hidden;
+}
+footer.pi-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-light), var(--orange));
+}
+
+.pi-footer__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 760px) {
+  .pi-footer__inner { grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2.4rem; }
+}
+
+.pi-footer__brand img {
+  height: 40px;
+  width: auto;
+  max-width: 170px;
+  opacity: 0.92;
+  margin-bottom: 0.9rem;
+}
+.pi-footer__brand p { font-size: 0.82rem; color: rgba(255, 255, 255, 0.5); margin: 0 0 0.9rem; }
+
+.pi-footer__col h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.86rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.pi-footer__col a {
+  display: block;
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+  font-size: 0.83rem;
+  padding: 0.24rem 0;
+  transition: color var(--pi-fast), padding-left var(--pi-fast);
+}
+.pi-footer__col a:hover { color: var(--orange-light); padding-left: 5px; }
+
+.pi-footer__bottom {
+  max-width: 1180px;
+  margin: 2.2rem auto 0;
+  padding-top: 1.3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.4rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.32);
+}
+.pi-footer__bottom a { color: rgba(255, 255, 255, 0.42); text-decoration: none; }
+.pi-footer__bottom a:hover { color: var(--orange-light); }
+
+/* Retour en haut */
+.pi-totop {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 140;
+  width: 44px; height: 44px;
+  display: grid;
+  place-items: center;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 24px rgba(13, 27, 42, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition: opacity 0.3s ease, transform 0.35s var(--pi-ease), visibility 0.3s, background var(--pi-fast);
+}
+.pi-totop.is-visible { opacity: 1; visibility: visible; transform: none; }
+.pi-totop:hover { background: var(--orange-light); }
+
+/* ═══════════════════════════════════════════════════
+   12. ACCESSIBILITÉ
+   ═══════════════════════════════════════════════════ */
+
+.pi-skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 300;
+  background: var(--orange);
+  color: #fff;
+  padding: 0.7rem 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.pi-skip:focus { left: 0; }
+
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Respect du réglage système « réduire les animations » */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .pi-reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════
+   13. IMPRESSION
+   ═══════════════════════════════════════════════════ */
+
+@media print {
+  nav.pi-nav, .pi-mobile, .pi-progress, .pi-totop, .pi-burger { display: none !important; }
+  .pi-reveal { opacity: 1 !important; transform: none !important; }
+  body { background: #fff; }
+}

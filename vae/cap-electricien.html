@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAE CAP Électricien – Accompagnement VAE – Parcours Industrie</title>
+<meta name="description" content="Obtenez votre VAE CAP Électricien par la VAE. Accompagnement spécialisé métiers techniques. Diagnostic gratuit. 100% en visio. Parcours-industrie.fr"/>
+
+<link rel="canonical" href="https://parcours-industrie.fr/vae/cap-electricien"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="Parcours Industrie"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://parcours-industrie.fr/vae/cap-electricien"/>
+<meta property="og:title" content="VAE CAP Électricien"/>
+<meta property="og:description" content="Obtenez votre VAE CAP Électricien par la VAE. Accompagnement spécialisé métiers techniques. Diagnostic gratuit. 100% en visio. Parcours-industrie.fr"/>
+<meta property="og:image" content="https://parcours-industrie.fr/og-image.jpg"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://parcours-industrie.fr/og-image.jpg"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1b2a;--steel:#1c3a52;--orange:#e8601c;--orange-light:#f07b3a;--cream:#f5f1eb;--light:#ffffff;--text:#1a2634;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 1.2rem;box-shadow:0 2px 16px rgba(0,0,0,0.35);}
+.logo-wrap{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.logo-svg{width:36px;height:36px;flex-shrink:0;}
+.logo-text .l1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:white;}.logo-text .l1 span{color:var(--orange);}
+.logo-text .l2{font-size:0.56rem;color:rgba(255,255,255,0.38);letter-spacing:0.1em;text-transform:uppercase;}
+.nav-cta{background:var(--orange);color:white;border:none;padding:0.5rem 1rem;font-family:'Lato',sans-serif;font-weight:700;font-size:0.8rem;border-radius:3px;cursor:pointer;text-transform:uppercase;text-decoration:none;}
+.page-hero{padding-top:62px;background:var(--navy);position:relative;overflow:hidden;}
+.page-hero-img{width:100%;height:240px;object-fit:cover;opacity:0.15;filter:grayscale(40%);}
+.page-hero-overlay{position:absolute;inset:62px 0 0 0;background:linear-gradient(to bottom,rgba(13,27,42,0.4),rgba(13,27,42,0.95));display:flex;flex-direction:column;justify-content:flex-end;padding:1.8rem 1.4rem 2.2rem;}
+.breadcrumb{font-size:0.7rem;color:rgba(255,255,255,0.4);margin-bottom:0.6rem;}.breadcrumb a{color:var(--orange);text-decoration:none;}
+.page-level{display:inline-block;background:rgba(232,96,28,0.2);border:1px solid rgba(232,96,28,0.4);color:#f07b3a;font-size:0.66rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.65rem;border-radius:20px;margin-bottom:0.5rem;margin-right:0.4rem;}
+.page-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.8rem,7vw,2.8rem);color:white;line-height:1.05;margin-bottom:0.6rem;}
+.page-hero p{font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.6;max-width:520px;}
+section{padding:2.5rem 1.4rem;}
+.section-tag{display:inline-block;color:var(--orange);font-weight:700;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;border-left:3px solid var(--orange);padding-left:0.6rem;}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.6rem,5vw,2.2rem);color:var(--navy);line-height:1.1;margin-bottom:0.9rem;}
+.section-sub{font-size:0.92rem;color:#5a6e80;line-height:1.65;margin-bottom:1.5rem;}
+.white{background:white;}.cream{background:var(--cream);}.navy{background:var(--navy);}.navy .section-title{color:white;}
+
+/* QUICK INFO BAR */
+.info-bar{display:grid;grid-template-columns:repeat(3,1fr);background:var(--orange);padding:1.2rem 1.4rem;gap:1rem;text-align:center;}
+.info-bar-item .val{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.3rem;color:white;line-height:1;}
+.info-bar-item .lbl{font-size:0.65rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.07em;margin-top:0.15rem;}
+
+/* COMPETENCES */
+.comp-grid{display:grid;gap:0.6rem;margin-top:1.2rem;}
+.comp-item{display:flex;align-items:flex-start;gap:0.75rem;background:var(--cream);border-radius:6px;padding:0.85rem 1rem;}
+.comp-check{color:var(--orange);font-weight:800;flex-shrink:0;font-size:1rem;}
+.comp-item p{font-size:0.87rem;color:var(--navy);line-height:1.5;}
+
+/* PROFILS */
+.profil-grid{display:grid;gap:0.7rem;margin-top:1.2rem;}
+.profil-item{background:white;border-radius:6px;padding:0.9rem 1.1rem;border-left:3px solid var(--orange);font-size:0.87rem;color:var(--text);}
+
+/* DEBOUCHES */
+.debouche-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem;}
+.debouche-tag{background:var(--navy);color:white;font-size:0.8rem;font-weight:600;padding:0.4rem 0.9rem;border-radius:4px;}
+
+/* SALAIRE */
+.salaire-box{background:white;border-radius:8px;padding:1.3rem;border:2px solid var(--orange);margin-top:1.2rem;text-align:center;}
+.salaire-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2rem;color:var(--orange);line-height:1;}
+.salaire-label{font-size:0.78rem;color:#8a9aaa;margin-top:0.3rem;}
+
+/* PROCESSUS */
+.steps{display:flex;flex-direction:column;margin-top:1.2rem;}
+.step{display:flex;gap:1rem;padding-bottom:1.3rem;}
+.step:last-child{padding-bottom:0;}
+.step-left{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.step-circle{width:36px;height:36px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;color:white;}
+.step-line{width:2px;flex:1;background:#e0e8f0;margin-top:4px;}
+.step:last-child .step-line{display:none;}
+.step-content{padding-top:0.3rem;}
+.step-content h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:white;margin-bottom:0.2rem;}
+.step-content p{font-size:0.83rem;color:rgba(255,255,255,0.55);line-height:1.5;}
+
+/* DIPLOMES VOISINS */
+.voisins{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.2rem;}
+.voisin-link{background:white;border:1.5px solid #e0e8f0;border-radius:6px;padding:1rem 1.2rem;text-decoration:none;display:flex;justify-content:space-between;align-items:center;transition:border-color 0.2s;}
+.voisin-link:hover{border-color:var(--orange);}
+.voisin-link span{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--navy);}
+.voisin-link .arr{color:var(--orange);font-size:1.1rem;}
+
+/* CTA */
+.cta-section{background:var(--orange);text-align:center;padding:2.8rem 1.4rem;}
+.cta-section h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.7rem,6vw,2.5rem);color:white;line-height:1.1;margin-bottom:0.7rem;}
+.cta-section p{font-size:0.92rem;color:rgba(255,255,255,0.85);margin-bottom:1.5rem;line-height:1.6;}
+.btn-white{background:white;color:var(--orange);padding:0.95rem 1.8rem;border:none;border-radius:4px;font-family:'Lato',sans-serif;font-weight:700;font-size:0.92rem;cursor:pointer;}
+
+footer{background:var(--navy);color:rgba(255,255,255,0.45);padding:2rem 1.4rem;font-size:0.78rem;line-height:1.8;}
+.footer-logo{display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;text-decoration:none;}
+.footer-links{display:flex;flex-wrap:wrap;gap:0.5rem 1rem;margin-top:1rem;}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;}.footer-links a:hover{color:var(--orange);}
+footer hr{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:1rem 0;}
+@media(min-width:640px){.comp-grid{grid-template-columns:1fr 1fr;}.profil-grid{grid-template-columns:1fr 1fr;}}
+
+/* ═══════════════════════════════════════════════════════════════════
+   AMÉLIORATIONS VISUELLES — FICHE DIPLÔME
+   ───────────────────────────────────────────────────────────────────
+   Ce bloc ne touche ni au texte, ni au SEO, ni aux couleurs, ni aux
+   polices. Il ne fait qu'aérer la mise en page.
+
+   Placé APRÈS les règles ci-dessus : c'est ce qui lui permet de les
+   compléter sans avoir à les réécrire.
+
+   Sommaire
+     1. Largeur de lecture
+     2. Rythme vertical
+     3. Bandeau de titre
+     4. Bandeau d'informations clés
+     5. Cartes et grilles — hauteurs égales
+     6. Salaire, étiquettes de métiers
+     7. Étapes de l'accompagnement
+     8. Diplômes voisins
+     9. Éléments graphiques discrets
+    10. Confort tactile et sécurité mobile
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── 1. LARGEUR DE LECTURE ──────────────────────────────────────────
+   Le contenu s'étirait sur toute la largeur : sur un écran 1440 px une
+   ligne de texte faisait 1400 px de long, illisible. On le borne à
+   1100 px (une fiche diplôme est un texte de lecture, un peu plus
+   étroit que la page d'accueil) et on le centre, sans toucher au HTML. */
+section,
+.info-bar,
+.page-hero-overlay {
+  padding-inline: max(1.4rem, (100% - 1100px) / 2);
+}
+
+/* ── 2. RYTHME VERTICAL ─────────────────────────────────────────────
+   2,5 rem convient sur mobile mais tasse la page sur grand écran. */
+section { padding-block: clamp(2.5rem, 5vw, 4.5rem); }
+.cta-section { padding-block: clamp(2.8rem, 6vw, 5rem); }
+
+.section-sub { max-width: 65ch; }
+.section-title { letter-spacing: -0.015em; }
+
+/* ── 3. BANDEAU DE TITRE ────────────────────────────────────────────
+   L'image ne faisait que 240 px de haut quelle que soit la taille de
+   l'écran : sur desktop le bandeau paraissait écrasé et le titre
+   collait au bas. On lui donne de la hauteur progressivement. */
+.page-hero-img { height: clamp(240px, 26vw, 380px); }
+.page-hero-overlay { padding-block: 2rem 2.4rem; }
+.page-hero h1 { letter-spacing: -0.015em; }
+.page-hero p { font-size: clamp(0.9rem, 0.86rem + 0.25vw, 1.05rem); }
+.page-hero-img{opacity:0.38;filter:grayscale(14%) contrast(1.06);}
+.page-hero-overlay{background:linear-gradient(90deg,rgba(13,27,42,0.95) 0%,rgba(13,27,42,0.84) 38%,rgba(13,27,42,0.44) 72%,rgba(13,27,42,0.16) 100%),linear-gradient(to bottom,rgba(13,27,42,0.08),rgba(13,27,42,0.52));}
+
+/* Le fil d'Ariane respire et devient cliquable confortablement */
+.breadcrumb { margin-bottom: 0.9rem; line-height: 1.8; }
+.breadcrumb a { padding: 0.1rem 0; }
+
+/* ── 4. BANDEAU D'INFORMATIONS CLÉS ─────────────────────────────────
+   Bande orange sous le titre. Un séparateur fin entre les colonnes
+   remplace l'alignement flottant, plus net à lire. */
+.info-bar { padding-block: clamp(1.2rem, 2.2vw, 1.7rem); }
+
+@media (min-width: 560px) {
+  .info-bar-item + .info-bar-item {
+    border-left: 1px solid rgba(255, 255, 255, 0.28);
+  }
+}
+.info-bar-item .val { font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem); }
+
+/* ── 5. CARTES ET GRILLES — HAUTEURS ÉGALES ─────────────────────────
+   Sans hauteur imposée, deux cases voisines d'une même ligne se
+   terminent à des hauteurs différentes dès que le texte est plus long. */
+@media (min-width: 1000px) {
+  .comp-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.comp-grid { gap: clamp(0.6rem, 1.2vw, 0.9rem); }
+.comp-grid > *,
+.profil-grid > * { height: 100%; }
+
+.comp-item,
+.profil-item {
+  border-radius: 8px;
+  padding: clamp(0.85rem, 1.6vw, 1.15rem) clamp(1rem, 1.8vw, 1.3rem);
+}
+.profil-item { display: flex; align-items: center; }
+
+/* ── 6. SALAIRE ET ÉTIQUETTES DE MÉTIERS ────────────────────────────
+   Le chiffre du salaire est l'information la plus regardée de la page :
+   on lui donne la place qu'elle mérite. */
+.salaire-box {
+  padding: clamp(1.3rem, 2.6vw, 2rem);
+  border-radius: 10px;
+  max-width: 560px;
+  box-shadow: 0 8px 30px rgba(232, 96, 28, 0.12);
+}
+.salaire-num { font-size: clamp(2rem, 1.4rem + 2.2vw, 2.8rem); }
+.salaire-label { font-size: 0.82rem; margin-top: 0.5rem; }
+
+.debouche-tags { gap: 0.6rem; }
+.debouche-tag {
+  border: 1px solid transparent;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* ── 7. ÉTAPES DE L'ACCOMPAGNEMENT ──────────────────────────────────
+   La colonne de 5 étapes reste verticale — c'est une chronologie, la
+   casser en deux colonnes brouillerait l'ordre de lecture. On la borne
+   en largeur et on l'aère. */
+.steps { max-width: 720px; }
+.step { padding-bottom: clamp(1.3rem, 2.4vw, 1.8rem); gap: clamp(1rem, 2vw, 1.4rem); }
+.step-circle { width: 40px; height: 40px; font-size: 1.1rem; }
+.step-content h4 { font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem); margin-bottom: 0.35rem; }
+.step-content p { font-size: clamp(0.83rem, 0.8rem + 0.15vw, 0.92rem); line-height: 1.6; }
+
+/* ── 8. DIPLÔMES VOISINS ────────────────────────────────────────────
+   Deux liens empilés occupaient toute la largeur sur desktop. */
+@media (min-width: 700px) {
+  .voisins { flex-direction: row; }
+  .voisin-link { flex: 1; }
+}
+.voisin-link { border-radius: 8px; padding: 1.1rem 1.3rem; }
+.voisin-link .arr { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* ── 9. ÉLÉMENTS GRAPHIQUES DISCRETS ────────────────────────────────
+   Quelques repères visuels très légers, aucune couleur hors charte. */
+
+/* Trame de points sur la section navy des étapes */
+.navy { position: relative; overflow: hidden; }
+.navy::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+.navy > * { position: relative; z-index: 1; }
+
+/* Liseré orange sous le bandeau d'informations */
+.info-bar { border-bottom: 3px solid rgba(13, 27, 42, 0.15); }
+
+/* Filet fin entre deux sections blanches qui se suivent */
+.white + .white { border-top: 1px solid #e8edf2; }
+
+/* Cercle géométrique en filigrane dans le bandeau final */
+.cta-section { position: relative; overflow: hidden; }
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -130px; right: -130px;
+  width: 340px; height: 340px;
+  border: 36px solid rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.cta-section > * { position: relative; z-index: 1; }
+
+/* ── 10. CONFORT TACTILE ET SÉCURITÉ MOBILE ─────────────────────────
+   Règle de base : aucune information n'apparaît uniquement au survol.
+   Ici tous les effets de survol sont décoratifs — les intitulés, les
+   salaires et les textes sont visibles en permanence. */
+
+/* Les effets de survol ne s'activent que si un vrai pointeur existe.
+   Sinon iOS garde l'état « survolé » collé après un simple appui. */
+@media (hover: hover) and (pointer: fine) {
+  .voisin-link:hover .arr { transform: translateX(5px); }
+  .debouche-tag:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+  }
+  .comp-item:hover { background: #fff4ed; }
+}
+
+/* Équivalents à l'appui, au doigt */
+.voisin-link:active { border-color: var(--orange); }
+.debouche-tag:active { background: var(--orange); }
+.comp-item:active { background: #fff4ed; }
+
+/* Cible tactile d'au moins 44 px (recommandation Apple) */
+.btn-white { min-height: 46px; }
+a.btn-white {
+  display: inline-flex; align-items: center; justify-content: center;
+  text-decoration: none;
+}
+
+/* Aucune animation ne doit provoquer de défilement horizontal.
+   « .steps » est volontairement absent de cette liste : il a sa propre
+   largeur maximale de 720 px, qu'un max-width:100% écraserait. */
+.comp-grid, .profil-grid, .debouche-tags, .voisins { max-width: 100%; }
+.page-hero, .cta-section, .info-bar { overflow-x: clip; }
+
+/* Réglage système « réduire les animations » */
+@media (prefers-reduced-motion: reduce) {
+  .voisin-link .arr, .debouche-tag, .comp-item { transition: none !important; }
+}
+
+
+</style>
+
+<!-- ══ Identité visuelle & favicons ══ -->
+<link rel="icon" type="image/x-icon" href="../favicon.ico?v=3"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg?v=3"/>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
+<meta name="theme-color" content="#0d1b2a"/>
+
+<!-- ══ Feuille de style partagée — modifier ICI = modifié sur TOUTES les pages ══ -->
+<link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+
+<!-- ══════════ BARRE DE PROGRESSION DE LECTURE ══════════ -->
+<div class="pi-progress" aria-hidden="true"><div class="pi-progress__bar"></div></div>
+
+<a class="pi-skip" href="#contenu">Aller au contenu</a>
+
+<!-- ══════════ NAVIGATION (identique sur toutes les pages) ══════════
+     Pour ajouter une entrée au menu : voir GUIDE-CLIENT.md
+     ═════════════════════════════════════════════════════════════ -->
+<nav class="pi-nav">
+  <a class="pi-nav__logo" href="../index.html" aria-label="Parcours Industrie — accueil">
+    <img src="../logo-blanc.svg" alt="Parcours Industrie" width="86" height="36"/>
+  </a>
+
+  <ul class="pi-nav__menu">
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link is-active" href="index.html">VAE</a>
+      <div class="pi-nav__sub pi-nav__sub--mega">
+        <span class="pi-nav__sub-title">Électricité & Énergie</span>
+        <a href="cap-electricien.html">VAE CAP Électricien</a>
+        <a href="bac-pro-melec.html">VAE Bac pro MELEC</a>
+        <a href="bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+        <a href="bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+        <span class="pi-nav__sub-title">Maintenance industrielle</span>
+        <a href="cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+        <a href="bac-pro-mei.html">VAE Bac pro MEI</a>
+        <a href="bac-pro-mspc.html">VAE Bac pro MSPC</a>
+        <a href="bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+        <span class="pi-nav__sub-title">Réseaux & Cybersécurité</span>
+        <a href="bac-pro-ciel.html">VAE Bac pro CIEL</a>
+        <a href="bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+        <a href="bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+        <span class="pi-nav__sub-title">Sécurité</span>
+        <a href="cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+        <a href="bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+        <a href="bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+        <span class="pi-nav__sub-title">Production & Automatisme</span>
+        <a href="bac-pro-pspa.html">VAE Bac pro PSPA</a>
+        <a href="bts-cprp.html">VAE BTS CPRP</a>
+        <span class="pi-nav__sub-title">Enseignement supérieur</span>
+        <a href="licence-pro-industrie.html">VAE Licence pro industrie</a>
+        <a href="master-industrie.html">VAE Master industrie</a>
+        <a href="diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+        <a class="pi-nav__sub-all" href="index.html">→ Toutes les filières VAE</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="../bilan/index.html">Bilan</a></li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../reconversion/index.html">Reconversion</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../reconversion/index.html">→ Reconversion : vue d'ensemble</a>
+        <a href="../reconversion/electricite.html">Électricité & Énergie</a>
+        <a href="../reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+        <a href="../reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+        <a href="../reconversion/securite-privee.html">Sécurité privée</a>
+        <a href="../reconversion/btp.html">BTP & Construction</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../orientation/index.html">Orientation</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../orientation/index.html">→ Orientation : vue d'ensemble</a>
+        <a href="../orientation/collegiens.html">Collégiens — après la 3e</a>
+        <a href="../orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+        <a href="../orientation/adultes.html">Adultes en reconversion</a>
+        <a href="../orientation/parents.html">Parents — comprendre la voie pro</a>
+        <a href="../orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../coaching/index.html">Coaching</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../coaching/index.html">→ Coaching : vue d'ensemble</a>
+        <a href="../coaching/cv-technicien.html">CV technicien</a>
+        <a href="../coaching/lettre-motivation.html">Lettre de motivation</a>
+        <a href="../coaching/entretien-embauche.html">Entretien d'embauche</a>
+        <a href="../coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+        <a href="../coaching/outplacement.html">Outplacement technicien</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../entreprises/index.html">Entreprises</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../entreprises/index.html">→ Entreprises : vue d'ensemble</a>
+        <a href="../entreprises/vae-collective.html">VAE collective</a>
+        <a href="../entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+        <a href="../entreprises/conseil-rh.html">Conseil RH externalisé</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../ingenierie/index.html">Ingénierie</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../ingenierie/index.html">→ Ingénierie : vue d'ensemble</a>
+        <a href="../ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
+        <a href="../ingenierie/titre-rncp.html">Création titre RNCP</a>
+        <a href="../ingenierie/qualiopi.html">Certification Qualiopi</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="../blog/index.html">Blog</a></li>
+  </ul>
+
+  <a class="pi-nav__cta" href="../contact.html">Diagnostic gratuit</a>
+
+  <button class="pi-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="pi-mobile" id="menu-mobile">
+  <a class="pi-mobile__head" href="../index.html">Accueil</a>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">VAE<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="index.html"><strong>VAE — vue d'ensemble</strong></a>
+      <a href="cap-electricien.html">VAE CAP Électricien</a>
+      <a href="bac-pro-melec.html">VAE Bac pro MELEC</a>
+      <a href="bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+      <a href="bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+      <a href="cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+      <a href="bac-pro-mei.html">VAE Bac pro MEI</a>
+      <a href="bac-pro-mspc.html">VAE Bac pro MSPC</a>
+      <a href="bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+      <a href="bac-pro-ciel.html">VAE Bac pro CIEL</a>
+      <a href="bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+      <a href="bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+      <a href="cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+      <a href="bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+      <a href="bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+      <a href="bac-pro-pspa.html">VAE Bac pro PSPA</a>
+      <a href="bts-cprp.html">VAE BTS CPRP</a>
+      <a href="licence-pro-industrie.html">VAE Licence pro industrie</a>
+      <a href="master-industrie.html">VAE Master industrie</a>
+      <a href="diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="../bilan/index.html">Bilan</a></div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Reconversion<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../reconversion/index.html"><strong>Reconversion — vue d'ensemble</strong></a>
+      <a href="../reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="../reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="../reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="../reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="../reconversion/btp.html">BTP & Construction</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Orientation<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../orientation/index.html"><strong>Orientation — vue d'ensemble</strong></a>
+      <a href="../orientation/collegiens.html">Collégiens — après la 3e</a>
+      <a href="../orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+      <a href="../orientation/adultes.html">Adultes en reconversion</a>
+      <a href="../orientation/parents.html">Parents — comprendre la voie pro</a>
+      <a href="../orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Coaching<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../coaching/index.html"><strong>Coaching — vue d'ensemble</strong></a>
+      <a href="../coaching/cv-technicien.html">CV technicien</a>
+      <a href="../coaching/lettre-motivation.html">Lettre de motivation</a>
+      <a href="../coaching/entretien-embauche.html">Entretien d'embauche</a>
+      <a href="../coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+      <a href="../coaching/outplacement.html">Outplacement technicien</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Entreprises<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../entreprises/index.html"><strong>Entreprises — vue d'ensemble</strong></a>
+      <a href="../entreprises/vae-collective.html">VAE collective</a>
+      <a href="../entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+      <a href="../entreprises/conseil-rh.html">Conseil RH externalisé</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Ingénierie<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../ingenierie/index.html"><strong>Ingénierie — vue d'ensemble</strong></a>
+      <a href="../ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
+      <a href="../ingenierie/titre-rncp.html">Création titre RNCP</a>
+      <a href="../ingenierie/qualiopi.html">Certification Qualiopi</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="../blog/index.html">Blog</a></div>
+  <a class="pi-mobile__cta" href="../contact.html">Diagnostic gratuit →</a>
+</div>
+
+<span id="contenu"></span>
+
+
+<!-- HERO -->
+<div class="page-hero">
+  <img loading="lazy" decoding="async" src="../images/vae/cap-electricien-installation-concept.png" alt="VAE CAP Électricien" class="page-hero-img"/>
+  <div class="page-hero-overlay">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a> › <a href="index.html">VAE</a> › VAE CAP Électricien</div>
+    <div>
+      <span class="page-level">⚡ Électricité & Énergie</span>
+      <span class="page-level">📜 CAP</span>
+    </div>
+    <h1>VAE CAP Électricien</h1>
+    <p>Vous travaillez dans l'électricité depuis plus d'un an ? Le CAP Électricien peut être obtenu grâce à votre expérience, sans retourner à l'école.</p>
+  </div>
+</div>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-bar-item"><div class="val">CAP</div><div class="lbl">Niveau diplôme</div></div>
+  <div class="info-bar-item"><div class="val">1 an minimum</div><div class="lbl">Expérience requise</div></div>
+  <div class="info-bar-item"><div class="val">CPF</div><div class="lbl">Finançable</div></div>
+</div>
+
+<!-- PRÉSENTATION DU DIPLÔME -->
+<section class="white">
+  <div class="section-tag">Le diplôme</div>
+  <h2 class="section-title">Qu'est-ce que le VAE CAP Électricien ?</h2>
+  <p class="section-sub">Le CAP Électricien forme aux travaux d'installation, de mise en service et de maintenance des équipements électriques dans les bâtiments résidentiels, tertiaires et industriels.</p>
+  <div style="background:var(--cream);border-left:4px solid var(--orange);border-radius:0 6px 6px 0;padding:1.1rem 1.2rem;">
+    <p style="font-size:0.9rem;color:#4a5e70;line-height:1.65"><strong style="color:var(--navy)">Pourquoi obtenir ce diplôme par VAE ?</strong><br>
+    Si vous travaillez dans ce domaine depuis au moins 1 an, votre expérience correspond peut-être déjà aux compétences attendues par le jury. La VAE vous permet d'obtenir ce diplôme officiel sans reprendre une formation complète.</p>
+  </div>
+  <figure class="vae-context-visual">
+    <img loading="lazy" decoding="async" src="../images/vae/cap-electricien-contexte-installation.png" alt="Installation électrique résidentielle et tertiaire"/>
+  </figure>
+</section>
+
+<!-- COMPÉTENCES -->
+<section class="cream">
+  <div class="section-tag">Référentiel</div>
+  <h2 class="section-title">Compétences évaluées par le jury</h2>
+  <p class="section-sub">Le jury évalue si votre expérience professionnelle couvre ces compétences du référentiel officiel du VAE CAP Électricien.</p>
+  <div class="comp-grid"><div class="comp-item"><span class="comp-check">✓</span><p>Réalisation de câblages et d'installations électriques</p></div><div class="comp-item"><span class="comp-check">✓</span><p>Lecture et interprétation de schémas électriques</p></div><div class="comp-item"><span class="comp-check">✓</span><p>Mise en service et contrôle des installations</p></div><div class="comp-item"><span class="comp-check">✓</span><p>Respect des normes de sécurité NF C 15-100</p></div><div class="comp-item"><span class="comp-check">✓</span><p>Diagnostic et dépannage d'équipements électriques</p></div><div class="comp-item"><span class="comp-check">✓</span><p>Utilisation des outils de mesure électrique</p></div></div>
+</section>
+
+<!-- PROFILS CONCERNÉS -->
+<section class="white">
+  <div class="section-tag">Profils concernés</div>
+  <h2 class="section-title">Ce diplôme est fait pour vous si...</h2>
+  <div class="profil-grid"><div class="profil-item">👤 Électricien bâtiment sans diplôme</div><div class="profil-item">👤 Aide-électricien avec plusieurs années d'expérience</div><div class="profil-item">👤 Agent de maintenance polyvalent intervenant en électricité</div><div class="profil-item">👤 Technicien d'installation d'équipements électriques</div></div>
+</section>
+
+<!-- DÉBOUCHÉS & SALAIRE -->
+<section class="cream">
+  <div class="section-tag">Carrière</div>
+  <h2 class="section-title">Débouchés et salaires</h2>
+  <p class="section-sub">Le VAE CAP Électricien ouvre la voie à ces postes dans les entreprises industrielles et techniques.</p>
+  <div class="debouche-tags"><span class="debouche-tag">Électricien bâtiment</span><span class="debouche-tag">Technicien de maintenance</span><span class="debouche-tag">Chef d'équipe électricité</span><span class="debouche-tag">Auto-entrepreneur électricien</span></div>
+  <div class="salaire-box">
+    <div class="salaire-num">22 000 – 32 000 € / an</div>
+    <div class="salaire-label">Fourchette salariale avec le VAE CAP Électricien</div>
+  </div>
+</section>
+
+<!-- PROCESSUS VAE -->
+<section class="navy">
+  <div class="section-tag" style="color:var(--orange);border-color:var(--orange)">Notre accompagnement</div>
+  <h2 class="section-title">Comment on vous accompagne vers le CAP</h2>
+  <div class="steps">
+    <div class="step"><div class="step-left"><div class="step-circle">1</div><div class="step-line"></div></div><div class="step-content"><h4>Diagnostic gratuit (30 min)</h4><p>On vérifie que votre expérience correspond bien au référentiel du VAE CAP Électricien et on vous explique les étapes.</p></div></div>
+    <div class="step"><div class="step-left"><div class="step-circle">2</div><div class="step-line"></div></div><div class="step-content"><h4>Dossier de recevabilité</h4><p>On vous aide à constituer le dossier de recevabilité auprès de l'organisme certificateur.</p></div></div>
+    <div class="step"><div class="step-left"><div class="step-circle">3</div><div class="step-line"></div></div><div class="step-content"><h4>Analyse de votre expérience</h4><p>On décrypte vos activités professionnelles pour les faire correspondre aux compétences du référentiel VAE CAP Électricien.</p></div></div>
+    <div class="step"><div class="step-left"><div class="step-circle">4</div><div class="step-line"></div></div><div class="step-content"><h4>Rédaction du dossier VAE</h4><p>On co-rédige votre livret de présentation des acquis. Chaque compétence est documentée et argumentée.</p></div></div>
+    <div class="step"><div class="step-left"><div class="step-circle">5</div><div class="step-line"></div></div><div class="step-content"><h4>Préparation au jury</h4><p>Simulation d'entretien, questions types, posture. Vous arrivez confiant devant le jury.</p></div></div>
+  </div>
+</section>
+
+<!-- DIPLÔMES VOISINS -->
+<section class="white">
+  <div class="section-tag">Voir aussi</div>
+  <h2 class="section-title">Diplômes de la même filière</h2>
+  <div class="voisins"><a href="bac-pro-melec.html" class="voisin-link"><span>VAE Bac pro MELEC</span><span class="arr">→</span></a><a href="bts-electrotechnique.html" class="voisin-link"><span>VAE BTS Électrotechnique</span><span class="arr">→</span></a></div>
+</section>
+
+
+  <!-- Autres diplômes -->
+  <section class="white" style="padding-top:1.5rem;padding-bottom:2rem">
+    <div style="background:var(--cream);border-left:4px solid var(--orange);border-radius:0 6px 6px 0;padding:1.1rem 1.3rem;">
+      <p style="font-size:0.9rem;color:#4a5e70;line-height:1.7"><strong style="color:var(--navy)">Votre diplôme n'est pas dans la liste ?</strong><br>
+      Nous accompagnons la VAE pour tout autre diplôme du domaine des sciences techniques et industrielles — du CAP au Master et au diplôme d'ingénieur. <a href="../contact.html" style="color:var(--orange);font-weight:700;text-decoration:none">Contactez-nous</a> pour vérifier l'éligibilité de votre diplôme cible.</p>
+    </div>
+  </section>
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Votre CAP est<br>peut-être à portée de main.</h2>
+  <p>Diagnostic gratuit de 30 minutes pour vérifier votre éligibilité au VAE CAP Électricien par la VAE. Sans engagement.</p>
+  <a class="btn-white" href="../contact.html">📅 Diagnostic gratuit →</a>
+</section>
+
+
+<!-- ══ Moteur d'animations partagé ══ -->
+<script src="../assets/main.js" defer></script>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     SCRIPT PROPRE À CETTE FICHE DIPLÔME
+     ───────────────────────────────────────────────────────────────────
+     Les animations communes au site sont dans assets/main.js : on ne
+     les répète pas. Ce script ne traite que ce qui est spécifique à
+     cette page. Volontairement court — moins de code, moins de risque
+     de ralentissement sur mobile.
+     ═══════════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── 1. Détection tactile ─────────────────────────────────────────
+     Marque la page en « is-touch » quand l'appareil n'a pas de vraie
+     souris. Sur iPhone, sans cette distinction, un effet de survol
+     reste collé sur une carte après un simple appui. */
+  var tactile = window.matchMedia('(hover: none)').matches || 'ontouchstart' in window;
+  document.documentElement.classList.add(tactile ? 'is-touch' : 'is-pointer');
+
+  /* ── 2. Apparition en cascade des compétences ─────────────────────
+     Les 6 compétences du référentiel apparaissent l'une après l'autre
+     plutôt que d'un bloc : le regard suit la liste. Le décalage est
+     posé ici parce qu'il dépend du nombre de cases, propre à la fiche.
+     Au-delà de 6 cases on ne décale plus, pour ne pas faire attendre. */
+  var cases = document.querySelectorAll('.comp-grid > *');
+
+  Array.prototype.forEach.call(cases, function (el, i) {
+    el.setAttribute('data-delay', String(Math.min(i, 5)));
+  });
+
+  /* ── 3. Économie de ressources sur l'image du bandeau ─────────────
+     Cette image est animée en parallaxe au scroll. Une fois sortie de
+     l'écran, on demande au navigateur d'arrêter de la préparer :
+     « will-change » accélère l'animation mais consomme de la mémoire. */
+  var bandeau = document.querySelector('.page-hero');
+  var photo = document.querySelector('.page-hero-img');
+
+  if (bandeau && photo && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (e) {
+        photo.style.willChange = e.isIntersecting ? 'transform' : 'auto';
+      });
+    }, { threshold: 0 }).observe(bandeau);
+  }
+})();
+</script>
+
+<!-- ══════════ PIED DE PAGE (identique sur toutes les pages) ══════════ -->
+<footer class="pi-footer">
+  <div class="pi-footer__inner">
+    <div class="pi-footer__brand">
+      <img src="../logo-blanc.svg" alt="Parcours Industrie" width="81" height="34"/>
+      <p>Cabinet spécialisé VAE, bilan de compétences, reconversion et orientation pour les métiers techniques et industriels.</p>
+      <p>Accompagnement 100 % en visio · France entière<br>Diagnostic gratuit sans engagement</p>
+      <a class="pi-btn" href="../contact.html" style="display:inline-block;margin-top:0.6rem;background:var(--orange);color:#fff;padding:0.6rem 1.1rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em">Prendre rendez-vous</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Nos prestations</h4>
+      <a href="index.html">VAE métiers techniques</a>
+      <a href="../bilan/index.html">Bilan de compétences</a>
+      <a href="../reconversion/index.html">Reconversion professionnelle</a>
+      <a href="../orientation/index.html">Orientation</a>
+      <a href="../coaching/index.html">Coaching & Emploi</a>
+      <a href="../ingenierie/index.html">Ingénierie de formation</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Filières</h4>
+      <a href="../reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="../reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="../reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="../reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="../reconversion/btp.html">BTP & Construction</a>
+      <a href="index.html">Toutes les filières VAE</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Le cabinet</h4>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../entreprises/index.html">Entreprises & organismes</a>
+      <a href="../blog/index.html">Blog & conseils</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../mentions-legales.html">Mentions légales</a>
+      <a href="../politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </div>
+
+  <div class="pi-footer__bottom">
+    <div>© 2026 parcours-industrie.fr — Tous droits réservés</div>
+    <div><a href="../mentions-legales.html">Mentions légales</a> · <a href="../politique-confidentialite.html">Confidentialité</a> · <a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<button class="pi-totop" aria-label="Revenir en haut de la page">↑</button>
+
+</body>
+</html>

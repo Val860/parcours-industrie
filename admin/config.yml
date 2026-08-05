@@ -1,0 +1,314 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+locale: fr
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "contenus"
+    label: "Contenus du site"
+    files:
+      - name: "avis"
+        label: "Avis clients"
+        file: "content/avis-clients.json"
+        format: "json"
+        fields:
+          - label: "Avis"
+            name: "avis"
+            widget: "list"
+            summary: "{{fields.nom}} — {{fields.service}}"
+            fields:
+              - { label: "Afficher l'avis", name: "visible", widget: "boolean", default: true }
+              - { label: "Nom affiché", name: "nom", widget: "string" }
+              - { label: "Initiales", name: "initiales", widget: "string", hint: "Exemple : KA" }
+              - { label: "Profil / métier", name: "profil", widget: "string" }
+              - { label: "Service", name: "service", widget: "string" }
+              - { label: "Avis", name: "texte", widget: "text" }
+              - { label: "Note", name: "note", widget: "number", value_type: "int", min: 1, max: 5, default: 5 }
+
+      - name: "articles"
+        label: "Articles de blog"
+        file: "content/blog/articles.json"
+        format: "json"
+        fields:
+          - label: "Articles"
+            name: "articles"
+            widget: "list"
+            summary: "{{fields.titre}}"
+            fields:
+              - { label: "Publier", name: "visible", widget: "boolean", default: true }
+              - { label: "Mettre à la une", name: "featured", widget: "boolean", default: false }
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string", hint: "Exemple : vae-electricien" }
+              - label: "Catégorie"
+                name: "categorie"
+                widget: "select"
+                options: ["vae", "reconversion", "orientation", "bilan", "coaching emploi", "entreprises", "actualités"]
+              - { label: "Résumé court", name: "resume", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Texte alternatif image", name: "alt", widget: "string", required: false }
+              - { label: "Date affichée", name: "date", widget: "string", default: "Juillet 2025" }
+              - { label: "Temps de lecture", name: "lecture", widget: "string", default: "5 min" }
+              - { label: "URL personnalisée", name: "url", widget: "string", required: false, hint: "Laisser vide pour utiliser la page automatique blog/article.html?slug=..." }
+              - { label: "Article complet", name: "contenu", widget: "markdown", required: false }
+
+      - name: "images_site"
+        label: "Images du site"
+        file: "content/site-images.json"
+        format: "json"
+        fields:
+          - label: "Accueil"
+            name: "accueil"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "Électricité et énergie"
+            name: "electricite_energie"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "Maintenance industrielle"
+            name: "maintenance_industrielle"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "Production industrielle"
+            name: "production_industrielle"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "Cybersécurité et réseaux"
+            name: "cybersecurite_reseaux"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "VAE"
+            name: "vae"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "Bilan de compétences"
+            name: "bilan"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "Blog"
+            name: "blog"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "Images générales"
+            name: "generales"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }
+
+          - label: "Logos et éléments graphiques"
+            name: "logos"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "label", widget: "hidden" }
+              - label: "Liste des images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.label}}"
+                collapsed: true
+                fields:
+                  - { label: "Nom", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false, hint: "Les nouvelles images sont rangées automatiquement dans /images/uploads/." }
+                  - { label: "Texte alternatif", name: "alt", widget: "string", required: false }
+                  - { label: "Identifiant", name: "id", widget: "hidden" }
+                  - { label: "Page", name: "page", widget: "hidden" }
+                  - { label: "Section", name: "section", widget: "hidden" }
+                  - { label: "Image de secours", name: "current_path", widget: "hidden" }
+                  - { label: "Description", name: "description", widget: "hidden", required: false }
+                  - { label: "Type", name: "type", widget: "hidden", default: "img" }
+                  - { label: "Existe", name: "exists", widget: "hidden", default: true, required: false }

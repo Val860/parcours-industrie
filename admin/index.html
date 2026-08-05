@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Administration — Parcours Industrie</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script type="module" src="../assets/netlify-identity-callback.js"></script>
+</head>
+<body>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function (user) {
+        console.info('[Netlify Identity] Initialisation admin.', user ? user.email : 'aucun utilisateur connecté');
+      });
+      window.netlifyIdentity.on('login', function () {
+        console.info('[Netlify Identity] Connexion réussie, ouverture du CMS.');
+      });
+      window.netlifyIdentity.on('error', function (error) {
+        console.error('[Netlify Identity] Erreur dans l’interface admin.', error);
+      });
+    } else {
+      console.error('[Netlify Identity] Le widget Netlify Identity n’a pas été chargé.');
+    }
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>

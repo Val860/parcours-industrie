@@ -1,0 +1,102 @@
+{
+  "articles": [
+    {
+      "visible": true,
+      "featured": true,
+      "titre": "Comment obtenir un diplôme par la VAE quand on est électricien ?",
+      "slug": "vae-electricien",
+      "categorie": "vae",
+      "resume": "Vous travaillez dans l'électricité depuis plusieurs années mais vous n'avez pas de diplôme officiel ? La VAE peut tout changer. On vous explique comment ça marche concrètement.",
+      "image": "/images/blog/blog-article-vae-electricien.png",
+      "alt": "VAE électricien",
+      "date": "Juillet 2025",
+      "lecture": "5 min",
+      "url": "vae-electricien.html",
+      "contenu": ""
+    },
+    {
+      "visible": true,
+      "featured": false,
+      "titre": "Se reconvertir dans la maintenance industrielle — le guide complet",
+      "slug": "reconversion-maintenance-industrielle",
+      "categorie": "reconversion",
+      "resume": "Débouchés, formations, salaires et parcours types pour réussir sa reconversion vers la maintenance.",
+      "image": "/images/blog/blog-article-reconversion-maintenance.png",
+      "alt": "Reconversion maintenance",
+      "date": "Juillet 2025",
+      "lecture": "6 min",
+      "url": "../reconversion/maintenance-industrielle.html",
+      "contenu": ""
+    },
+    {
+      "visible": true,
+      "featured": false,
+      "titre": "Préparer son entretien de motivation BTS CIEL",
+      "slug": "entretien-motivation-bts-ciel",
+      "categorie": "orientation",
+      "resume": "Ce que les jurys attendent vraiment et comment se démarquer des autres candidats.",
+      "image": "/images/blog/blog-article-bts-ciel-entretien.png",
+      "alt": "BTS CIEL entretien",
+      "date": "Juillet 2025",
+      "lecture": "4 min",
+      "url": "../orientation/entretien-motivation.html",
+      "contenu": ""
+    },
+    {
+      "visible": true,
+      "featured": false,
+      "titre": "Bilan de compétences pour techniciens — tout ce qu'il faut savoir",
+      "slug": "bilan-competences-techniciens",
+      "categorie": "bilan",
+      "resume": "Durée, coût, financement CPF, déroulement — le guide complet pour les professionnels de l'industrie.",
+      "image": "/images/blog/blog-article-bilan-competences.png",
+      "alt": "Bilan de compétences",
+      "date": "Juin 2025",
+      "lecture": "5 min",
+      "url": "../bilan/index.html",
+      "contenu": ""
+    },
+    {
+      "visible": true,
+      "featured": false,
+      "titre": "Alternance dans les métiers techniques — comment bien choisir ?",
+      "slug": "alternance-metiers-techniques",
+      "categorie": "orientation",
+      "resume": "CFA, entreprise, contrat d'apprentissage ou de professionnalisation — on démêle tout pour vous.",
+      "image": "/images/blog/blog-article-alternance-industrie.png",
+      "alt": "Alternance industrie",
+      "date": "Juin 2025",
+      "lecture": "4 min",
+      "url": "../orientation/lyceens.html",
+      "contenu": ""
+    },
+    {
+      "visible": true,
+      "featured": false,
+      "titre": "Chef d'équipe sans diplôme — comment faire reconnaître son expérience ?",
+      "slug": "chef-equipe-sans-diplome",
+      "categorie": "coaching emploi",
+      "resume": "VAE, bilan, formation courte — les 3 voies pour officialiser vos compétences d'encadrement.",
+      "image": "/images/blog/blog-article-chef-equipe-industrie.png",
+      "alt": "Chef équipe",
+      "date": "Juin 2025",
+      "lecture": "5 min",
+      "url": "../coaching/prise-de-poste.html",
+      "contenu": ""
+    },
+    {
+      "visible": true,
+      "featured": false,
+      "titre": "Les métiers industriels qui recrutent en 2025",
+      "slug": "metiers-industriels-recrutent",
+      "categorie": "actualités",
+      "resume": "Électricité, maintenance, cybersécurité industrielle — les filières en tension et les salaires.",
+      "image": "/images/blog/blog-article-metiers-industrie.png",
+      "alt": "Métiers industrie 2025",
+      "date": "Mai 2025",
+      "lecture": "3 min",
+      "url": "../reconversion/index.html",
+      "contenu": ""
+    }
+  ]
+}

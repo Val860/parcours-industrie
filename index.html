@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours Industrie – VAE, Bilan de compétences & Reconversion Métiers Techniques</title>
+  <meta name="description" content="Cabinet spécialisé VAE, bilan de compétences, reconversion et orientation pour les professionnels des métiers techniques et industriels. Diagnostic gratuit. 100% en visio."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Parcours Industrie"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://parcours-industrie.fr/"/>
+  <meta property="og:title" content="Parcours Industrie – Spécialiste métiers techniques"/>
+  <meta property="og:description" content="VAE, bilan de compétences, reconversion, orientation et coaching emploi pour les techniciens et professionnels de l'industrie. Diagnostic gratuit."/>
+  <meta property="og:image" content="https://parcours-industrie.fr/og-image.jpg"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:image" content="https://parcours-industrie.fr/og-image.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Parcours Industrie – Spécialiste métiers techniques"/>
+<meta name="twitter:description" content="VAE, bilan de compétences, reconversion, orientation et coaching emploi pour les techniciens et professionnels de l'industrie. Diagnostic gratuit."/>
+  <link rel="canonical" href="https://parcours-industrie.fr/"/>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script type="module" src="assets/netlify-identity-callback.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --steel: #1c3a52;
+    --orange: #e8601c;
+    --orange-light: #f07b3a;
+    --cream: #f5f1eb;
+    --gray: #8a9aaa;
+    --light: #ffffff;
+    --text: #1a2634;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lato', sans-serif; color: var(--text); background: var(--cream); overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--navy);
+    padding: 0 1.2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 62px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.35);
+  }
+
+  .logo-wrap { display: flex; align-items: center; gap: 0.6rem; }
+
+  /* ── SVG LOGO ── */
+  .logo-svg { width: 38px; height: 38px; flex-shrink: 0; }
+
+  .logo-text { line-height: 1.1; }
+  .logo-text .l1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 1.25rem;
+    color: white; letter-spacing: 0.02em;
+  }
+  .logo-text .l1 span { color: var(--orange); }
+  .logo-text .l2 {
+    font-size: 0.58rem; font-weight: 400;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  .nav-cta {
+    background: var(--orange); color: white; border: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.8rem;
+    border-radius: 3px; cursor: pointer; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding-top: 62px; min-height: 100svh;
+    background: var(--navy);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(255,255,255,0.025) 48px, rgba(255,255,255,0.025) 49px),
+      repeating-linear-gradient(0deg,  transparent, transparent 48px, rgba(255,255,255,0.025) 48px, rgba(255,255,255,0.025) 49px);
+  }
+
+  /* Hero photo – right side on desktop, subtle bg on mobile */
+  .hero-photo-wrap {
+    position: absolute;
+    inset: 62px 0 0 0;
+    overflow: hidden;
+  }
+
+  .hero-photo-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: 68% center;
+    opacity: 0.34;
+    filter: grayscale(25%) contrast(1.08) brightness(1.08);
+  }
+
+  .hero-photo-wrap::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg,
+        rgba(13,27,42,0.96) 0%,
+        rgba(13,27,42,0.82) 36%,
+        rgba(13,27,42,0.38) 62%,
+        rgba(13,27,42,0.10) 100%),
+      linear-gradient(to bottom,
+        rgba(13,27,42,0.22) 0%,
+        rgba(13,27,42,0.12) 52%,
+        rgba(13,27,42,0.64) 100%);
+  }
+
+  .hero-accent {
+    position: absolute; top: -80px; right: -80px;
+    width: 340px; height: 340px;
+    background: radial-gradient(circle, rgba(232,96,28,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-inner {
+    position: relative; z-index: 2;
+    padding: 2.5rem 1.4rem 3rem;
+  }
+
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(232,96,28,0.15);
+    border: 1px solid rgba(232,96,28,0.4);
+    color: var(--orange-light);
+    font-weight: 700; font-size: 0.7rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.35rem 0.75rem; border-radius: 20px;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.6rem, 10vw, 4.5rem);
+    color: var(--light); line-height: 1.0;
+    letter-spacing: -0.01em; margin-bottom: 1.2rem;
+  }
+
+  .hero h1 em { font-style: normal; color: var(--orange); }
+
+  .hero p {
+    font-size: 1rem; color: rgba(255,255,255,0.72);
+    line-height: 1.7; margin-bottom: 2rem;
+    max-width: 520px; font-weight: 300;
+  }
+
+  .hero-btns { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .btn-primary {
+    background: var(--orange); color: white;
+    padding: 1rem 1.5rem; border: none; border-radius: 4px;
+    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem;
+    cursor: pointer; letter-spacing: 0.02em; text-align: center;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-primary:active { transform: scale(0.98); }
+
+  .btn-secondary {
+    background: transparent; color: white;
+    padding: 1rem 1.5rem;
+    border: 1.5px solid rgba(255,255,255,0.25); border-radius: 4px;
+    font-family: 'Lato', sans-serif; font-weight: 600; font-size: 0.95rem;
+    cursor: pointer; text-align: center;
+  }
+
+  .hero-stats {
+    display: flex; gap: 2rem; margin-top: 2.5rem;
+    padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);
+    flex-wrap: wrap;
+  }
+
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 2rem; color: var(--orange); line-height: 1;
+  }
+  .stat-label { font-size: 0.7rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.1rem; }
+
+  /* ── PHOTO STRIP ── */
+  .photo-strip {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3px; background: var(--navy);
+  }
+
+  .photo-strip-item {
+    position: relative; overflow: hidden;
+    aspect-ratio: 4/3;
+  }
+
+  .photo-strip-item img {
+    width: 100%; height: 100%;
+    object-fit: cover; filter: grayscale(20%);
+    transition: transform 0.4s;
+  }
+
+  .photo-strip-item:hover img { transform: scale(1.04); }
+
+  .photo-strip-item .overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(13,27,42,0.8) 0%, transparent 60%);
+    display: flex; align-items: flex-end; padding: 0.8rem;
+  }
+
+  .photo-strip-item .overlay span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 0.9rem;
+    color: white; line-height: 1.2;
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 3.5rem 1.4rem; }
+
+  .section-tag {
+    display: inline-block; color: var(--orange);
+    font-weight: 700; font-size: 0.7rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    border-left: 3px solid var(--orange); padding-left: 0.6rem;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: clamp(1.8rem, 6vw, 2.6rem);
+    color: var(--navy); line-height: 1.1; margin-bottom: 1rem;
+  }
+
+  .section-sub { font-size: 0.95rem; color: #5a6e80; line-height: 1.65; margin-bottom: 2rem; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--light); }
+
+  .services-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
+
+  .service-card {
+    border: 1.5px solid #e0e8f0; border-radius: 6px;
+    padding: 1.5rem; position: relative; overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: white;
+  }
+  .service-card:hover { border-color: var(--orange); box-shadow: 0 4px 20px rgba(232,96,28,0.1); }
+  .service-card.featured {
+    background: white;
+    border-color: rgba(232,96,28,0.42);
+    color: var(--text);
+  }
+
+  .service-num {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+    font-size: 2.8rem; color: rgba(232,96,28,0.12);
+    position: absolute; top: 0.5rem; right: 1rem; line-height: 1;
+  }
+  .service-card.featured .service-num { color: rgba(232,96,28,0.12); }
+
+  .service-icon {
+    width: 58px; height: 58px; background: rgba(232,96,28,0.1);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem; font-size: 1.7rem;
+    overflow: hidden;
+  }
+  .service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .service-icon .emoji-fallback { display: none; }
+  .service-icon img.is-missing { display: none; }
+  .service-icon img.is-missing + .emoji-fallback { display: inline; }
+  .service-card.featured .service-icon { background: rgba(232,96,28,0.16); }
+
+
+  .service-card h3 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: 1.25rem; color: var(--navy); margin-bottom: 0.5rem;
+  }
+  .service-card.featured h3 { color: var(--navy); }
+
+  .service-card p { font-size: 0.88rem; color: #5a6e80; line-height: 1.6; margin-bottom: 1rem; }
+  .service-card.featured p { color: #5a6e80; }
+
+  .service-price { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--orange); }
+  .service-badge {
+    display: inline-block; background: var(--orange); color: white;
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.2rem 0.5rem; border-radius: 2px; margin-bottom: 0.75rem;
+  }
+
+  /* ── NICHES ── */
+  .niches {
+    position: relative;
+    isolation: isolate;
+    background:
+      linear-gradient(115deg, rgba(245,241,235,0.78) 0%, rgba(245,241,235,0.58) 46%, rgba(245,241,235,0.28) 100%),
+      url("images/accueil/background-specialisations.png") center / cover no-repeat,
+      var(--cream);
+  }
+  .niches::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(255,255,255,0.48), rgba(255,255,255,0.06)),
+      radial-gradient(circle at 88% 18%, rgba(232,96,28,0.2), transparent 32%);
+    pointer-events: none;
+  }
+
+  .niches-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; }
+
+  .niche-item {
+    background: rgba(255,255,255,0.84); border-radius: 6px; padding: 1.1rem;
+    border-left: 3px solid var(--orange);
+    border-top: 1px solid rgba(255,255,255,0.66);
+    box-shadow: 0 14px 34px rgba(13,27,42,0.08);
+    backdrop-filter: blur(8px);
+  }
+  .niche-item .icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .niche-item h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; color: var(--navy); margin-bottom: 0.25rem; }
+  .niche-item p { font-size: 0.78rem; color: #6a7e90; line-height: 1.45; }
+
+  /* ── PROFIL ── */
+  .profil { background: var(--navy); color: white; }
+  .profil .section-title { color: white; }
+
+  .profil-card {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem;
+  }
+
+  .profil-items { display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem; }
+
+  .profil-item { display: flex; align-items: flex-start; gap: 0.9rem; }
+
+  .profil-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; flex-shrink: 0; margin-top: 0.35rem; }
+
+  .profil-item p { font-size: 0.9rem; color: rgba(255,255,255,0.72); line-height: 1.55; }
+  .profil-item strong { color: white; }
+
+  /* ── PROCESS ── */
+  .process { background: white; }
+
+  .steps { margin-top: 1.5rem; display: flex; flex-direction: column; }
+
+  .step { display: flex; gap: 1rem; position: relative; padding-bottom: 1.5rem; }
+  .step:last-child { padding-bottom: 0; }
+
+  .step-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+
+  .step-circle {
+    width: 40px; height: 40px; background: var(--orange); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; color: white;
+  }
+
+  .step-line { width: 2px; flex: 1; background: #e0e8f0; margin-top: 4px; }
+  .step:last-child .step-line { display: none; }
+
+  .step-content { padding-top: 0.4rem; }
+  .step-content h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 0.3rem; }
+  .step-content p { font-size: 0.85rem; color: #6a7e90; line-height: 1.55; }
+
+  /* ── TESTIMONIAL ── */
+  .temoignages { background: var(--cream); }
+
+  .temoignage-card {
+    background: white; border-radius: 8px; padding: 1.4rem;
+    margin-bottom: 1rem; border-left: 4px solid var(--orange);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .temo-stars { color: var(--orange); font-size: 0.9rem; margin-bottom: 0.6rem; }
+
+  .temo-text { font-size: 0.9rem; color: #4a5e70; line-height: 1.6; font-style: italic; margin-bottom: 0.8rem; }
+
+  .temo-author {
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+
+  .temo-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--navy); display: flex; align-items: center; justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; color: var(--orange);
+    flex-shrink: 0;
+  }
+
+  .temo-name { font-weight: 700; font-size: 0.85rem; color: var(--navy); }
+  .temo-role { font-size: 0.75rem; color: #8a9aaa; }
+
+  /* ── CTA ── */
+  .cta-section { background: var(--orange); color: white; text-align: center; padding: 3.5rem 1.4rem; }
+
+  .cta-section h2 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+    font-size: clamp(2rem, 8vw, 3rem); line-height: 1.1; margin-bottom: 0.8rem;
+  }
+
+  .cta-section p { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 1.8rem; }
+
+  .btn-white {
+    background: white; color: var(--orange);
+    padding: 1rem 2rem; border: none; border-radius: 4px;
+    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem;
+    cursor: pointer; display: inline-block;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy); color: rgba(255,255,255,0.45);
+    padding: 2rem 1.4rem; font-size: 0.78rem; line-height: 1.8;
+  }
+
+  .footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+
+  .footer-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 1rem; }
+  .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.75rem; }
+  .footer-links a:hover { color: var(--orange); }
+
+  footer hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 1rem 0; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-inner > * { animation: fadeUp 0.65s ease both; }
+  .hero-inner .hero-tag   { animation-delay: 0.05s; }
+  .hero-inner h1          { animation-delay: 0.15s; }
+  .hero-inner p           { animation-delay: 0.25s; }
+  .hero-inner .hero-btns  { animation-delay: 0.35s; }
+  .hero-inner .hero-stats { animation-delay: 0.45s; }
+
+  /* ── RESPONSIVE ── */
+  @media (min-width: 640px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .hero-btns { flex-direction: row; }
+    .niches-grid { grid-template-columns: repeat(3, 1fr); }
+    .photo-strip { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  @media (min-width: 900px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .hero-photo-wrap img { opacity: 0.46; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     AMÉLIORATIONS VISUELLES — PAGE D'ACCUEIL
+     ───────────────────────────────────────────────────────────────────
+     Ce bloc ne touche ni au texte, ni au SEO, ni aux couleurs, ni aux
+     polices. Il ne fait que respirer la mise en page et casser la
+     rigidité du gabarit d'origine.
+
+     Il est placé APRÈS les règles ci-dessus : c'est ce qui lui permet
+     de les compléter sans avoir à les réécrire.
+
+     Sommaire
+       1. Largeur de lecture (le changement le plus visible)
+       2. Rythme vertical
+       3. Hiérarchie typographique
+       4. Cartes plus aérées
+       5. Variations de mise en page (desktop)
+       6. Éléments graphiques discrets
+       7. Confort tactile et sécurité mobile
+     ═══════════════════════════════════════════════════════════════════ */
+
+  /* ── 1. LARGEUR DE LECTURE ──────────────────────────────────────────
+     Le contenu s'étirait sur toute la largeur de l'écran : sur un écran
+     large, une ligne de texte pouvait faire 1400 px de long, ce qui est
+     illisible et fait « page non finie ».
+     On borne le contenu à 1180 px et on le centre, sans toucher au HTML :
+     la marge latérale grandit toute seule quand l'écran s'agrandit. */
+  section:not(.hero),
+  .hero-inner {
+    padding-inline: max(1.4rem, (100% - 1180px) / 2);
+  }
+  /* La bande de photos reste volontairement pleine largeur. */
+
+  /* ── 2. RYTHME VERTICAL ─────────────────────────────────────────────
+     3,5 rem de respiration, c'est juste sur mobile mais serré sur grand
+     écran. La valeur s'adapte maintenant à la taille de l'écran. */
+  section:not(.hero) { padding-block: clamp(3.5rem, 6vw, 6rem); }
+  .cta-section { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
+
+  /* ── 3. HIÉRARCHIE TYPOGRAPHIQUE ────────────────────────────────────
+     L'œil doit distinguer d'un coup : surtitre → titre → chapô → contenu. */
+  .section-tag { margin-bottom: 0.9rem; }
+  .section-title { margin-bottom: 0.9rem; letter-spacing: -0.015em; }
+  .section-sub {
+    max-width: 62ch;              /* longueur de ligne confortable */
+    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.06rem);
+    line-height: 1.7;
+    margin-bottom: clamp(2rem, 3.5vw, 3rem);
+  }
+  .hero p { max-width: 34em; }
+
+  /* ── 4. CARTES PLUS AÉRÉES ──────────────────────────────────────────
+     Angles légèrement plus doux et plus d'air à l'intérieur dès que
+     l'écran le permet. Sur mobile on garde les valeurs compactes. */
+  .service-card,
+  .niche-item,
+  .temoignage-card,
+  .profil-card { border-radius: 10px; }
+
+  @media (min-width: 760px) {
+    .service-card   { padding: 1.9rem 1.7rem; }
+    .niche-item     { padding: 1.4rem 1.3rem; }
+    .temoignage-card{ padding: 1.8rem 1.6rem; }
+    .profil-card    { padding: 2.2rem 2rem; }
+    .services-grid  { gap: 1.3rem; }
+    .niches-grid    { gap: 1rem; }
+  }
+
+  /* Le grand chiffre fantôme des cartes services : un cran plus discret
+     et mieux calé dans l'angle. */
+  .service-num { font-size: 3.4rem; top: 0.6rem; right: 1.1rem; }
+
+  /* ── 5. VARIATIONS DE MISE EN PAGE (desktop) ────────────────────────
+     Trois longues listes verticales se suivaient. Sur grand écran elles
+     passent sur deux colonnes : la page respire et paraît moins générique.
+     Rien ne change sous 900 px. */
+  @media (min-width: 900px) {
+
+    /* Les 4 arguments « pourquoi nous choisir » côte à côte */
+    .profil-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem 2.4rem;
+    }
+
+    /* Les 4 étapes du process sur deux colonnes.
+       Le trait vertical qui reliait les étapes n'a plus de sens dans
+       cette disposition : on le masque et on numérote autrement. */
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.6rem 2.4rem;
+    }
+    .step { padding-bottom: 0; }
+    .step-line { display: none; }
+
+    /* Les témoignages côte à côte, et surtout DE MÊME HAUTEUR.
+       Sans « stretch », chaque carte prend la hauteur de son texte et
+       la colonne la plus bavarde dépasse l'autre. */
+    .temoignages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+    .temoignages .temoignage-card {
+      margin-bottom: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    /* la citation occupe l'espace libre, l'auteur reste calé en bas :
+       les deux cartes s'alignent proprement quel que soit le texte */
+    .temoignages .temo-text { flex: 1; }
+    .temoignages .temo-author { margin-top: auto; }
+
+    /* le surtitre et le titre gardent toute la largeur */
+    .temoignages > .section-tag,
+    .temoignages > .section-title { grid-column: 1 / -1; }
+  }
+
+  /* ── 5 bis. BANDE DE PHOTOS ─────────────────────────────────────────
+     Les 4 photos se touchaient bord à bord, sans aucun espace ni marge :
+     l'ensemble faisait bloc et le libellé collait au coin de l'image.
+     On aère la bande, on arrondit les angles et on rend le texte lisible. */
+  .photo-strip {
+    gap: clamp(0.5rem, 1.4vw, 1rem);
+    padding: clamp(0.9rem, 2.2vw, 1.5rem);
+    padding-inline: max(clamp(0.9rem, 2.2vw, 1.5rem), (100% - 1180px) / 2);
+  }
+
+  .photo-strip-item {
+    border-radius: 8px;
+    overflow: hidden;                 /* l'image suit les angles arrondis */
+  }
+
+  /* Le libellé posé sur la photo : plus d'air autour, dégradé plus franc
+     pour rester lisible quelle que soit la photo placée dessous. */
+  .photo-strip-item .overlay {
+    background: linear-gradient(to top,
+                rgba(13, 27, 42, 0.92) 0%,
+                rgba(13, 27, 42, 0.55) 45%,
+                transparent 85%);
+    padding: 1rem 0.95rem 0.85rem;
+  }
+
+  .photo-strip-item .overlay span {
+    font-size: clamp(0.92rem, 1.5vw, 1.1rem);
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+  }
+
+  /* ── 5 ter. HAUTEURS ÉGALES DANS LES GRILLES ────────────────────────
+     Par défaut les cases d'une grille s'étirent déjà à la hauteur de la
+     ligne, mais les cartes doivent le répercuter sur leur contenu, sinon
+     le fond blanc s'arrête avant le bas de la case. */
+  .services-grid > *,
+  .niches-grid > * { height: 100%; }
+
+  .service-card,
+  .niche-item { display: flex; flex-direction: column; }
+
+  /* Dans une carte passée en colonne flexible, un élément sans largeur
+     propre s'étire sur toute la largeur. Le badge et la pastille d'icône
+     doivent au contraire garder la largeur de leur contenu. */
+  .service-card .service-badge,
+  .service-card .service-icon { align-self: flex-start; }
+
+  /* le prix reste collé en bas de la carte, quelle que soit la longueur
+     du texte au-dessus : les 6 cartes s'alignent visuellement */
+  .service-card .service-price { margin-top: auto; padding-top: 0.6rem; }
+
+  /* Les icônes remplacent les grands numéros décoratifs en haut à droite.
+     Elles deviennent plus visibles, tout en laissant le contenu lisible. */
+  .service-card {
+    padding-top: clamp(4.8rem, 5vw, 5.4rem);
+  }
+  .service-card .service-num {
+    display: none;
+  }
+  .service-card .service-icon {
+    position: absolute;
+    top: 1.45rem;
+    right: 1.45rem;
+    margin-bottom: 0;
+    box-shadow: 0 12px 28px rgba(13, 27, 42, 0.08);
+  }
+  .service-card.featured .service-icon {
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+  }
+  .service-card .service-badge {
+    margin-right: 4.8rem;
+  }
+  .service-card h3 {
+    padding-right: 4.6rem;
+  }
+
+  /* ── 6. ÉLÉMENTS GRAPHIQUES DISCRETS ────────────────────────────────
+     Quelques repères visuels très légers pour casser les grands aplats,
+     sans ajouter la moindre couleur hors charte. */
+
+  /* Trame de points sur la section navy */
+  .profil { position: relative; overflow: hidden; }
+  .profil::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 26px 26px;
+    pointer-events: none;
+  }
+  .profil > * { position: relative; z-index: 1; }
+
+  /* Cercle géométrique en filigrane dans le bandeau orange final */
+  .cta-section { position: relative; overflow: hidden; }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -140px; right: -140px;
+    width: 380px; height: 380px;
+    border: 40px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cta-section > * { position: relative; z-index: 1; }
+
+  /* Filet fin entre la bande de photos et la section suivante */
+  .photo-strip + .services { border-top: 3px solid var(--orange); }
+
+  /* Séparation nette entre les sections claires qui se suivent */
+  .process { border-top: 1px solid #e8edf2; }
+
+  /* ── 7. CONFORT TACTILE ET SÉCURITÉ MOBILE ──────────────────────────
+     Règle de base : aucune information n'apparaît uniquement au survol.
+     Ici, les effets de survol sont purement décoratifs — les libellés des
+     photos, les prix et les textes des cartes sont visibles en permanence. */
+
+  /* Les décorations de survol ne s'activent que si un vrai pointeur
+     existe. Sinon iOS garde l'état « survolé » collé après un appui. */
+  @media (hover: hover) and (pointer: fine) {
+    .service-card:hover { border-color: var(--orange); }
+  }
+  /* Retour visuel à l'appui, au doigt */
+  .service-card:active,
+  .niche-item:active,
+  .temoignage-card:active { border-color: var(--orange); }
+
+  /* Cibles tactiles d'au moins 44 px de haut (recommandation Apple) */
+  .btn-primary, .btn-secondary, .btn-white { min-height: 46px; }
+
+  /* Les liens boutons doivent se comporter comme des boutons */
+  a.btn-primary, a.btn-secondary, a.btn-white {
+    display: inline-flex; align-items: center; justify-content: center;
+    text-decoration: none;
+  }
+
+  /* Aucune animation ne doit provoquer de défilement horizontal */
+  .services-grid, .niches-grid, .steps, .temoignages, .photo-strip { max-width: 100%; }
+  .hero, .services, .niches, .profil, .process, .temoignages, .cta-section { overflow-x: clip; }
+
+  /* Sur petit écran, on réduit le halo décoratif du hero : il coûte cher
+     à redessiner au scroll sur les téléphones d'entrée de gamme. */
+  @media (max-width: 640px) {
+    .hero-accent { width: 220px; height: 220px; top: -60px; right: -60px; }
+    .hero-photo-wrap img { opacity: 0.28; object-position: 62% top; }
+    .hero-photo-wrap::after {
+      background:
+        linear-gradient(90deg,
+          rgba(13,27,42,0.94) 0%,
+          rgba(13,27,42,0.82) 48%,
+          rgba(13,27,42,0.48) 100%),
+        linear-gradient(to bottom,
+          rgba(13,27,42,0.28) 0%,
+          rgba(13,27,42,0.34) 58%,
+          rgba(13,27,42,0.82) 100%);
+    }
+    .cta-section::before { display: none; }
+  }
+
+  /* Réglage système « réduire les animations » : on neutralise aussi
+     l'animation d'entrée du hero définie plus haut. */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-inner > * { animation: none !important; }
+  }
+</style>
+
+<!-- ══ Identité visuelle & favicons ══ -->
+<link rel="icon" type="image/x-icon" href="favicon.ico?v=3"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<meta name="theme-color" content="#0d1b2a"/>
+
+<!-- ══ Feuille de style partagée — modifier ICI = modifié sur TOUTES les pages ══ -->
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+<!-- ══════════ BARRE DE PROGRESSION DE LECTURE ══════════ -->
+<div class="pi-progress" aria-hidden="true"><div class="pi-progress__bar"></div></div>
+
+<a class="pi-skip" href="#contenu">Aller au contenu</a>
+
+<!-- ══════════ NAVIGATION (identique sur toutes les pages) ══════════
+     Pour ajouter une entrée au menu : voir GUIDE-CLIENT.md
+     ═════════════════════════════════════════════════════════════ -->
+<nav class="pi-nav">
+  <a class="pi-nav__logo" href="index.html" aria-label="Parcours Industrie — accueil">
+    <img src="logo-blanc.svg" alt="Parcours Industrie" width="86" height="36"/>
+  </a>
+
+  <ul class="pi-nav__menu">
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="vae/index.html">VAE</a>
+      <div class="pi-nav__sub pi-nav__sub--mega">
+        <span class="pi-nav__sub-title">Électricité & Énergie</span>
+        <a href="vae/cap-electricien.html">VAE CAP Électricien</a>
+        <a href="vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
+        <a href="vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+        <a href="vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+        <span class="pi-nav__sub-title">Maintenance industrielle</span>
+        <a href="vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+        <a href="vae/bac-pro-mei.html">VAE Bac pro MEI</a>
+        <a href="vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
+        <a href="vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+        <span class="pi-nav__sub-title">Réseaux & Cybersécurité</span>
+        <a href="vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
+        <a href="vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+        <a href="vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+        <span class="pi-nav__sub-title">Sécurité</span>
+        <a href="vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+        <a href="vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+        <a href="vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+        <span class="pi-nav__sub-title">Production & Automatisme</span>
+        <a href="vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
+        <a href="vae/bts-cprp.html">VAE BTS CPRP</a>
+        <span class="pi-nav__sub-title">Enseignement supérieur</span>
+        <a href="vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
+        <a href="vae/master-industrie.html">VAE Master industrie</a>
+        <a href="vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+        <a class="pi-nav__sub-all" href="vae/index.html">→ Toutes les filières VAE</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="bilan/index.html">Bilan</a></li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="reconversion/index.html">Reconversion</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="reconversion/index.html">→ Reconversion : vue d'ensemble</a>
+        <a href="reconversion/electricite.html">Électricité & Énergie</a>
+        <a href="reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+        <a href="reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+        <a href="reconversion/securite-privee.html">Sécurité privée</a>
+        <a href="reconversion/btp.html">BTP & Construction</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="orientation/index.html">Orientation</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="orientation/index.html">→ Orientation : vue d'ensemble</a>
+        <a href="orientation/collegiens.html">Collégiens — après la 3e</a>
+        <a href="orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+        <a href="orientation/adultes.html">Adultes en reconversion</a>
+        <a href="orientation/parents.html">Parents — comprendre la voie pro</a>
+        <a href="orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="coaching/index.html">Coaching</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="coaching/index.html">→ Coaching : vue d'ensemble</a>
+        <a href="coaching/cv-technicien.html">CV technicien</a>
+        <a href="coaching/lettre-motivation.html">Lettre de motivation</a>
+        <a href="coaching/entretien-embauche.html">Entretien d'embauche</a>
+        <a href="coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+        <a href="coaching/outplacement.html">Outplacement technicien</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="entreprises/index.html">Entreprises</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="entreprises/index.html">→ Entreprises : vue d'ensemble</a>
+        <a href="entreprises/vae-collective.html">VAE collective</a>
+        <a href="entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+        <a href="entreprises/conseil-rh.html">Conseil RH externalisé</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="ingenierie/index.html">Ingénierie</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="ingenierie/index.html">→ Ingénierie : vue d'ensemble</a>
+        <a href="ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
+        <a href="ingenierie/titre-rncp.html">Création titre RNCP</a>
+        <a href="ingenierie/qualiopi.html">Certification Qualiopi</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="blog/index.html">Blog</a></li>
+  </ul>
+
+  <a class="pi-nav__cta" href="contact.html">Diagnostic gratuit</a>
+
+  <button class="pi-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="pi-mobile" id="menu-mobile">
+  <a class="pi-mobile__head" href="index.html">Accueil</a>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">VAE<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="vae/index.html"><strong>VAE — vue d'ensemble</strong></a>
+      <a href="vae/cap-electricien.html">VAE CAP Électricien</a>
+      <a href="vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
+      <a href="vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+      <a href="vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+      <a href="vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+      <a href="vae/bac-pro-mei.html">VAE Bac pro MEI</a>
+      <a href="vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
+      <a href="vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+      <a href="vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
+      <a href="vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+      <a href="vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+      <a href="vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+      <a href="vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+      <a href="vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+      <a href="vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
+      <a href="vae/bts-cprp.html">VAE BTS CPRP</a>
+      <a href="vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
+      <a href="vae/master-industrie.html">VAE Master industrie</a>
+      <a href="vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="bilan/index.html">Bilan</a></div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Reconversion<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="reconversion/index.html"><strong>Reconversion — vue d'ensemble</strong></a>
+      <a href="reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="reconversion/btp.html">BTP & Construction</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Orientation<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="orientation/index.html"><strong>Orientation — vue d'ensemble</strong></a>
+      <a href="orientation/collegiens.html">Collégiens — après la 3e</a>
+      <a href="orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+      <a href="orientation/adultes.html">Adultes en reconversion</a>
+      <a href="orientation/parents.html">Parents — comprendre la voie pro</a>
+      <a href="orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Coaching<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="coaching/index.html"><strong>Coaching — vue d'ensemble</strong></a>
+      <a href="coaching/cv-technicien.html">CV technicien</a>
+      <a href="coaching/lettre-motivation.html">Lettre de motivation</a>
+      <a href="coaching/entretien-embauche.html">Entretien d'embauche</a>
+      <a href="coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+      <a href="coaching/outplacement.html">Outplacement technicien</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Entreprises<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="entreprises/index.html"><strong>Entreprises — vue d'ensemble</strong></a>
+      <a href="entreprises/vae-collective.html">VAE collective</a>
+      <a href="entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+      <a href="entreprises/conseil-rh.html">Conseil RH externalisé</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Ingénierie<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="ingenierie/index.html"><strong>Ingénierie — vue d'ensemble</strong></a>
+      <a href="ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
+      <a href="ingenierie/titre-rncp.html">Création titre RNCP</a>
+      <a href="ingenierie/qualiopi.html">Certification Qualiopi</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="blog/index.html">Blog</a></div>
+  <a class="pi-mobile__cta" href="contact.html">Diagnostic gratuit →</a>
+</div>
+
+<span id="contenu"></span>
+
+
+<!-- ══ NAV ══ -->
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-photo-wrap">
+    <img data-cms-image="accueil_hero" src="images/accueil/hero-accueil.jpg" alt="Atelier électrique industriel" width="1600" height="900" loading="eager" fetchpriority="high"/>
+  </div>
+  <div class="hero-accent"></div>
+
+  <div class="hero-inner">
+    <div class="hero-tag">⚙️ Spécialiste métiers techniques &amp; industriels</div>
+    <h1>Votre expérience<br>mérite un <em>diplôme.</em></h1>
+    <p>Cabinet spécialisé VAE, bilan de compétences, reconversion, orientation, coaching emploi et ingénierie de formation — exclusivement pour les métiers techniques et industriels. De la voie pro à l'ingénieur.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="contact.html">🎯 Diagnostic VAE gratuit</a>
+      <a class="btn-secondary" href="#services">Découvrir nos services ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">CAP→Ingé</div>
+        <div class="stat-label">Tous niveaux</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">En visio</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">CPF</div>
+        <div class="stat-label">Finançable</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHOTO STRIP ══ -->
+<div class="photo-strip">
+  <div class="photo-strip-item">
+    <img data-cms-image="accueil_electricite" src="images/accueil/electricien-tableau-electrique.jpg" alt="Électricien" loading="lazy"/>
+    <div class="overlay"><span>Électricité<br>&amp; Énergie</span></div>
+  </div>
+  <div class="photo-strip-item">
+    <img data-cms-image="accueil_maintenance" src="images/accueil/technicien-maintenance-usine.jpg" alt="Maintenance industrielle" loading="lazy"/>
+    <div class="overlay"><span>Maintenance<br>Industrielle</span></div>
+  </div>
+  <div class="photo-strip-item">
+    <img data-cms-image="accueil_reseaux" src="images/accueil/reseaux-infrastructure-numerique.jpg" alt="Réseaux cybersécurité" loading="lazy"/>
+    <div class="overlay"><span>Réseaux<br>&amp; Cyber</span></div>
+  </div>
+  <div class="photo-strip-item">
+    <img data-cms-image="accueil_reconversion" src="images/accueil/reunion-equipe-projet.jpg" alt="Reconversion professionnelle" loading="lazy"/>
+    <div class="overlay"><span>Bilan &amp;<br>Reconversion</span></div>
+  </div>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<section class="services" id="services">
+  <div class="section-tag">Nos prestations</div>
+  <h2 class="section-title">Ce que nous faisons pour vous</h2>
+  <p class="section-sub">Des accompagnements sur mesure, pensés pour les professionnels des métiers techniques.</p>
+
+  <div class="services-grid">
+    <div class="service-card featured">
+      <div class="service-badge">⭐ Le plus demandé</div>
+      <div class="service-num">01</div>
+      <div class="service-icon"><img src="images/icons/icone-vae-complet.png" alt="" onerror="this.classList.add('is-missing')"/><span class="emoji-fallback">🏆</span></div>
+      <h3>Accompagnement VAE complet</h3>
+      <p>Nous analysons votre expérience, rédigeons votre dossier et vous préparons au jury pour l'obtention de votre diplôme.</p>
+      <div class="service-price">À partir de 900 €</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon"><img src="images/icons/icone-diagnostic-vae.png" alt="" onerror="this.classList.add('is-missing')"/><span class="emoji-fallback">🔍</span></div>
+      <h3>Diagnostic VAE</h3>
+      <p>Analyse de votre parcours, identification du diplôme adapté et plan de travail personnalisé en 1h.</p>
+      <div class="service-price">80 – 150 €</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon"><img src="images/icons/icone-bilan-competences.png" alt="" onerror="this.classList.add('is-missing')"/><span class="emoji-fallback">🎯</span></div>
+      <h3>Bilan de compétences</h3>
+      <p>Définissez votre projet professionnel et construisez votre plan de reconversion. Finançable CPF.</p>
+      <div class="service-price">1 500 – 2 500 €</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-icon"><img src="images/icons/icone-programme-entreprise.png" alt="" onerror="this.classList.add('is-missing')"/><span class="emoji-fallback">🏭</span></div>
+      <h3>Programme entreprise</h3>
+      <p>Certification collective de vos salariés techniciens. Devis personnalisé selon le nombre de participants.</p>
+      <div class="service-price">Sur devis</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">05</div>
+      <div class="service-icon"><img src="images/icons/icone-orientation-technique.png" alt="" onerror="this.classList.add('is-missing')"/><span class="emoji-fallback">🧭</span></div>
+      <h3>Orientation technique</h3>
+      <p>Choisissez votre voie parmi les filières CAP, Bac pro et BTS techniques. Accompagnement personnalisé.</p>
+      <div class="service-price">150 – 300 €</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <div class="service-icon"><img src="images/icons/icone-preparation-jury-vae.png" alt="" onerror="this.classList.add('is-missing')"/><span class="emoji-fallback">🎤</span></div>
+      <h3>Préparation jury VAE</h3>
+      <p>Simulation d'entretien jury, travail sur l'argumentation et la posture. Vous arrivez prêt et confiant.</p>
+      <div class="service-price">120 – 250 €</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NICHES ══ -->
+<section class="niches">
+  <div class="section-tag">Nos spécialisations</div>
+  <h2 class="section-title">On connaît vos métiers</h2>
+  <p class="section-sub">Contrairement aux cabinets généralistes, nous maîtrisons les référentiels techniques de vos diplômes.</p>
+
+  <div class="niches-grid">
+    <div class="niche-item"><div class="icon">⚡</div><h4>Électricité &amp; Énergie</h4><p>CAP Électricien, Bac pro MELEC, BTS Électrotechnique</p></div>
+    <div class="niche-item"><div class="icon">🔧</div><h4>Maintenance industrielle</h4><p>Bac pro MSPC, BTS Maintenance industrielle</p></div>
+    <div class="niche-item"><div class="icon">💻</div><h4>Réseaux &amp; Cyber</h4><p>Bac pro CIEL, BTS CIEL, cybersécurité industrielle</p></div>
+    <div class="niche-item"><div class="icon">🛡️</div><h4>Sécurité privée</h4><p>CAP Agent de sécurité, Bac pro Sécurité prévention</p></div>
+    <div class="niche-item"><div class="icon">⚙️</div><h4>Production &amp; Automatisme</h4><p>Bac pro MEI, opérateurs et techniciens de production</p></div>
+    <div class="niche-item"><div class="icon">🏗️</div><h4>BTP &amp; Construction</h4><p>CAP, Bac pro et BTS du secteur bâtiment &amp; travaux</p></div>
+  </div>
+</section>
+
+<!-- ══ PROFIL ══ -->
+<section class="profil">
+  <div class="section-tag" style="border-color:var(--orange);color:var(--orange)">Pourquoi nous choisir</div>
+  <h2 class="section-title">Une expertise rare sur les métiers techniques</h2>
+
+  <div class="profil-card">
+    <div class="profil-items">
+      <div class="profil-item">
+        <div class="profil-dot"></div>
+        <p><strong>Connaissance approfondie des référentiels</strong> — Nous maîtrisons les diplômes professionnels du CAP au BTS et savons comment faire correspondre votre expérience terrain.</p>
+      </div>
+      <div class="profil-item">
+        <div class="profil-dot"></div>
+        <p><strong>100 % en visio</strong> — Accompagnement à distance, le soir ou le week-end selon vos disponibilités. Aucun déplacement nécessaire.</p>
+      </div>
+      <div class="profil-item">
+        <div class="profil-dot"></div>
+        <p><strong>Spécialisé industrie</strong> — Nous ne sommes pas un cabinet généraliste. Nous connaissons vos métiers, vos contraintes et vos entreprises.</p>
+      </div>
+      <div class="profil-item">
+        <div class="profil-dot"></div>
+        <p><strong>Financement CPF</strong> — Nos prestations peuvent être financées par votre Compte Personnel de Formation. Zéro euro de votre poche dans la plupart des cas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESS ══ -->
+<section class="process">
+  <div class="section-tag">Comment ça marche</div>
+  <h2 class="section-title">4 étapes pour votre diplôme</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-left"><div class="step-circle">1</div><div class="step-line"></div></div>
+      <div class="step-content">
+        <h4>Diagnostic gratuit (30 min)</h4>
+        <p>On analyse votre parcours, on identifie le diplôme adapté et on vérifie votre éligibilité à la VAE. Sans engagement.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-left"><div class="step-circle">2</div><div class="step-line"></div></div>
+      <div class="step-content">
+        <h4>Analyse de votre expérience</h4>
+        <p>On décrypte vos activités professionnelles pour les faire correspondre au référentiel du diplôme visé.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-left"><div class="step-circle">3</div><div class="step-line"></div></div>
+      <div class="step-content">
+        <h4>Rédaction du dossier VAE</h4>
+        <p>On vous accompagne pour rédiger un dossier solide, structuré et convaincant pour le jury.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-left"><div class="step-circle">4</div><div class="step-line"></div></div>
+      <div class="step-content">
+        <h4>Passage devant jury</h4>
+        <p>On simule l'entretien, on travaille votre argumentation. Vous arrivez prêt, structuré et confiant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TÉMOIGNAGES ══ -->
+<section class="temoignages" data-cms-testimonials>
+  <div class="section-tag">Témoignages</div>
+  <h2 class="section-title">Ils ont obtenu leur diplôme</h2>
+
+  <div class="temoignage-card">
+    <div class="temo-stars">★★★★★</div>
+    <div class="temo-text">"Après 12 ans comme électricien sans diplôme, j'ai enfin mon Bac pro MELEC. L'accompagnement était précis, concret et adapté à mon profil. Je recommande à tous les techniciens."</div>
+    <div class="temo-author">
+      <div class="temo-avatar">KA</div>
+      <div><div class="temo-name">Karim A.</div><div class="temo-role">Électricien, VAE Bac pro MELEC</div></div>
+    </div>
+  </div>
+
+  <div class="temoignage-card">
+    <div class="temo-stars">★★★★★</div>
+    <div class="temo-text">"Le bilan de compétences m'a permis de structurer mon projet de reconversion. En 3 mois j'avais un plan clair pour passer chef d'équipe maintenance."</div>
+    <div class="temo-author">
+      <div class="temo-avatar">SL</div>
+      <div><div class="temo-name">Stéphane L.</div><div class="temo-role">Technicien maintenance, bilan de compétences</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta-section">
+  <h2>Prêt à faire reconnaître<br>votre expérience ?</h2>
+  <p>Diagnostic gratuit de 30 minutes pour savoir si la VAE est faite pour vous. Sans engagement, 100% en visio.</p>
+  <a href="contact.html" class="btn-white">📅 Prendre rendez-vous gratuitement →</a>
+</section>
+
+<!-- ══════════ PIED DE PAGE (identique sur toutes les pages) ══════════ -->
+<footer class="pi-footer">
+  <div class="pi-footer__inner">
+    <div class="pi-footer__brand">
+      <img src="logo-blanc.svg" alt="Parcours Industrie" width="81" height="34"/>
+      <p>Cabinet spécialisé VAE, bilan de compétences, reconversion et orientation pour les métiers techniques et industriels.</p>
+      <p>Accompagnement 100 % en visio · France entière<br>Diagnostic gratuit sans engagement</p>
+      <a class="pi-btn" href="contact.html" style="display:inline-block;margin-top:0.6rem;background:var(--orange);color:#fff;padding:0.6rem 1.1rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em">Prendre rendez-vous</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Nos prestations</h4>
+      <a href="vae/index.html">VAE métiers techniques</a>
+      <a href="bilan/index.html">Bilan de compétences</a>
+      <a href="reconversion/index.html">Reconversion professionnelle</a>
+      <a href="orientation/index.html">Orientation</a>
+      <a href="coaching/index.html">Coaching & Emploi</a>
+      <a href="ingenierie/index.html">Ingénierie de formation</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Filières</h4>
+      <a href="reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="reconversion/btp.html">BTP & Construction</a>
+      <a href="vae/index.html">Toutes les filières VAE</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Le cabinet</h4>
+      <a href="a-propos.html">À propos</a>
+      <a href="entreprises/index.html">Entreprises & organismes</a>
+      <a href="blog/index.html">Blog & conseils</a>
+      <a href="contact.html">Contact</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </div>
+
+  <div class="pi-footer__bottom">
+    <div>© 2026 parcours-industrie.fr — Tous droits réservés</div>
+    <div><a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<button class="pi-totop" aria-label="Revenir en haut de la page">↑</button>
+
+<!-- ══ Moteur d'animations partagé (apparition au scroll, compteurs,
+     barre de progression, nav floutée, parallaxe) ══ -->
+<script src="assets/main.js" defer></script>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     SCRIPT PROPRE À LA PAGE D'ACCUEIL
+     ───────────────────────────────────────────────────────────────────
+     Les animations communes à tout le site sont dans assets/main.js.
+     On ne les répète pas ici : ce script ne traite que deux points
+     spécifiques à l'accueil. Volontairement court — moins de code,
+     moins de risque de ralentissement sur mobile.
+     ═══════════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── 1. Détection tactile ─────────────────────────────────────────
+     Marque la page en « is-touch » quand l'appareil n'a pas de vraie
+     souris. Sur iPhone, sans cette distinction, un effet de survol
+     reste « collé » sur la carte après un simple appui. */
+  var tactile = window.matchMedia('(hover: none)').matches || 'ontouchstart' in window;
+  document.documentElement.classList.add(tactile ? 'is-touch' : 'is-pointer');
+
+  /* ── 2. Économie de ressources sur l'image du hero ────────────────
+     Cette image est animée en parallaxe pendant le scroll. Une fois
+     sortie de l'écran, on dit au navigateur d'arrêter de la préparer.
+     « will-change » accélère l'animation mais consomme de la mémoire :
+     on ne le laisse actif que pendant qu'il sert vraiment. */
+  var hero = document.querySelector('.hero');
+  var photoHero = document.querySelector('.hero-photo-wrap img');
+
+  if (hero && photoHero && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (e) {
+        photoHero.style.willChange = e.isIntersecting ? 'transform' : 'auto';
+      });
+    }, { threshold: 0 }).observe(hero);
+  }
+})();
+</script>
+
+</body>
+</html>

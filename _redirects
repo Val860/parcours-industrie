@@ -1,0 +1,190 @@
+# ═══════════════════════════════════════════════════════════════
+#  URLs — Parcours Industrie
+#
+#  Le site est organisé en dossiers : un dossier par rubrique du
+#  menu. Netlify sert automatiquement le fichier index.html d'un
+#  dossier, donc /vae/ affiche vae/index.html sans aucune règle.
+#
+#  Format : <URL demandée>  <fichier servi>  <code>
+#    200 = le fichier est servi, l'adresse affichée ne change pas
+#    301 = redirection définitive vers la nouvelle adresse
+#
+#  Après avoir ajouté une page : ajoutez sa ligne dans la section
+#  « URLs propres » (voir GUIDE-CLIENT.md, section 4).
+# ═══════════════════════════════════════════════════════════════
+
+# ── URLs propres : la même page sans le .html ──
+/a-propos                                    /a-propos.html   200
+/blog/vae-electricien                        /blog/vae-electricien.html   200
+/coaching/cv-technicien                      /coaching/cv-technicien.html   200
+/coaching/entretien-embauche                 /coaching/entretien-embauche.html   200
+/coaching/lettre-motivation                  /coaching/lettre-motivation.html   200
+/coaching/outplacement                       /coaching/outplacement.html   200
+/coaching/prise-de-poste                     /coaching/prise-de-poste.html   200
+/contact                                     /contact.html   200
+/entreprises/conseil-rh                      /entreprises/conseil-rh.html   200
+/entreprises/formation-tuteurs               /entreprises/formation-tuteurs.html   200
+/entreprises/vae-collective                  /entreprises/vae-collective.html   200
+/ingenierie/ouverture-diplome                /ingenierie/ouverture-diplome.html   200
+/ingenierie/qualiopi                         /ingenierie/qualiopi.html   200
+/ingenierie/titre-rncp                       /ingenierie/titre-rncp.html   200
+/mentions-legales                            /mentions-legales.html   200
+/merci                                       /merci.html   200
+/orientation/adultes                         /orientation/adultes.html   200
+/orientation/collegiens                      /orientation/collegiens.html   200
+/orientation/entretien-motivation            /orientation/entretien-motivation.html   200
+/orientation/lyceens                         /orientation/lyceens.html   200
+/orientation/parents                         /orientation/parents.html   200
+/politique-confidentialite                   /politique-confidentialite.html   200
+/reconversion/btp                            /reconversion/btp.html   200
+/reconversion/electricite                    /reconversion/electricite.html   200
+/reconversion/maintenance-industrielle       /reconversion/maintenance-industrielle.html   200
+/reconversion/reseaux-cybersecurite          /reconversion/reseaux-cybersecurite.html   200
+/reconversion/securite-privee                /reconversion/securite-privee.html   200
+/vae/bac-pro-ciel                            /vae/bac-pro-ciel.html   200
+/vae/bac-pro-mei                             /vae/bac-pro-mei.html   200
+/vae/bac-pro-melec                           /vae/bac-pro-melec.html   200
+/vae/bac-pro-mspc                            /vae/bac-pro-mspc.html   200
+/vae/bac-pro-pspa                            /vae/bac-pro-pspa.html   200
+/vae/bac-pro-securite-prevention             /vae/bac-pro-securite-prevention.html   200
+/vae/bac-pro-tmsec                           /vae/bac-pro-tmsec.html   200
+/vae/bts-ciel-ec                             /vae/bts-ciel-ec.html   200
+/vae/bts-ciel-ir                             /vae/bts-ciel-ir.html   200
+/vae/bts-cprp                                /vae/bts-cprp.html   200
+/vae/bts-electrotechnique                    /vae/bts-electrotechnique.html   200
+/vae/bts-maintenance-industrielle            /vae/bts-maintenance-industrielle.html   200
+/vae/bts-metiers-securite                    /vae/bts-metiers-securite.html   200
+/vae/cap-agent-securite                      /vae/cap-agent-securite.html   200
+/vae/cap-electricien                         /vae/cap-electricien.html   200
+/vae/cap-maintenance-equipements             /vae/cap-maintenance-equipements.html   200
+/vae/diplome-ingenieur                       /vae/diplome-ingenieur.html   200
+/vae/licence-pro-industrie                   /vae/licence-pro-industrie.html   200
+/vae/master-industrie                        /vae/master-industrie.html   200
+
+# ── Anciennes adresses → nouvelles (redirection permanente) ──
+#    Le site n'a jamais été mis en ligne sous ces adresses, mais
+#    elles ont pu circuler par mail : on les redirige par sécurité.
+/blog-vae-electricien                        /blog/vae-electricien   301
+/blog-vae-electricien.html                   /blog/vae-electricien   301
+/coaching-cv-technicien                      /coaching/cv-technicien   301
+/coaching-cv-technicien.html                 /coaching/cv-technicien   301
+/coaching-entretien-embauche                 /coaching/entretien-embauche   301
+/coaching-entretien-embauche.html            /coaching/entretien-embauche   301
+/coaching-lettre-motivation                  /coaching/lettre-motivation   301
+/coaching-lettre-motivation.html             /coaching/lettre-motivation   301
+/coaching-outplacement                       /coaching/outplacement   301
+/coaching-outplacement.html                  /coaching/outplacement   301
+/coaching-prise-de-poste                     /coaching/prise-de-poste   301
+/coaching-prise-de-poste.html                /coaching/prise-de-poste   301
+/entreprises-conseil-rh                      /entreprises/conseil-rh   301
+/entreprises-conseil-rh.html                 /entreprises/conseil-rh   301
+/entreprises-formation-tuteurs               /entreprises/formation-tuteurs   301
+/entreprises-formation-tuteurs.html          /entreprises/formation-tuteurs   301
+/entreprises-vae-collective                  /entreprises/vae-collective   301
+/entreprises-vae-collective.html             /entreprises/vae-collective   301
+/ingenierie-ouverture-diplome                /ingenierie/ouverture-diplome   301
+/ingenierie-ouverture-diplome.html           /ingenierie/ouverture-diplome   301
+/ingenierie-qualiopi                         /ingenierie/qualiopi   301
+/ingenierie-qualiopi.html                    /ingenierie/qualiopi   301
+/ingenierie-titre-rncp                       /ingenierie/titre-rncp   301
+/ingenierie-titre-rncp.html                  /ingenierie/titre-rncp   301
+/orientation-adultes                         /orientation/adultes   301
+/orientation-adultes.html                    /orientation/adultes   301
+/orientation-collegiens                      /orientation/collegiens   301
+/orientation-collegiens.html                 /orientation/collegiens   301
+/orientation-lyceens                         /orientation/lyceens   301
+/orientation-lyceens.html                    /orientation/lyceens   301
+/orientation-parents                         /orientation/parents   301
+/orientation-parents.html                    /orientation/parents   301
+/parcours-apropos                            /a-propos   301
+/parcours-apropos.html                       /a-propos   301
+/parcours-bilan                              /bilan/   301
+/parcours-bilan.html                         /bilan/   301
+/parcours-blog                               /blog/   301
+/parcours-blog.html                          /blog/   301
+/parcours-coaching-emploi                    /coaching/   301
+/parcours-coaching-emploi.html               /coaching/   301
+/parcours-contact                            /contact   301
+/parcours-contact.html                       /contact   301
+/parcours-entreprises                        /entreprises/   301
+/parcours-entreprises.html                   /entreprises/   301
+/parcours-entretien-motivation               /orientation/entretien-motivation   301
+/parcours-entretien-motivation.html          /orientation/entretien-motivation   301
+/parcours-industrie-v2                       /   301
+/parcours-industrie-v2.html                  /   301
+/parcours-ingenierie-formation               /ingenierie/   301
+/parcours-ingenierie-formation.html          /ingenierie/   301
+/parcours-mentions-legales                   /mentions-legales   301
+/parcours-mentions-legales.html              /mentions-legales   301
+/parcours-orientation                        /orientation/   301
+/parcours-orientation.html                   /orientation/   301
+/parcours-reconversion                       /reconversion/   301
+/parcours-reconversion.html                  /reconversion/   301
+/parcours-vae                                /vae/   301
+/parcours-vae.html                           /vae/   301
+/reconversion-btp                            /reconversion/btp   301
+/reconversion-btp.html                       /reconversion/btp   301
+/reconversion-electricite                    /reconversion/electricite   301
+/reconversion-electricite.html               /reconversion/electricite   301
+/reconversion-maintenance-industrielle       /reconversion/maintenance-industrielle   301
+/reconversion-maintenance-industrielle.html  /reconversion/maintenance-industrielle   301
+/reconversion-reseaux-cybersecurite          /reconversion/reseaux-cybersecurite   301
+/reconversion-reseaux-cybersecurite.html     /reconversion/reseaux-cybersecurite   301
+/reconversion-securite-privee                /reconversion/securite-privee   301
+/reconversion-securite-privee.html           /reconversion/securite-privee   301
+/vae-bac-pro-ciel                            /vae/bac-pro-ciel   301
+/vae-bac-pro-ciel.html                       /vae/bac-pro-ciel   301
+/vae-bac-pro-mei                             /vae/bac-pro-mei   301
+/vae-bac-pro-mei.html                        /vae/bac-pro-mei   301
+/vae-bac-pro-melec                           /vae/bac-pro-melec   301
+/vae-bac-pro-melec.html                      /vae/bac-pro-melec   301
+/vae-bac-pro-mspc                            /vae/bac-pro-mspc   301
+/vae-bac-pro-mspc.html                       /vae/bac-pro-mspc   301
+/vae-bac-pro-pspa                            /vae/bac-pro-pspa   301
+/vae-bac-pro-pspa.html                       /vae/bac-pro-pspa   301
+/vae-bac-pro-securite-prevention             /vae/bac-pro-securite-prevention   301
+/vae-bac-pro-securite-prevention.html        /vae/bac-pro-securite-prevention   301
+/vae-bac-pro-tmsec                           /vae/bac-pro-tmsec   301
+/vae-bac-pro-tmsec.html                      /vae/bac-pro-tmsec   301
+/vae-bts-ciel-ec                             /vae/bts-ciel-ec   301
+/vae-bts-ciel-ec.html                        /vae/bts-ciel-ec   301
+/vae-bts-ciel-ir                             /vae/bts-ciel-ir   301
+/vae-bts-ciel-ir.html                        /vae/bts-ciel-ir   301
+/vae-bts-cprp                                /vae/bts-cprp   301
+/vae-bts-cprp.html                           /vae/bts-cprp   301
+/vae-bts-electrotechnique                    /vae/bts-electrotechnique   301
+/vae-bts-electrotechnique.html               /vae/bts-electrotechnique   301
+/vae-bts-maintenance-industrielle            /vae/bts-maintenance-industrielle   301
+/vae-bts-maintenance-industrielle.html       /vae/bts-maintenance-industrielle   301
+/vae-bts-metiers-securite                    /vae/bts-metiers-securite   301
+/vae-bts-metiers-securite.html               /vae/bts-metiers-securite   301
+/vae-cap-agent-securite                      /vae/cap-agent-securite   301
+/vae-cap-agent-securite.html                 /vae/cap-agent-securite   301
+/vae-cap-electricien                         /vae/cap-electricien   301
+/vae-cap-electricien.html                    /vae/cap-electricien   301
+/vae-cap-maintenance-equipements             /vae/cap-maintenance-equipements   301
+/vae-cap-maintenance-equipements.html        /vae/cap-maintenance-equipements   301
+/vae-diplome-ingenieur                       /vae/diplome-ingenieur   301
+/vae-diplome-ingenieur.html                  /vae/diplome-ingenieur   301
+/vae-licence-pro-industrie                   /vae/licence-pro-industrie   301
+/vae-licence-pro-industrie.html              /vae/licence-pro-industrie   301
+/vae-master-industrie                        /vae/master-industrie   301
+/vae-master-industrie.html                   /vae/master-industrie   301
+
+# ── Alias courts ──
+/vae                                         /vae/   301
+/bilan                                       /bilan/   301
+/reconversion                                /reconversion/   301
+/orientation                                 /orientation/   301
+/coaching-emploi                             /coaching/   301
+/ingenierie-formation                        /ingenierie/   301
+/entreprises                                 /entreprises/   301
+/apropos                                     /a-propos   301
+/blog                                        /blog/   301
+/preparation-entretien-motivation            /orientation/entretien-motivation   301
+/blog/vae-electricien                        /blog/vae-electricien   301
+/diagnostic                                  /contact   301
+/rendez-vous                                 /contact   301
+
+# ── Page 404 personnalisée ──
+/*                                           /404.html   404

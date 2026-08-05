@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingénierie de Formation – Ouverture CAP, Bac pro, BTS, Titre RNCP | Parcours Industrie</title>
+  <meta name="description" content="Conception de programmes, ouverture CAP Bac pro BTS, création titres RNCP, accompagnement Qualiopi. Expert ingénierie pédagogique métiers industriels. Étude gratuite."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Parcours Industrie"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://parcours-industrie.fr/ingenierie/"/>
+  <meta property="og:title" content="Ingénierie de formation industrielle – Parcours Industrie"/>
+  <meta property="og:description" content="Ouverture de formations, titres RNCP, Qualiopi. Ingénierie pédagogique spécialisée métiers techniques et industriels."/>
+  <meta property="og:image" content="https://parcours-industrie.fr/og-image.jpg"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:image" content="https://parcours-industrie.fr/og-image.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Ingénierie de formation industrielle – Parcours Industrie"/>
+  <meta name="twitter:description" content="Ouverture de formations, titres RNCP, Qualiopi. Ingénierie pédagogique spécialisée métiers techniques et industriels."/>
+  <link rel="canonical" href="https://parcours-industrie.fr/ingenierie/"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1b2a;--steel:#1c3a52;--orange:#e8601c;--orange-light:#f07b3a;--cream:#f5f1eb;--light:#ffffff;--text:#1a2634;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 1.2rem;box-shadow:0 2px 16px rgba(0,0,0,0.35);}
+.logo-wrap{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.logo-svg{width:36px;height:36px;flex-shrink:0;}
+.logo-text .l1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:white;}.logo-text .l1 span{color:var(--orange);}
+.logo-text .l2{font-size:0.56rem;color:rgba(255,255,255,0.38);letter-spacing:0.1em;text-transform:uppercase;}
+.nav-cta{background:var(--orange);color:white;border:none;padding:0.5rem 1rem;font-family:'Lato',sans-serif;font-weight:700;font-size:0.8rem;border-radius:3px;cursor:pointer;text-transform:uppercase;text-decoration:none;}
+
+.hero{padding-top:62px;min-height:92svh;background:var(--navy);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
+.hero-bg{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 48px,rgba(255,255,255,0.025) 48px,rgba(255,255,255,0.025) 49px),repeating-linear-gradient(0deg,transparent,transparent 48px,rgba(255,255,255,0.025) 48px,rgba(255,255,255,0.025) 49px);}
+.hero-photo{position:absolute;inset:62px 0 0 0;overflow:hidden;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;opacity:0.12;filter:grayscale(50%);}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,27,42,0.4),rgba(13,27,42,0.96));}
+.hero-accent{position:absolute;top:-80px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(232,96,28,0.18) 0%,transparent 70%);border-radius:50%;}
+.hero-inner{position:relative;z-index:2;padding:2.5rem 1.4rem 3rem;}
+.breadcrumb{font-size:0.7rem;color:rgba(255,255,255,0.38);margin-bottom:1rem;}.breadcrumb a{color:var(--orange);text-decoration:none;}
+.hero-tag{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(232,96,28,0.15);border:1px solid rgba(232,96,28,0.4);color:var(--orange-light);font-weight:700;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.75rem;border-radius:20px;margin-bottom:1.2rem;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.4rem,9vw,4rem);color:white;line-height:1.0;margin-bottom:1.2rem;}
+.hero h1 em{font-style:normal;color:var(--orange);}
+.hero p{font-size:1rem;color:rgba(255,255,255,0.72);line-height:1.7;margin-bottom:2rem;max-width:520px;font-weight:300;}
+.hero-btns{display:flex;flex-direction:column;gap:0.75rem;}
+.btn-primary{background:var(--orange);color:white;padding:1rem 1.5rem;border:none;border-radius:4px;font-family:'Lato',sans-serif;font-weight:700;font-size:0.95rem;cursor:pointer;text-align:center;text-decoration:none;display:inline-block;}
+.btn-secondary{background:transparent;color:white;padding:1rem 1.5rem;border:1.5px solid rgba(255,255,255,0.25);border-radius:4px;font-family:'Lato',sans-serif;font-weight:600;font-size:0.95rem;cursor:pointer;text-align:center;text-decoration:none;display:inline-block;}
+.hero-stats{display:flex;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);flex-wrap:wrap;}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2rem;color:var(--orange);line-height:1;}
+.stat-label{font-size:0.7rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.06em;margin-top:0.1rem;}
+
+section{padding:3rem 1.4rem;}
+.section-tag{display:inline-block;color:var(--orange);font-weight:700;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;border-left:3px solid var(--orange);padding-left:0.6rem;}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.8rem,6vw,2.6rem);color:var(--navy);line-height:1.1;margin-bottom:1rem;}
+.section-sub{font-size:0.95rem;color:#5a6e80;line-height:1.65;margin-bottom:2rem;}
+.white{background:white;}.cream{background:var(--cream);}.navy{background:var(--navy);}
+.navy .section-title{color:white;}
+
+/* POUR QUI */
+.pourqui-grid{display:grid;gap:1rem;margin-top:1.5rem;}
+.pourqui-card{background:var(--cream);border-radius:8px;padding:1.3rem;display:flex;gap:1rem;align-items:flex-start;border-left:4px solid var(--orange);}
+.pourqui-icon{font-size:1.6rem;flex-shrink:0;}
+.pourqui-card h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--navy);margin-bottom:0.3rem;}
+.pourqui-card p{font-size:0.85rem;color:#6a7e80;line-height:1.55;}
+
+/* SERVICES */
+.services-grid{display:grid;gap:1rem;margin-top:1.5rem;}
+.serv{background:white;border-radius:8px;padding:1.5rem;border-top:4px solid var(--orange);transition:box-shadow 0.2s;}
+.serv:hover{box-shadow:0 6px 24px rgba(232,96,28,0.1);}
+.serv.featured{background:var(--navy);}
+.serv-icon{font-size:1.5rem;margin-bottom:0.7rem;}
+.serv h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:var(--navy);margin-bottom:0.5rem;}
+.serv.featured h3{color:white;}
+.serv p{font-size:0.87rem;color:#6a7e80;line-height:1.6;margin-bottom:1rem;}
+.serv.featured p{color:rgba(255,255,255,0.6);}
+.serv-list{display:flex;flex-direction:column;gap:0.3rem;margin-bottom:1rem;}
+.serv-list li{font-size:0.82rem;color:#6a7e80;line-height:1.7;list-style:none;display:flex;gap:0.5rem;}
+.serv-list li::before{content:"✓";color:var(--orange);font-weight:700;flex-shrink:0;}
+.serv.featured .serv-list li{color:rgba(255,255,255,0.6);}
+.serv-price{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:var(--orange);}
+
+/* PROCESSUS */
+.process-grid{display:grid;gap:1rem;margin-top:1.5rem;}
+.proc-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:1.3rem;}
+.proc-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.5rem;color:rgba(232,96,28,0.2);line-height:1;margin-bottom:0.3rem;}
+.proc-card h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:white;margin-bottom:0.4rem;}
+.proc-card p{font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.6;}
+.proc-duration{font-size:0.72rem;color:var(--orange);font-weight:700;margin-top:0.5rem;}
+
+/* DIPLOMES OUVERTS */
+.diplomes-grid{display:grid;gap:0.75rem;margin-top:1.5rem;}
+.diplome-row{background:white;border-radius:6px;padding:1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-left:3px solid var(--orange);}
+.diplome-info h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:0.2rem;}
+.diplome-info p{font-size:0.78rem;color:#8a9aaa;}
+.diplome-level{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;color:var(--orange);background:rgba(232,96,28,0.1);padding:0.3rem 0.7rem;border-radius:3px;flex-shrink:0;}
+
+/* QUALIOPI */
+.qualiopi-box{background:white;border-radius:8px;padding:1.5rem;border:2px solid var(--orange);margin-top:1.5rem;}
+.qualiopi-box h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:var(--navy);margin-bottom:0.7rem;}
+.qualiopi-box p{font-size:0.88rem;color:#5a6e80;line-height:1.65;margin-bottom:1rem;}
+.qualiopi-steps{display:flex;flex-direction:column;gap:0.6rem;}
+.q-step{display:flex;align-items:flex-start;gap:0.7rem;}
+.q-num{width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.8rem;color:white;flex-shrink:0;}
+.q-step p{font-size:0.85rem;color:#5a6e80;line-height:1.5;}
+
+/* TARIFS */
+.tarifs-grid{display:grid;gap:1rem;margin-top:1.5rem;}
+.tarif-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:1.4rem;}
+.tarif-card.highlight{background:var(--orange);border-color:var(--orange);}
+.tarif-label{font-size:0.7rem;font-weight:700;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.4rem;}
+.tarif-card.highlight .tarif-label{color:rgba(255,255,255,0.7);}
+.tarif-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:white;margin-bottom:0.5rem;}
+.tarif-price{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.8rem;color:var(--orange);line-height:1;margin-bottom:0.8rem;}
+.tarif-card.highlight .tarif-price{color:white;}
+.tarif-includes li{font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.8;list-style:none;display:flex;gap:0.5rem;}
+.tarif-includes li::before{content:"✓";color:var(--orange);font-weight:700;flex-shrink:0;}
+.tarif-card.highlight .tarif-includes li{color:rgba(255,255,255,0.85);}
+.tarif-card.highlight .tarif-includes li::before{color:white;}
+
+.faq-item{background:var(--cream);border-radius:6px;margin-bottom:0.75rem;overflow:hidden;}
+.faq-q{padding:1.1rem 1.3rem;font-weight:700;font-size:0.92rem;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.faq-q::after{content:"＋";color:var(--orange);font-size:1.1rem;flex-shrink:0;}
+.faq-a{padding:0 1.3rem 1.1rem;font-size:0.87rem;color:#5a6e80;line-height:1.65;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-q::after{content:"－";}
+
+.cta-section{background:var(--orange);text-align:center;padding:3.5rem 1.4rem;}
+.cta-section h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2rem,8vw,3rem);color:white;line-height:1.1;margin-bottom:0.8rem;}
+.cta-section p{font-size:0.95rem;color:rgba(255,255,255,0.85);margin-bottom:1.8rem;line-height:1.6;}
+.btn-white{background:white;color:var(--orange);padding:1rem 2rem;border:none;border-radius:4px;font-family:'Lato',sans-serif;font-weight:700;font-size:0.95rem;cursor:pointer;display:inline-block;text-decoration:none;}
+
+footer{background:var(--navy);color:rgba(255,255,255,0.45);padding:2rem 1.4rem;font-size:0.78rem;line-height:1.8;}
+.footer-logo{display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;text-decoration:none;}
+.footer-links{display:flex;flex-wrap:wrap;gap:0.5rem 1rem;margin-top:1rem;}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;}.footer-links a:hover{color:var(--orange);}
+footer hr{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:1rem 0;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.hero-inner>*{animation:fadeUp 0.65s ease both;}
+.hero-inner .hero-tag{animation-delay:0.05s;}.hero-inner h1{animation-delay:0.15s;}.hero-inner p{animation-delay:0.25s;}.hero-inner .hero-btns{animation-delay:0.35s;}.hero-inner .hero-stats{animation-delay:0.45s;}
+
+@media(min-width:640px){.hero-btns{flex-direction:row;}.pourqui-grid{grid-template-columns:1fr 1fr;}.services-grid{grid-template-columns:1fr 1fr;}.process-grid{grid-template-columns:1fr 1fr;}.tarifs-grid{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:900px){.services-grid{grid-template-columns:repeat(3,1fr);}}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   AMELIORATIONS VISUELLES — PAGES INGENIERIE
+   Harmonisation avec le style bac-pro-melec.html : rythme, cartes,
+   hover, sections navy, animations partagees et responsive.
+   ═══════════════════════════════════════════════════════════════════ */
+section,
+.hero-inner,
+.page-hero-overlay {
+  padding-inline: max(1.4rem, (100% - 1100px) / 2);
+}
+
+section { padding-block: clamp(2.7rem, 5vw, 4.7rem); }
+.cta-section { padding-block: clamp(3rem, 6vw, 5.2rem); }
+
+.hero { min-height: min(92svh, 820px); }
+.hero-inner { padding-block: clamp(2.7rem, 6vw, 5rem); }
+.hero-photo img,
+.page-hero-img {
+  opacity: 0.38;
+  filter: grayscale(14%) contrast(1.06);
+  transform-origin: center;
+}
+.page-hero-img { height: clamp(260px, 28vw, 410px); }
+.hero-photo::after {
+  background:
+    linear-gradient(90deg, rgba(13,27,42,0.95) 0%, rgba(13,27,42,0.84) 38%, rgba(13,27,42,0.44) 72%, rgba(13,27,42,0.16) 100%),
+    linear-gradient(to bottom, rgba(13,27,42,0.08), rgba(13,27,42,0.52));
+}
+.page-hero-overlay {
+  padding-block: 2rem 2.6rem;
+  background:
+    linear-gradient(90deg, rgba(13,27,42,0.95) 0%, rgba(13,27,42,0.84) 38%, rgba(13,27,42,0.44) 72%, rgba(13,27,42,0.16) 100%),
+    linear-gradient(to bottom, rgba(13,27,42,0.08), rgba(13,27,42,0.52));
+}
+.hero h1,
+.page-hero h1 {
+  max-width: 820px;
+  letter-spacing: 0;
+}
+.hero p,
+.page-hero p {
+  font-size: clamp(0.92rem, 0.86rem + 0.28vw, 1.08rem);
+  max-width: 650px;
+}
+.hero-tag,
+.page-level {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  line-height: 1.25;
+}
+.breadcrumb { line-height: 1.8; }
+.breadcrumb a,
+a,
+button,
+.btn-primary,
+.btn-secondary,
+.btn-white {
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+}
+
+.section-title { letter-spacing: 0; max-width: 860px; }
+.section-sub { max-width: 68ch; }
+.navy .section-sub { color: rgba(255,255,255,0.76); }
+
+.pourqui-grid,
+.services-grid,
+.process-grid,
+.diplomes-grid,
+.tarifs-grid,
+.cards {
+  gap: clamp(0.85rem, 1.5vw, 1.15rem);
+}
+.pourqui-card,
+.serv,
+.proc-card,
+.diplome-row,
+.qualiopi-box,
+.tarif-card,
+.card,
+.faq-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 32px rgba(13,27,42,0.06);
+}
+.pourqui-card,
+.serv,
+.diplome-row,
+.qualiopi-box,
+.card,
+.faq-item {
+  border: 1px solid #e4ebf1;
+  border-left: 4px solid rgba(232,96,28,0.34);
+}
+.serv { border-top-color: #e4ebf1; }
+.pourqui-card::after,
+.serv::after,
+.proc-card::after,
+.diplome-row::after,
+.qualiopi-box::after,
+.tarif-card::after,
+.card::after,
+.faq-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 3px;
+  background: var(--orange);
+  transition: width 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pourqui-card:hover,
+.serv:hover,
+.proc-card:hover,
+.diplome-row:hover,
+.qualiopi-box:hover,
+.tarif-card:hover,
+.card:hover,
+.faq-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(232,96,28,0.42);
+  box-shadow: 0 18px 42px rgba(13,27,42,0.11);
+}
+.pourqui-card:hover::after,
+.serv:hover::after,
+.proc-card:hover::after,
+.diplome-row:hover::after,
+.qualiopi-box:hover::after,
+.tarif-card:hover::after,
+.card:hover::after,
+.faq-item:hover::after { width: 100%; }
+.pourqui-card:active,
+.serv:active,
+.proc-card:active,
+.diplome-row:active,
+.card:active { transform: translateY(-2px); }
+
+.pourqui-icon,
+.serv-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(232,96,28,0.1);
+  border: 1px solid rgba(232,96,28,0.18);
+  line-height: 1;
+}
+.serv.featured,
+.proc-card,
+.tarif-card {
+  background: rgba(255,255,255,0.065);
+  border-color: rgba(255,255,255,0.13);
+  box-shadow: none;
+}
+.serv.featured p,
+.serv.featured .serv-list li,
+.proc-card p,
+.tarif-includes li { color: rgba(255,255,255,0.76); }
+
+/* Carte mise en avant dans la section "Ce que nous concevons pour vous".
+   Elle reste visuellement cohérente avec les autres cartes blanches. */
+.services-grid .serv.featured {
+  background: white;
+  border-color: rgba(232,96,28,0.42);
+  box-shadow: 0 18px 42px rgba(13,27,42,0.13);
+}
+.services-grid .serv.featured h3 { color: var(--navy); }
+.services-grid .serv.featured p,
+.services-grid .serv.featured .serv-list li {
+  color: #6a7e80;
+}
+.services-grid .serv.featured .serv-price { color: var(--orange); }
+
+.navy {
+  position: relative;
+  overflow: hidden;
+}
+.navy::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+.navy > * { position: relative; z-index: 1; }
+
+.steps { max-width: 760px; }
+.step { gap: clamp(1rem, 2vw, 1.4rem); padding-bottom: clamp(1.3rem, 2.2vw, 1.8rem); }
+.step-circle,
+.q-num {
+  box-shadow: 0 10px 24px rgba(232,96,28,0.25);
+}
+.step-circle { width: 40px; height: 40px; }
+.step-line { background: rgba(255,255,255,0.18); }
+.step h4,
+.navy .step h4 { font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem); color: white; }
+.step p,
+.navy .step p { font-size: clamp(0.84rem, 0.8rem + 0.16vw, 0.93rem); color: rgba(255,255,255,0.76); line-height: 1.62; }
+
+.process-grid { align-items: stretch; }
+.proc-card { min-height: 100%; }
+.proc-num { color: rgba(232,96,28,0.28); }
+.proc-duration { color: var(--orange-light); }
+
+.diplome-row { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+.diplome-level { white-space: nowrap; }
+.qualiopi-box { max-width: 760px; }
+.q-step { align-items: flex-start; }
+
+.tarif-card.highlight {
+  box-shadow: 0 18px 44px rgba(232,96,28,0.18);
+}
+.tarif-price { letter-spacing: 0; }
+
+.hero-stats {
+  max-width: 760px;
+}
+.hero-stats > div + div {
+  border-left: 1px solid rgba(255,255,255,0.16);
+  padding-left: 2rem;
+}
+.stat-num { font-size: clamp(2rem, 1.4rem + 2vw, 2.75rem); }
+
+.faq-q { transition: color 0.25s ease, background 0.25s ease; }
+.faq-q:hover { color: var(--orange); }
+.faq-item.open { border-color: rgba(232,96,28,0.42); }
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(13,27,42,0.18);
+}
+.btn-primary:hover { background: var(--orange-light); }
+.btn-secondary:hover { border-color: var(--orange); color: var(--orange-light); }
+.cta-section { position: relative; overflow: hidden; }
+.cta-section::before {
+  content: '';
+  position: absolute;
+  right: max(1.4rem, (100% - 1100px) / 2);
+  top: 50%;
+  width: clamp(150px, 24vw, 280px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(255,255,255,0.22);
+  transform: translateY(-50%) rotate(18deg);
+  pointer-events: none;
+}
+.cta-section > * { position: relative; z-index: 1; }
+
+@media (min-width: 640px) {
+  .cards,
+  .pourqui-grid,
+  .services-grid,
+  .process-grid,
+  .tarifs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-btns { flex-direction: row; flex-wrap: wrap; }
+}
+@media (min-width: 1000px) {
+  .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .process-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .tarifs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 639px) {
+  .hero { min-height: auto; }
+  .hero-inner { padding-bottom: 2.4rem; }
+  .hero-stats { gap: 1rem; }
+  .hero-stats > div + div { border-left: 0; padding-left: 0; }
+  .diplome-row { align-items: flex-start; flex-direction: column; }
+  .cta-section::before { opacity: 0.35; right: -80px; }
+}
+@media (hover: none) {
+  .pourqui-card,
+  .serv,
+  .proc-card,
+  .diplome-row,
+  .tarif-card,
+  .card { border-color: rgba(232,96,28,0.22); }
+  .pourqui-card::after,
+  .serv::after,
+  .proc-card::after,
+  .diplome-row::after,
+  .tarif-card::after,
+  .card::after { width: 42px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo img,
+  .page-hero-img,
+  .pourqui-card,
+  .serv,
+  .proc-card,
+  .diplome-row,
+  .qualiopi-box,
+  .tarif-card,
+  .card,
+  .faq-item,
+  .btn-primary,
+  .btn-secondary,
+  .btn-white { transition: none !important; transform: none !important; }
+}
+
+</style>
+
+<!-- ══ Identité visuelle & favicons ══ -->
+<link rel="icon" type="image/x-icon" href="../favicon.ico?v=3"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg?v=3"/>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
+<meta name="theme-color" content="#0d1b2a"/>
+
+<!-- ══ Feuille de style partagée — modifier ICI = modifié sur TOUTES les pages ══ -->
+<link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+
+<!-- ══════════ BARRE DE PROGRESSION DE LECTURE ══════════ -->
+<div class="pi-progress" aria-hidden="true"><div class="pi-progress__bar"></div></div>
+
+<a class="pi-skip" href="#contenu">Aller au contenu</a>
+
+<!-- ══════════ NAVIGATION (identique sur toutes les pages) ══════════
+     Pour ajouter une entrée au menu : voir GUIDE-CLIENT.md
+     ═════════════════════════════════════════════════════════════ -->
+<nav class="pi-nav">
+  <a class="pi-nav__logo" href="../index.html" aria-label="Parcours Industrie — accueil">
+    <img src="../logo-blanc.svg" alt="Parcours Industrie" width="86" height="36"/>
+  </a>
+
+  <ul class="pi-nav__menu">
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../vae/index.html">VAE</a>
+      <div class="pi-nav__sub pi-nav__sub--mega">
+        <span class="pi-nav__sub-title">Électricité & Énergie</span>
+        <a href="../vae/cap-electricien.html">VAE CAP Électricien</a>
+        <a href="../vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
+        <a href="../vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+        <a href="../vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+        <span class="pi-nav__sub-title">Maintenance industrielle</span>
+        <a href="../vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+        <a href="../vae/bac-pro-mei.html">VAE Bac pro MEI</a>
+        <a href="../vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
+        <a href="../vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+        <span class="pi-nav__sub-title">Réseaux & Cybersécurité</span>
+        <a href="../vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
+        <a href="../vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+        <a href="../vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+        <span class="pi-nav__sub-title">Sécurité</span>
+        <a href="../vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+        <a href="../vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+        <a href="../vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+        <span class="pi-nav__sub-title">Production & Automatisme</span>
+        <a href="../vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
+        <a href="../vae/bts-cprp.html">VAE BTS CPRP</a>
+        <span class="pi-nav__sub-title">Enseignement supérieur</span>
+        <a href="../vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
+        <a href="../vae/master-industrie.html">VAE Master industrie</a>
+        <a href="../vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+        <a class="pi-nav__sub-all" href="../vae/index.html">→ Toutes les filières VAE</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="../bilan/index.html">Bilan</a></li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../reconversion/index.html">Reconversion</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../reconversion/index.html">→ Reconversion : vue d'ensemble</a>
+        <a href="../reconversion/electricite.html">Électricité & Énergie</a>
+        <a href="../reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+        <a href="../reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+        <a href="../reconversion/securite-privee.html">Sécurité privée</a>
+        <a href="../reconversion/btp.html">BTP & Construction</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../orientation/index.html">Orientation</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../orientation/index.html">→ Orientation : vue d'ensemble</a>
+        <a href="../orientation/collegiens.html">Collégiens — après la 3e</a>
+        <a href="../orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+        <a href="../orientation/adultes.html">Adultes en reconversion</a>
+        <a href="../orientation/parents.html">Parents — comprendre la voie pro</a>
+        <a href="../orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../coaching/index.html">Coaching</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../coaching/index.html">→ Coaching : vue d'ensemble</a>
+        <a href="../coaching/cv-technicien.html">CV technicien</a>
+        <a href="../coaching/lettre-motivation.html">Lettre de motivation</a>
+        <a href="../coaching/entretien-embauche.html">Entretien d'embauche</a>
+        <a href="../coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+        <a href="../coaching/outplacement.html">Outplacement technicien</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../entreprises/index.html">Entreprises</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../entreprises/index.html">→ Entreprises : vue d'ensemble</a>
+        <a href="../entreprises/vae-collective.html">VAE collective</a>
+        <a href="../entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+        <a href="../entreprises/conseil-rh.html">Conseil RH externalisé</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link is-active" href="index.html" aria-current="page">Ingénierie</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="index.html">→ Ingénierie : vue d'ensemble</a>
+        <a href="ouverture-diplome.html">Ouverture de diplôme</a>
+        <a href="titre-rncp.html">Création titre RNCP</a>
+        <a href="qualiopi.html">Certification Qualiopi</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="../blog/index.html">Blog</a></li>
+  </ul>
+
+  <a class="pi-nav__cta" href="../contact.html">Diagnostic gratuit</a>
+
+  <button class="pi-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="pi-mobile" id="menu-mobile">
+  <a class="pi-mobile__head" href="../index.html">Accueil</a>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">VAE<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../vae/index.html"><strong>VAE — vue d'ensemble</strong></a>
+      <a href="../vae/cap-electricien.html">VAE CAP Électricien</a>
+      <a href="../vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
+      <a href="../vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+      <a href="../vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+      <a href="../vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+      <a href="../vae/bac-pro-mei.html">VAE Bac pro MEI</a>
+      <a href="../vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
+      <a href="../vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+      <a href="../vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
+      <a href="../vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+      <a href="../vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+      <a href="../vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+      <a href="../vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+      <a href="../vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+      <a href="../vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
+      <a href="../vae/bts-cprp.html">VAE BTS CPRP</a>
+      <a href="../vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
+      <a href="../vae/master-industrie.html">VAE Master industrie</a>
+      <a href="../vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="../bilan/index.html">Bilan</a></div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Reconversion<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../reconversion/index.html"><strong>Reconversion — vue d'ensemble</strong></a>
+      <a href="../reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="../reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="../reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="../reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="../reconversion/btp.html">BTP & Construction</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Orientation<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../orientation/index.html"><strong>Orientation — vue d'ensemble</strong></a>
+      <a href="../orientation/collegiens.html">Collégiens — après la 3e</a>
+      <a href="../orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+      <a href="../orientation/adultes.html">Adultes en reconversion</a>
+      <a href="../orientation/parents.html">Parents — comprendre la voie pro</a>
+      <a href="../orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Coaching<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../coaching/index.html"><strong>Coaching — vue d'ensemble</strong></a>
+      <a href="../coaching/cv-technicien.html">CV technicien</a>
+      <a href="../coaching/lettre-motivation.html">Lettre de motivation</a>
+      <a href="../coaching/entretien-embauche.html">Entretien d'embauche</a>
+      <a href="../coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+      <a href="../coaching/outplacement.html">Outplacement technicien</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Entreprises<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="../entreprises/index.html"><strong>Entreprises — vue d'ensemble</strong></a>
+      <a href="../entreprises/vae-collective.html">VAE collective</a>
+      <a href="../entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+      <a href="../entreprises/conseil-rh.html">Conseil RH externalisé</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Ingénierie<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="index.html"><strong>Ingénierie — vue d'ensemble</strong></a>
+      <a href="ouverture-diplome.html">Ouverture de diplôme</a>
+      <a href="titre-rncp.html">Création titre RNCP</a>
+      <a href="qualiopi.html">Certification Qualiopi</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="../blog/index.html">Blog</a></div>
+  <a class="pi-mobile__cta" href="../contact.html">Diagnostic gratuit →</a>
+</div>
+
+<span id="contenu"></span>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-photo"><img loading="lazy" decoding="async" src="../images/ingenierie/ingenierie-conception-parcours-formation.png" alt="Ingénierie de formation industrielle"/></div>
+  <div class="hero-accent"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a> › Ingénierie de formation</div>
+    <div class="hero-tag">📐 Ingénierie pédagogique</div>
+    <h1>Ingénierie de formation<br><em>sur mesure</em></h1>
+    <p>Pour les organismes de formation : ouverture CAP/Bac pro/BTS, titre RNCP, Qualiopi. Pour les entreprises industrielles : formation sur mesure de vos salariés, plan de formation, financement OPCO.</p>
+    <div class="hero-btns">
+      <a href="../contact.html" class="btn-primary">📞 Étude de faisabilité gratuite</a>
+      <a href="#organismes" class="btn-secondary">Nos prestations ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">CAP→M2</div><div class="stat-label">Tous niveaux</div></div>
+      <div class="stat-item"><div class="stat-num">RNCP</div><div class="stat-label">Titres & diplômes</div></div>
+      <div class="stat-item"><div class="stat-num">Qualiopi</div><div class="stat-label">Accompagnement</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 AXES CLAIRS -->
+<section class="white">
+  <div class="section-tag">Pour qui ?</div>
+  <h2 class="section-title">Deux axes d'intervention</h2>
+  <p class="section-sub">Notre ingénierie de formation s'adresse à deux types de clients aux besoins très différents.</p>
+  <div class="pourqui-grid">
+    <a class="pourqui-card" href="#organismes"><div class="pourqui-icon">🏫</div><div><h4>Organismes de formation & CFA</h4><p>Ouvrir un CAP, Bac pro ou BTS · Créer un titre RNCP · Obtenir Qualiopi · Audit pédagogique</p></div></a>
+    <a class="pourqui-card" href="#entreprises"><div class="pourqui-icon">🏭</div><div><h4>Entreprises industrielles</h4><p>Former vos salariés sur vos équipements · Plan de formation · Formateurs internes · Financement OPCO</p></div></a>
+  </div>
+  <figure class="vae-context-visual">
+    <img loading="lazy" decoding="async" src="../images/ingenierie/ingenierie-atelier-formation-technique.png" alt="Atelier de formation technique industrielle">
+  </figure>
+</section>
+
+<!-- AXE 1 — ORGANISMES -->
+<section class="cream" id="organismes">
+  <div class="section-tag">Axe 1 — Organismes de formation</div>
+  <h2 class="section-title">Créez et développez<br>votre offre de formation</h2>
+  <p class="section-sub">Vous êtes organisme de formation, CFA, lycée pro ou formateur indépendant dans les métiers techniques. Nous vous aidons à structurer, certifier et développer votre offre.</p>
+  <div class="services-grid">
+
+    <div class="serv featured">
+      <div class="serv-icon">📋</div>
+      <h3>Ouverture CAP / Bac pro / BTS</h3>
+      <p>Accompagnement complet pour ouvrir une nouvelle section dans un diplôme de l'Éducation nationale. Dossier rectorat, habilitation, organisation pédagogique.</p>
+      <ul class="serv-list">
+        <li>Analyse de faisabilité et étude de marché</li>
+        <li>Rédaction du dossier d'habilitation rectorat</li>
+        <li>Organisation pédagogique et référentiel</li>
+        <li>Accompagnement jusqu'à l'ouverture effective</li>
+      </ul>
+      <div class="serv-price">3 000 – 8 000 €</div>
+    </div>
+
+    <div class="serv">
+      <div class="serv-icon">🏆</div>
+      <h3>Création titre RNCP</h3>
+      <p>Votre métier spécifique mérite sa propre certification. On conçoit votre titre professionnel et accompagne son inscription au RNCP — éligible CPF.</p>
+      <ul class="serv-list">
+        <li>Analyse des activités et compétences cibles</li>
+        <li>Conception du référentiel métier complet</li>
+        <li>Dossier France Compétences</li>
+        <li>Suivi jusqu'à l'enregistrement</li>
+      </ul>
+      <div class="serv-price">5 000 – 15 000 €</div>
+    </div>
+
+    <div class="serv">
+      <div class="serv-icon">✅</div>
+      <h3>Accompagnement Qualiopi</h3>
+      <p>Sans Qualiopi, pas de CPF ni OPCO. On vous prépare à l'audit — diagnostic, mise en conformité, simulation complète.</p>
+      <ul class="serv-list">
+        <li>Diagnostic qualité initial</li>
+        <li>Mise en conformité du système qualité</li>
+        <li>Création des documents obligatoires</li>
+        <li>Simulation d'audit</li>
+      </ul>
+      <div class="serv-price">2 500 – 5 000 €</div>
+    </div>
+
+    <div class="serv">
+      <div class="serv-icon">📊</div>
+      <h3>Audit pédagogique</h3>
+      <p>Analyse de votre offre existante — conformité aux référentiels, points forts, axes d'amélioration. Rapport détaillé avec recommandations.</p>
+      <ul class="serv-list">
+        <li>Analyse des programmes et progressions</li>
+        <li>Conformité aux référentiels officiels</li>
+        <li>Rapport d'audit avec plan d'action</li>
+      </ul>
+      <div class="serv-price">1 500 – 3 000 €</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AXE 2 — ENTREPRISES -->
+<section class="white" id="entreprises">
+  <div class="section-tag">Axe 2 — Entreprises industrielles</div>
+  <h2 class="section-title">Formez vos équipes<br>sur vos besoins spécifiques</h2>
+  <p class="section-sub">Vos salariés ont besoin de monter en compétences sur vos équipements, vos process ou vos méthodes ? Nous concevons des formations 100% sur mesure — pas des catalogues génériques — et vous aidons à les financer via votre OPCO.</p>
+
+  <div class="qualiopi-box">
+    <h3>Pourquoi faire appel à nous plutôt qu'à un organisme de formation classique ?</h3>
+    <p>Parce que nous connaissons les métiers industriels de l'intérieur. Nos programmes s'adaptent à vos équipements réels, vos process, votre vocabulaire technique et vos contraintes d'organisation. Et nous vous aidons à financer via votre OPCO.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="serv featured">
+      <div class="serv-icon">📐</div>
+      <h3>Formation sur mesure pour vos salariés</h3>
+      <p>Vos techniciens doivent maîtriser un équipement spécifique, une nouvelle procédure, un logiciel métier ou une réglementation ? On conçoit et anime la formation adaptée — sur vos machines, dans votre atelier ou en visio.</p>
+      <ul class="serv-list">
+        <li>Analyse précise de vos besoins terrain</li>
+        <li>Conception du programme sur vos équipements réels</li>
+        <li>Supports pédagogiques adaptés à vos salariés</li>
+        <li>Animation en intra-entreprise ou visio</li>
+        <li>Évaluation des acquis et attestation de formation</li>
+        <li>Dossier de prise en charge OPCO</li>
+      </ul>
+      <div class="serv-price">Sur devis — finançable OPCO</div>
+    </div>
+
+    <div class="serv">
+      <div class="serv-icon">📋</div>
+      <h3>Plan de développement des compétences</h3>
+      <p>On structure votre PDC annuel — recensement des besoins par service, priorisation, budget prévisionnel, calendrier. Document clé pour vos entretiens professionnels et vos obligations légales.</p>
+      <ul class="serv-list">
+        <li>Audit des compétences de vos équipes</li>
+        <li>Recensement des besoins par salarié et par poste</li>
+        <li>Plan de formation priorisé sur 12 mois</li>
+        <li>Optimisation des financements OPCO</li>
+      </ul>
+      <div class="serv-price">Sur devis</div>
+    </div>
+
+    <div class="serv">
+      <div class="serv-icon">🎓</div>
+      <h3>Formation de formateurs internes</h3>
+      <p>Vos meilleurs techniciens ont l'expertise mais pas les outils pédagogiques pour la transmettre. On les forme à devenir formateurs internes efficaces — gain de temps, économie de coûts.</p>
+      <ul class="serv-list">
+        <li>Techniques de transmission des savoirs</li>
+        <li>Conception de supports pédagogiques simples</li>
+        <li>Méthodes d'évaluation des apprentis</li>
+        <li>Gestion des situations délicates</li>
+      </ul>
+      <div class="serv-price">Sur devis — finançable OPCO</div>
+    </div>
+
+    <div class="serv">
+      <div class="serv-icon">💰</div>
+      <h3>Ingénierie financière de la formation</h3>
+      <p>Vous ne savez pas comment financer vos formations ? On identifie et monte tous les dossiers de financement disponibles — OPCO, Pro-A, FNE-Formation, CPF de transition — pour minimiser votre reste à charge.</p>
+      <ul class="serv-list">
+        <li>Identification des droits à formation</li>
+        <li>Montage des dossiers OPCO</li>
+        <li>Pro-A pour la reconversion en alternance</li>
+        <li>FNE-Formation en cas de difficulté économique</li>
+      </ul>
+      <div class="serv-price">Inclus dans nos missions</div>
+    </div>
+
+  </div>
+
+  <div class="qualiopi-box">
+    <h3>Financement OPCO — Objectif 0€ de reste à charge</h3>
+    <p>Opco 2i (industrie), CONSTRUCTYS (BTP), AFDAS (services), Atlas (tertiaire) — selon votre branche, toutes vos formations peuvent être prises en charge. On gère les dossiers pour vous.</p>
+    <a href="../contact.html" class="btn-primary">📩 Demander une étude de financement →</a>
+  </div>
+</section>
+
+<!-- PROCESSUS -->
+<section class="navy">
+  <div class="section-tag" style="color:var(--orange);border-color:var(--orange)">Notre méthode</div>
+  <h2 class="section-title">Comment nous travaillons</h2>
+  <div class="process-grid">
+    <div class="proc-card"><div class="proc-num">01</div><h4>Étude de faisabilité</h4><p>On analyse votre projet, le marché, les contraintes réglementaires et les ressources nécessaires. On vous dit clairement si le projet est viable.</p><div class="proc-duration">⏱ 1 à 2 semaines</div></div>
+    <div class="proc-card"><div class="proc-num">02</div><h4>Conception pédagogique</h4><p>On conçoit le programme, le référentiel de compétences, la progression pédagogique et les modalités d'évaluation.</p><div class="proc-duration">⏱ 3 à 6 semaines</div></div>
+    <div class="proc-card"><div class="proc-num">03</div><h4>Dossiers administratifs</h4><p>On rédige les dossiers réglementaires : habilitation rectorat, dossier France Compétences, déclaration d'activité DREETS.</p><div class="proc-duration">⏱ 4 à 8 semaines</div></div>
+    <div class="proc-card"><div class="proc-num">04</div><h4>Mise en œuvre et suivi</h4><p>On vous accompagne dans le déploiement : recrutement formateurs, organisation des sessions, premiers apprenants.</p><div class="proc-duration">⏱ Continu</div></div>
+  </div>
+</section>
+
+<!-- DIPLÔMES QU'ON PEUT OUVRIR -->
+<section class="white">
+  <div class="section-tag">Diplômes & certifications</div>
+  <h2 class="section-title">Ce qu'on peut vous aider à ouvrir</h2>
+  <p class="section-sub">Nous maîtrisons les référentiels et les procédures d'habilitation de ces diplômes dans les filières industrielles.</p>
+  <div class="diplomes-grid">
+    <div class="diplome-row"><div class="diplome-info"><h4>CAP Électricien / Maintenance équipements</h4><p>Filière électricité et maintenance industrielle</p></div><div class="diplome-level">CAP — Niv. 3</div></div>
+    <div class="diplome-row"><div class="diplome-info"><h4>Bac pro MELEC / MSPC / CIEL / MEI</h4><p>Filières électricité, maintenance, réseaux</p></div><div class="diplome-level">Bac pro — Niv. 4</div></div>
+    <div class="diplome-row"><div class="diplome-info"><h4>BTS Électrotechnique / Maintenance / CIEL</h4><p>Filières techniques supérieures industrielles</p></div><div class="diplome-level">BTS — Niv. 5</div></div>
+    <div class="diplome-row"><div class="diplome-info"><h4>Licence pro Maintenance / Électrotechnique</h4><p>Filières industrielles Bac+3</p></div><div class="diplome-level">LP — Niv. 6</div></div>
+    <div class="diplome-row"><div class="diplome-info"><h4>Titres RNCP métiers techniques sur mesure</h4><p>Tous secteurs industriels — conception complète</p></div><div class="diplome-level">Niv. 3 à 7</div></div>
+  </div>
+</section>
+
+<!-- QUALIOPI -->
+<section class="cream">
+  <div class="section-tag">Certification qualité</div>
+  <h2 class="section-title">Qualiopi — On vous prépare à l'audit</h2>
+  <p class="section-sub">Sans Qualiopi, pas de financement CPF ni OPCO. On vous aide à obtenir cette certification indispensable.</p>
+  <div class="qualiopi-box">
+    <h3>Les 4 étapes de l'accompagnement Qualiopi</h3>
+    <p>La certification Qualiopi est obligatoire pour accéder aux financements publics. Elle repose sur 7 indicateurs qualité que votre organisme doit satisfaire. On vous guide à chaque étape.</p>
+    <div class="qualiopi-steps">
+      <div class="q-step"><div class="q-num">1</div><p><strong>Diagnostic initial</strong> — On évalue votre niveau de conformité actuel par rapport aux 7 critères Qualiopi.</p></div>
+      <div class="q-step"><div class="q-num">2</div><p><strong>Plan d'action</strong> — On identifie les écarts et on construit le plan de mise en conformité priorisé.</p></div>
+      <div class="q-step"><div class="q-num">3</div><p><strong>Mise en conformité</strong> — On crée avec vous tous les documents, processus et outils requis par le référentiel.</p></div>
+      <div class="q-step"><div class="q-num">4</div><p><strong>Simulation d'audit</strong> — On simule l'audit complet pour que vous arriez confiant le jour J.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section class="navy">
+  <div class="section-tag" style="color:var(--orange);border-color:var(--orange)">Tarifs</div>
+  <h2 class="section-title">Nos formules ingénierie</h2>
+  <div class="tarifs-grid">
+    <div class="tarif-card">
+      <div class="tarif-label">Formule conseil</div>
+      <div class="tarif-name">Audit & Faisabilité</div>
+      <div class="tarif-price">1 500 – 3 000 €</div>
+      <ul class="tarif-includes">
+        <li>Audit pédagogique complet</li>
+        <li>Étude de faisabilité</li>
+        <li>Rapport de recommandations</li>
+        <li>1 réunion de restitution</li>
+      </ul>
+    </div>
+    <div class="tarif-card highlight">
+      <div class="tarif-label">Formule complète</div>
+      <div class="tarif-name">Ouverture diplôme</div>
+      <div class="tarif-price">3 000 – 8 000 €</div>
+      <ul class="tarif-includes">
+        <li>Faisabilité + conception</li>
+        <li>Programme pédagogique complet</li>
+        <li>Dossier habilitation rectorat</li>
+        <li>Accompagnement ouverture</li>
+        <li>Suivi première année</li>
+      </ul>
+    </div>
+    <div class="tarif-card">
+      <div class="tarif-label">Formule premium</div>
+      <div class="tarif-name">Titre RNCP sur mesure</div>
+      <div class="tarif-price">5 000 – 15 000 €</div>
+      <ul class="tarif-includes">
+        <li>Conception référentiel métier</li>
+        <li>Dossier France Compétences</li>
+        <li>Modalités d'évaluation</li>
+        <li>Accompagnement jusqu'à l'enregistrement</li>
+        <li>Suivi post-enregistrement</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="white">
+  <div class="section-tag">Questions fréquentes</div>
+  <h2 class="section-title">Vos questions sur l'ingénierie de formation</h2>
+
+  <div class="faq-item open">
+    <div class="faq-q">Combien de temps pour ouvrir un CAP ou Bac pro ?</div>
+    <div class="faq-a">En moyenne 6 à 12 mois entre le dépôt du dossier d'habilitation et l'ouverture effective. Le rectorat instruit le dossier, fait une visite des locaux et des équipements, puis donne son accord. On vous accompagne tout au long de ce processus pour éviter les allers-retours.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Quelle différence entre un diplôme de l'Éducation nationale et un titre RNCP ?</div>
+    <div class="faq-a">Un diplôme EN (CAP, Bac pro, BTS) est délivré par l'État via le rectorat. Il est très reconnu mais nécessite de suivre un référentiel imposé. Un titre RNCP est une certification professionnelle que vous créez vous-même et faites enregistrer auprès de France Compétences. Il offre plus de flexibilité pour coller à un métier spécifique.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Faut-il obligatoirement Qualiopi pour former ?</div>
+    <div class="faq-a">Non, vous pouvez former sans Qualiopi. Mais sans Qualiopi, vos formations ne peuvent pas être financées par le CPF, les OPCO ou France Travail. Vos clients paient donc de leur poche, ce qui réduit considérablement votre marché. Qualiopi est quasi-indispensable si vous voulez développer votre activité.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Vous accompagnez aussi les lycées professionnels publics ?</div>
+    <div class="faq-a">Oui. On peut accompagner un lycée pro public ou un CFA public dans l'ouverture d'une nouvelle section, la création d'un partenariat école-entreprise structuré ou le développement de nouvelles filières en alternance.</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Votre projet de formation<br>mérite un expert.</h2>
+  <p>Étude de faisabilité gratuite pour analyser votre projet et vous dire clairement si et comment on peut vous accompagner.</p>
+  <a href="../contact.html" class="btn-white">📞 Étude de faisabilité gratuite →</a>
+</section>
+
+<!-- ══ Moteur d'animations partagé ══ -->
+<script src="../assets/main.js" defer></script>
+
+<!-- ══════════ PIED DE PAGE (identique sur toutes les pages) ══════════ -->
+<footer class="pi-footer">
+  <div class="pi-footer__inner">
+    <div class="pi-footer__brand">
+      <img src="../logo-blanc.svg" alt="Parcours Industrie" width="81" height="34"/>
+      <p>Cabinet spécialisé VAE, bilan de compétences, reconversion et orientation pour les métiers techniques et industriels.</p>
+      <p>Accompagnement 100 % en visio · France entière<br>Diagnostic gratuit sans engagement</p>
+      <a class="pi-btn" href="../contact.html" style="display:inline-block;margin-top:0.6rem;background:var(--orange);color:#fff;padding:0.6rem 1.1rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em">Prendre rendez-vous</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Nos prestations</h4>
+      <a href="../vae/index.html">VAE métiers techniques</a>
+      <a href="../bilan/index.html">Bilan de compétences</a>
+      <a href="../reconversion/index.html">Reconversion professionnelle</a>
+      <a href="../orientation/index.html">Orientation</a>
+      <a href="../coaching/index.html">Coaching & Emploi</a>
+      <a href="index.html">Ingénierie de formation</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Filières</h4>
+      <a href="../reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="../reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="../reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="../reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="../reconversion/btp.html">BTP & Construction</a>
+      <a href="../vae/index.html">Toutes les filières VAE</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Le cabinet</h4>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../entreprises/index.html">Entreprises & organismes</a>
+      <a href="../blog/index.html">Blog & conseils</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../mentions-legales.html">Mentions légales</a>
+      <a href="../politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </div>
+
+  <div class="pi-footer__bottom">
+    <div>© 2026 parcours-industrie.fr — Tous droits réservés</div>
+    <div><a href="../mentions-legales.html">Mentions légales</a> · <a href="../politique-confidentialite.html">Confidentialité</a> · <a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<button class="pi-totop" aria-label="Revenir en haut de la page">↑</button>
+
+</body>
+</html>

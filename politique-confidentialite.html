@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité – Parcours Industrie</title>
+  <meta name="description" content="Comment Parcours Industrie collecte, utilise et protège vos données personnelles. Conformité RGPD."/>
+  <meta name="robots" content="noindex, follow"/>
+  <meta name="author" content="Parcours Industrie"/>
+  <link rel="canonical" href="https://parcours-industrie.fr/politique-confidentialite"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a; --steel: #1c3a52; --orange: #e8601c;
+    --orange-light: #f07b3a; --cream: #f5f1eb; --gray: #8a9aaa; --text: #1a2634;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Lato', sans-serif; color: var(--text); background: var(--cream); }
+
+  .legal-hero { background: var(--navy); padding: calc(62px + 2.6rem) 1.2rem 2.6rem; position: relative; overflow: hidden; }
+  .legal-hero-inner { max-width: 820px; margin: 0 auto; position: relative; z-index: 2; }
+  .legal-tag {
+    display: inline-block; background: rgba(232,96,28,0.18); border: 1px solid rgba(232,96,28,0.4);
+    color: var(--orange-light); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 20px; margin-bottom: 0.9rem;
+  }
+  .legal-hero h1 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+    font-size: clamp(1.9rem, 5.5vw, 2.7rem); color: #fff; line-height: 1.08;
+  }
+  .legal-hero p { color: rgba(255,255,255,0.6); font-size: 0.92rem; margin-top: 0.7rem; }
+
+  .legal-body { max-width: 820px; margin: 0 auto; padding: 2.6rem 1.2rem 4rem; }
+  .legal-body section { background: #fff; border-radius: 9px; padding: 1.5rem 1.4rem; margin-bottom: 1rem; box-shadow: 0 3px 18px rgba(13,27,42,0.06); }
+  .legal-body h2 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.28rem;
+    color: var(--navy); margin-bottom: 0.8rem; padding-left: 0.7rem; border-left: 3px solid var(--orange);
+  }
+  .legal-body h3 { font-size: 0.95rem; color: var(--navy); margin: 1rem 0 0.4rem; }
+  .legal-body p, .legal-body li { font-size: 0.93rem; line-height: 1.75; color: #43525f; }
+  .legal-body ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+  .legal-body li { margin-bottom: 0.35rem; }
+  .legal-body a { color: var(--orange); }
+  table.legal-table { width: 100%; border-collapse: collapse; margin-top: 0.7rem; font-size: 0.88rem; }
+  table.legal-table th, table.legal-table td { text-align: left; padding: 0.6rem 0.7rem; border-bottom: 1px solid #eceff2; vertical-align: top; }
+  table.legal-table th { color: var(--navy); font-weight: 700; width: 38%; }
+  .maj { font-size: 0.8rem; color: var(--gray); text-align: center; margin-top: 1.4rem; }
+
+  /* Zone à compléter par le client avant mise en production */
+  .a-completer {
+    background: #fff8f3; border: 1.5px dashed var(--orange); border-radius: 6px;
+    padding: 0.85rem 1rem; margin: 0.8rem 0; font-size: 0.88rem; color: #8a4a20;
+  }
+  .a-completer strong { color: var(--orange); }
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   AMELIORATIONS VISUELLES — CONFIDENTIALITE
+   ═══════════════════════════════════════════════════════════════════ */
+.legal-hero{padding:calc(62px + clamp(2rem,4vw,3.2rem)) max(1.4rem,(100% - 1100px)/2) clamp(2rem,4vw,3rem);overflow:hidden;}
+.legal-hero::before{content:'';position:absolute;inset:62px 0 0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;}
+.legal-hero-inner{max-width:900px;}
+.legal-tag{display:inline-flex;align-items:center;width:fit-content;line-height:1.25;}
+.legal-hero h1{letter-spacing:0;}
+.legal-hero p{color:rgba(255,255,255,.76);line-height:1.65;max-width:68ch;}
+.legal-body{max-width:900px;padding:clamp(2rem,4vw,3.2rem) 1.4rem clamp(3rem,5vw,4.5rem);}
+.legal-body section{border:1px solid #e4ebf1;border-left:4px solid rgba(232,96,28,.38);box-shadow:0 10px 32px rgba(13,27,42,.055);position:relative;overflow:hidden;}
+.legal-body section::before{content:'';position:absolute;left:0;top:0;width:42px;height:3px;background:var(--orange);}
+.legal-body h2{letter-spacing:0;}
+.legal-body p,.legal-body li{color:#43525f;}
+.legal-table{display:block;overflow-x:auto;white-space:normal;}
+.legal-table tbody{display:table;width:100%;}
+.a-completer{border-radius:8px;border-left:4px solid var(--orange);}
+.maj{color:#6a7e90;text-align:center;font-size:.85rem;}
+@media(max-width:639px){table.legal-table th,table.legal-table td{display:block;width:100%;padding:.55rem 0;}table.legal-table th{border-bottom:0;}table.legal-table td{padding-bottom:.8rem;}}
+
+</style>
+
+<!-- ══ Identité visuelle & favicons ══ -->
+<link rel="icon" type="image/x-icon" href="favicon.ico?v=3"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<meta name="theme-color" content="#0d1b2a"/>
+
+<!-- ══ Feuille de style partagée — modifier ICI = modifié sur TOUTES les pages ══ -->
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+<!-- ══════════ BARRE DE PROGRESSION DE LECTURE ══════════ -->
+<div class="pi-progress" aria-hidden="true"><div class="pi-progress__bar"></div></div>
+
+<a class="pi-skip" href="#contenu">Aller au contenu</a>
+
+<!-- ══════════ NAVIGATION (identique sur toutes les pages) ══════════
+     Pour ajouter une entrée au menu : voir GUIDE-CLIENT.md
+     ═════════════════════════════════════════════════════════════ -->
+<nav class="pi-nav">
+  <a class="pi-nav__logo" href="index.html" aria-label="Parcours Industrie — accueil">
+    <img src="logo-blanc.svg" alt="Parcours Industrie" width="86" height="36"/>
+  </a>
+
+  <ul class="pi-nav__menu">
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="vae/index.html">VAE</a>
+      <div class="pi-nav__sub pi-nav__sub--mega">
+        <span class="pi-nav__sub-title">Électricité & Énergie</span>
+        <a href="vae/cap-electricien.html">VAE CAP Électricien</a>
+        <a href="vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
+        <a href="vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+        <a href="vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+        <span class="pi-nav__sub-title">Maintenance industrielle</span>
+        <a href="vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+        <a href="vae/bac-pro-mei.html">VAE Bac pro MEI</a>
+        <a href="vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
+        <a href="vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+        <span class="pi-nav__sub-title">Réseaux & Cybersécurité</span>
+        <a href="vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
+        <a href="vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+        <a href="vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+        <span class="pi-nav__sub-title">Sécurité</span>
+        <a href="vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+        <a href="vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+        <a href="vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+        <span class="pi-nav__sub-title">Production & Automatisme</span>
+        <a href="vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
+        <a href="vae/bts-cprp.html">VAE BTS CPRP</a>
+        <span class="pi-nav__sub-title">Enseignement supérieur</span>
+        <a href="vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
+        <a href="vae/master-industrie.html">VAE Master industrie</a>
+        <a href="vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+        <a class="pi-nav__sub-all" href="vae/index.html">→ Toutes les filières VAE</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="bilan/index.html">Bilan</a></li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="reconversion/index.html">Reconversion</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="reconversion/index.html">→ Reconversion : vue d'ensemble</a>
+        <a href="reconversion/electricite.html">Électricité & Énergie</a>
+        <a href="reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+        <a href="reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+        <a href="reconversion/securite-privee.html">Sécurité privée</a>
+        <a href="reconversion/btp.html">BTP & Construction</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="orientation/index.html">Orientation</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="orientation/index.html">→ Orientation : vue d'ensemble</a>
+        <a href="orientation/collegiens.html">Collégiens — après la 3e</a>
+        <a href="orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+        <a href="orientation/adultes.html">Adultes en reconversion</a>
+        <a href="orientation/parents.html">Parents — comprendre la voie pro</a>
+        <a href="orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="coaching/index.html">Coaching</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="coaching/index.html">→ Coaching : vue d'ensemble</a>
+        <a href="coaching/cv-technicien.html">CV technicien</a>
+        <a href="coaching/lettre-motivation.html">Lettre de motivation</a>
+        <a href="coaching/entretien-embauche.html">Entretien d'embauche</a>
+        <a href="coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+        <a href="coaching/outplacement.html">Outplacement technicien</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="entreprises/index.html">Entreprises</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="entreprises/index.html">→ Entreprises : vue d'ensemble</a>
+        <a href="entreprises/vae-collective.html">VAE collective</a>
+        <a href="entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+        <a href="entreprises/conseil-rh.html">Conseil RH externalisé</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="ingenierie/index.html">Ingénierie</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="ingenierie/index.html">→ Ingénierie : vue d'ensemble</a>
+        <a href="ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
+        <a href="ingenierie/titre-rncp.html">Création titre RNCP</a>
+        <a href="ingenierie/qualiopi.html">Certification Qualiopi</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="blog/index.html">Blog</a></li>
+  </ul>
+
+  <a class="pi-nav__cta" href="contact.html">Diagnostic gratuit</a>
+
+  <button class="pi-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="pi-mobile" id="menu-mobile">
+  <a class="pi-mobile__head" href="index.html">Accueil</a>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">VAE<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="vae/index.html"><strong>VAE — vue d'ensemble</strong></a>
+      <a href="vae/cap-electricien.html">VAE CAP Électricien</a>
+      <a href="vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
+      <a href="vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+      <a href="vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+      <a href="vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+      <a href="vae/bac-pro-mei.html">VAE Bac pro MEI</a>
+      <a href="vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
+      <a href="vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+      <a href="vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
+      <a href="vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+      <a href="vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+      <a href="vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+      <a href="vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+      <a href="vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+      <a href="vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
+      <a href="vae/bts-cprp.html">VAE BTS CPRP</a>
+      <a href="vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
+      <a href="vae/master-industrie.html">VAE Master industrie</a>
+      <a href="vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="bilan/index.html">Bilan</a></div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Reconversion<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="reconversion/index.html"><strong>Reconversion — vue d'ensemble</strong></a>
+      <a href="reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="reconversion/btp.html">BTP & Construction</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Orientation<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="orientation/index.html"><strong>Orientation — vue d'ensemble</strong></a>
+      <a href="orientation/collegiens.html">Collégiens — après la 3e</a>
+      <a href="orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+      <a href="orientation/adultes.html">Adultes en reconversion</a>
+      <a href="orientation/parents.html">Parents — comprendre la voie pro</a>
+      <a href="orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Coaching<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="coaching/index.html"><strong>Coaching — vue d'ensemble</strong></a>
+      <a href="coaching/cv-technicien.html">CV technicien</a>
+      <a href="coaching/lettre-motivation.html">Lettre de motivation</a>
+      <a href="coaching/entretien-embauche.html">Entretien d'embauche</a>
+      <a href="coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+      <a href="coaching/outplacement.html">Outplacement technicien</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Entreprises<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="entreprises/index.html"><strong>Entreprises — vue d'ensemble</strong></a>
+      <a href="entreprises/vae-collective.html">VAE collective</a>
+      <a href="entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+      <a href="entreprises/conseil-rh.html">Conseil RH externalisé</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Ingénierie<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="ingenierie/index.html"><strong>Ingénierie — vue d'ensemble</strong></a>
+      <a href="ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
+      <a href="ingenierie/titre-rncp.html">Création titre RNCP</a>
+      <a href="ingenierie/qualiopi.html">Certification Qualiopi</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="blog/index.html">Blog</a></div>
+  <a class="pi-mobile__cta" href="contact.html">Diagnostic gratuit →</a>
+</div>
+
+<span id="contenu"></span>
+
+
+<div class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-tag">Données personnelles</div>
+    <h1>Politique de confidentialité</h1>
+    <p>Comment nous collectons, utilisons et protégeons vos données — conformément au RGPD.</p>
+  </div>
+</div>
+
+<div class="legal-body">
+
+  <section>
+    <h2>1. Qui traite vos données ?</h2>
+    <p>Le responsable du traitement des données collectées sur ce site est&nbsp;:</p>
+    <!-- ═══ À COMPLÉTER PAR LE CLIENT AVANT MISE EN PRODUCTION ═══ -->
+    <div class="a-completer">
+      <strong>À compléter :</strong> raison sociale, forme juridique, adresse du siège,
+      numéro SIRET, email de contact et nom du responsable de la publication.
+      Ces informations sont légalement obligatoires et doivent être identiques
+      à celles des mentions légales.
+    </div>
+    <p>Pour toute question relative à vos données, vous pouvez nous écrire à l'adresse email de contact indiquée sur la <a href="contact.html">page Contact</a>.</p>
+  </section>
+
+  <section>
+    <h2>2. Quelles données sont collectées ?</h2>
+    <p>Nous ne collectons que les données que vous nous transmettez volontairement via le formulaire de contact du site. Aucune donnée n'est collectée à votre insu.</p>
+    <table class="legal-table">
+      <tr><th>Donnée</th><td>Prénom et nom, adresse email, numéro de téléphone (facultatif), statut professionnel, domaine métier, nature de la demande, message libre.</td></tr>
+      <tr><th>Finalité</th><td>Vous recontacter pour organiser le diagnostic gratuit et répondre à votre demande d'accompagnement.</td></tr>
+      <tr><th>Base légale</th><td>Votre consentement explicite, recueilli par la case à cocher du formulaire (article 6.1.a du RGPD).</td></tr>
+      <tr><th>Caractère obligatoire</th><td>Les champs marqués d'un astérisque sont nécessaires pour traiter votre demande. Sans eux, nous ne pouvons pas vous répondre.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Qui a accès à vos données ?</h2>
+    <p>Vos données sont destinées au seul cabinet Parcours Industrie. <strong>Elles ne sont ni vendues, ni louées, ni transmises à des tiers à des fins commerciales.</strong></p>
+    <h3>Sous-traitant technique</h3>
+    <p>Le site est hébergé par <strong>Netlify</strong> (Netlify Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis). Les réponses au formulaire transitent et sont stockées par le service Netlify Forms. Netlify applique les clauses contractuelles types de la Commission européenne pour encadrer les transferts de données hors Union européenne.</p>
+    <p>Le nom de domaine est géré par <strong>OVH SAS</strong>, 2 rue Kellermann, 59100 Roubaix, France.</p>
+  </section>
+
+  <section>
+    <h2>4. Combien de temps sont-elles conservées ?</h2>
+    <ul>
+      <li><strong>Demande sans suite</strong> — les données sont supprimées au plus tard 12 mois après le dernier contact.</li>
+      <li><strong>Demande suivie d'un accompagnement</strong> — les données sont conservées pendant la durée de la prestation, puis 3 ans à des fins de suivi, avant suppression.</li>
+      <li><strong>Obligations comptables</strong> — les documents de facturation sont conservés 10 ans, conformément au code de commerce.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Quels sont vos droits ?</h2>
+    <p>Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> — obtenir une copie des données que nous détenons sur vous.</li>
+      <li><strong>Droit de rectification</strong> — faire corriger une donnée inexacte ou incomplète.</li>
+      <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données.</li>
+      <li><strong>Droit à la limitation</strong> — demander le gel temporaire du traitement.</li>
+      <li><strong>Droit d'opposition</strong> — vous opposer au traitement de vos données.</li>
+      <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format lisible par machine.</li>
+      <li><strong>Retrait du consentement</strong> — à tout moment, sans que cela remette en cause la licéité du traitement effectué avant le retrait.</li>
+    </ul>
+    <p>Pour exercer ces droits, écrivez-nous à l'adresse email indiquée sur la page Contact. Nous répondons dans un délai maximum d'un mois.</p>
+    <p>Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la <strong>CNIL</strong> — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+  </section>
+
+  <section>
+    <h2>6. Cookies et mesure d'audience</h2>
+    <p>Ce site <strong>ne dépose aucun cookie publicitaire, aucun traceur commercial et aucun outil de profilage</strong>. Aucun bandeau de consentement n'est donc nécessaire.</p>
+    <p>Les polices de caractères sont chargées depuis Google Fonts, ce qui implique une connexion à un serveur de Google au chargement de la page. Cette connexion transmet votre adresse IP à Google.</p>
+    <div class="a-completer">
+      <strong>Note technique :</strong> pour supprimer totalement cette dépendance externe,
+      les polices peuvent être hébergées localement dans le dossier <code>/assets/</code>.
+      À décider avec le prestataire.
+    </div>
+    <p>Netlify enregistre des journaux techniques de connexion (adresse IP, date, page demandée) à des fins de sécurité et de statistiques agrégées. Ces journaux ne permettent pas de vous identifier nominativement.</p>
+  </section>
+
+  <section>
+    <h2>7. Sécurité</h2>
+    <p>Le site est intégralement servi en HTTPS : les données que vous saisissez dans le formulaire sont chiffrées pendant leur transmission. L'accès à l'interface d'administration des réponses est protégé par mot de passe et réservé au cabinet.</p>
+  </section>
+
+  <section>
+    <h2>8. Modification de cette politique</h2>
+    <p>Cette politique peut être mise à jour pour refléter une évolution du site ou de la réglementation. La date de dernière mise à jour figure ci-dessous. En cas de modification substantielle, une information sera affichée sur le site.</p>
+  </section>
+
+  <p class="maj">Dernière mise à jour : juillet 2026</p>
+</div>
+
+<!-- ══ Moteur d'animations partagé ══ -->
+<script src="assets/main.js" defer></script>
+
+<!-- ══════════ PIED DE PAGE (identique sur toutes les pages) ══════════ -->
+<footer class="pi-footer">
+  <div class="pi-footer__inner">
+    <div class="pi-footer__brand">
+      <img src="logo-blanc.svg" alt="Parcours Industrie" width="81" height="34"/>
+      <p>Cabinet spécialisé VAE, bilan de compétences, reconversion et orientation pour les métiers techniques et industriels.</p>
+      <p>Accompagnement 100 % en visio · France entière<br>Diagnostic gratuit sans engagement</p>
+      <a class="pi-btn" href="contact.html" style="display:inline-block;margin-top:0.6rem;background:var(--orange);color:#fff;padding:0.6rem 1.1rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em">Prendre rendez-vous</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Nos prestations</h4>
+      <a href="vae/index.html">VAE métiers techniques</a>
+      <a href="bilan/index.html">Bilan de compétences</a>
+      <a href="reconversion/index.html">Reconversion professionnelle</a>
+      <a href="orientation/index.html">Orientation</a>
+      <a href="coaching/index.html">Coaching & Emploi</a>
+      <a href="ingenierie/index.html">Ingénierie de formation</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Filières</h4>
+      <a href="reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="reconversion/btp.html">BTP & Construction</a>
+      <a href="vae/index.html">Toutes les filières VAE</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Le cabinet</h4>
+      <a href="a-propos.html">À propos</a>
+      <a href="entreprises/index.html">Entreprises & organismes</a>
+      <a href="blog/index.html">Blog & conseils</a>
+      <a href="contact.html">Contact</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </div>
+
+  <div class="pi-footer__bottom">
+    <div>© 2026 parcours-industrie.fr — Tous droits réservés</div>
+    <div><a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<button class="pi-totop" aria-label="Revenir en haut de la page">↑</button>
+
+</body></html>

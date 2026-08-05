@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – Diagnostic Gratuit VAE & Orientation | Parcours Industrie</title>
+  <meta name="description" content="Prenez rendez-vous pour un diagnostic gratuit de 30 minutes. VAE, bilan de compétences, reconversion ou orientation métiers techniques. 100% en visio, sans engagement."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Parcours Industrie"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://parcours-industrie.fr/contact"/>
+  <meta property="og:title" content="Diagnostic gratuit – Parcours Industrie"/>
+  <meta property="og:description" content="30 minutes gratuites pour analyser votre situation et voir comment Parcours Industrie peut vous accompagner. Sans engagement, 100% en visio."/>
+  <meta property="og:image" content="https://parcours-industrie.fr/og-image.jpg"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:image" content="https://parcours-industrie.fr/og-image.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Diagnostic gratuit – Parcours Industrie"/>
+  <meta name="twitter:description" content="30 minutes gratuites pour analyser votre situation et voir comment Parcours Industrie peut vous accompagner. Sans engagement, 100% en visio."/>
+  <link rel="canonical" href="https://parcours-industrie.fr/contact"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1b2a;--steel:#1c3a52;--orange:#e8601c;--orange-light:#f07b3a;--cream:#f5f1eb;--light:#ffffff;--text:#1a2634;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 1.2rem;box-shadow:0 2px 16px rgba(0,0,0,0.35);}
+.logo-wrap{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.logo-svg{width:36px;height:36px;flex-shrink:0;}
+.logo-text .l1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:white;}.logo-text .l1 span{color:var(--orange);}
+.logo-text .l2{font-size:0.56rem;color:rgba(255,255,255,0.38);letter-spacing:0.1em;text-transform:uppercase;}
+.nav-cta{background:var(--orange);color:white;border:none;padding:0.5rem 1rem;font-family:'Lato',sans-serif;font-weight:700;font-size:0.8rem;border-radius:3px;cursor:pointer;text-transform:uppercase;text-decoration:none;}
+
+/* HERO CONTACT */
+.contact-hero{padding-top:62px;background:var(--navy);padding-bottom:0;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 48px,rgba(255,255,255,0.025) 48px,rgba(255,255,255,0.025) 49px),repeating-linear-gradient(0deg,transparent,transparent 48px,rgba(255,255,255,0.025) 48px,rgba(255,255,255,0.025) 49px);}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.38;filter:grayscale(14%) contrast(1.06);}
+.hero-accent{position:absolute;top:-80px;right:0;width:260px;height:260px;background:radial-gradient(circle,rgba(232,96,28,0.18) 0%,transparent 70%);border-radius:50%;}
+.hero-inner{position:relative;z-index:2;padding:2.5rem 1.4rem 3rem;}
+.breadcrumb{font-size:0.72rem;color:rgba(255,255,255,0.4);margin-bottom:0.8rem;}.breadcrumb a{color:var(--orange);text-decoration:none;}
+.page-level{display:inline-block;background:rgba(232,96,28,0.2);border:1px solid rgba(232,96,28,0.4);color:var(--orange-light);font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.7rem;border-radius:20px;margin-bottom:0.8rem;}
+.contact-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2rem,8vw,3rem);color:white;line-height:1.05;margin-bottom:0.8rem;}
+.contact-hero h1 em{font-style:normal;color:var(--orange);}
+.contact-hero p{font-size:0.95rem;color:rgba(255,255,255,0.68);line-height:1.65;max-width:500px;}
+
+/* GARANTIES */
+.garanties{display:flex;flex-direction:column;gap:0.6rem;margin-top:2rem;}
+.garantie-item{display:flex;align-items:center;gap:0.7rem;}
+.garantie-item span{font-size:0.88rem;color:rgba(255,255,255,0.65);}
+.g-icon{width:24px;height:24px;background:rgba(232,96,28,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0;}
+
+/* MAIN LAYOUT */
+.contact-main{padding:2.5rem 1.4rem;}
+.section-tag{display:inline-block;color:var(--orange);font-weight:700;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;border-left:3px solid var(--orange);padding-left:0.6rem;}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.7rem,5vw,2.4rem);color:var(--navy);line-height:1.1;margin-bottom:1rem;}
+
+/* FORM */
+.form-card{background:white;border-radius:10px;padding:1.8rem 1.4rem;box-shadow:0 4px 24px rgba(0,0,0,0.08);}
+.form-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.4rem;color:var(--navy);margin-bottom:0.3rem;}
+.form-sub{font-size:0.85rem;color:#8a9aaa;margin-bottom:1.5rem;}
+.field{margin-bottom:1.1rem;}
+.field label{display:block;font-size:0.8rem;font-weight:700;color:var(--navy);margin-bottom:0.35rem;letter-spacing:0.04em;text-transform:uppercase;}
+.field input,.field select,.field textarea{width:100%;padding:0.8rem 1rem;border:1.5px solid #d0dce8;border-radius:5px;font-family:'Lato',sans-serif;font-size:0.9rem;color:var(--text);background:#fff;transition:border-color 0.2s;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange);}
+.field textarea{height:110px;resize:vertical;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.radio-group{display:flex;flex-direction:column;gap:0.5rem;margin-top:0.3rem;}
+.radio-item{display:flex;align-items:center;gap:0.6rem;background:var(--cream);border-radius:5px;padding:0.7rem 1rem;cursor:pointer;border:1.5px solid transparent;transition:border-color 0.2s;}
+.radio-item:hover{border-color:var(--orange);}
+.radio-item input[type=radio]{accent-color:var(--orange);}
+.radio-item span{font-size:0.88rem;color:var(--navy);font-weight:500;}
+.submit-btn{width:100%;background:var(--orange);color:white;border:none;padding:1.1rem;font-family:'Lato',sans-serif;font-weight:700;font-size:1rem;border-radius:5px;cursor:pointer;margin-top:1rem;letter-spacing:0.02em;transition:background 0.2s;}
+.submit-btn:hover{background:var(--orange-light);}
+.form-note{font-size:0.75rem;color:#8a9aaa;text-align:center;margin-top:0.8rem;line-height:1.5;}
+
+/* INFOS CONTACT */
+.contact-infos{margin-top:2rem;}
+.info-card{background:var(--navy);border-radius:8px;padding:1.5rem;margin-bottom:1rem;}
+.info-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:white;margin-bottom:1rem;}
+.info-items{display:flex;flex-direction:column;gap:0.8rem;}
+.info-item{display:flex;align-items:flex-start;gap:0.8rem;}
+.info-icon{width:36px;height:36px;background:rgba(232,96,28,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.info-item .label{font-size:0.72rem;color:rgba(255,255,255,0.38);text-transform:uppercase;letter-spacing:0.06em;}
+.info-item .value{font-size:0.9rem;color:white;font-weight:600;}
+
+/* HORAIRES */
+.horaires-card{background:white;border-radius:8px;padding:1.3rem;}
+.horaires-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:var(--navy);margin-bottom:0.8rem;}
+.horaire-row{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0;border-bottom:1px solid #f0f0f0;font-size:0.85rem;}
+.horaire-row:last-child{border-bottom:none;}
+.horaire-row .day{color:#6a7e90;}
+.horaire-row .time{font-weight:700;color:var(--navy);}
+.horaire-row .available{color:var(--orange);font-size:0.75rem;font-weight:700;}
+
+/* FAQ RAPIDE */
+.faq-rapide{background:var(--cream);padding:2.5rem 1.4rem;}
+.faq-rapide .section-title{margin-bottom:1.2rem;}
+.faq-item{background:white;border-radius:6px;margin-bottom:0.6rem;overflow:hidden;}
+.faq-q{padding:1rem 1.2rem;font-weight:700;font-size:0.9rem;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.faq-q::after{content:"＋";color:var(--orange);font-size:1.1rem;flex-shrink:0;}
+.faq-a{padding:0 1.2rem 1rem;font-size:0.85rem;color:#5a6e80;line-height:1.65;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-q::after{content:"－";}
+
+footer{background:var(--navy);color:rgba(255,255,255,0.45);padding:2rem 1.4rem;font-size:0.78rem;line-height:1.8;}
+.footer-logo{display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;text-decoration:none;}
+.footer-links{display:flex;flex-wrap:wrap;gap:0.5rem 1rem;margin-top:1rem;}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;}.footer-links a:hover{color:var(--orange);}
+footer hr{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:1rem 0;}
+
+.pi-form fieldset legend{padding:0;}
+.pi-form fieldset legend.field-legend{display:block;font-size:0.8rem;font-weight:700;color:var(--navy);margin-bottom:0.35rem;letter-spacing:0.04em;text-transform:uppercase;}
+.pi-form .check-item{display:flex;align-items:flex-start;gap:0.6rem;background:var(--cream);border-radius:5px;padding:0.8rem 1rem;cursor:pointer;border:1.5px solid transparent;font-size:0.85rem;line-height:1.5;color:var(--navy);min-width:0;}
+.pi-form .check-item span{min-width:0;overflow-wrap:anywhere;}
+.pi-form .check-item:hover{border-color:var(--orange);}
+.pi-form .check-item input{accent-color:var(--orange);margin-top:0.2rem;}
+
+/* ═══════════════════════════════════════════════════════════════════
+   AMELIORATIONS VISUELLES — PAGE CONTACT
+   Harmonisation avec les pages retravaillees : meilleure hierarchie,
+   formulaire plus clair, micro-interactions et responsive robuste.
+   ═══════════════════════════════════════════════════════════════════ */
+.contact-hero .hero-inner,
+.contact-main,
+.faq-rapide {
+  padding-inline: max(1.4rem, (100% - 1100px) / 2);
+}
+
+.contact-hero {
+  min-height: clamp(330px, 42vw, 500px);
+  display: flex;
+  align-items: center;
+}
+.contact-hero::after {
+  content: '';
+  position: absolute;
+  inset: 62px 0 0;
+  background:
+    linear-gradient(90deg, rgba(13,27,42,0.96) 0%, rgba(13,27,42,0.86) 40%, rgba(13,27,42,0.46) 74%, rgba(13,27,42,0.16) 100%),
+    linear-gradient(to bottom, rgba(13,27,42,0.08), rgba(13,27,42,0.54));
+  pointer-events: none;
+}
+.hero-bg {
+  opacity: 0.95;
+}
+.hero-accent {
+  width: clamp(220px, 28vw, 380px);
+  height: clamp(220px, 28vw, 380px);
+  right: max(-90px, calc((100% - 1100px) / 2 - 120px));
+  top: 22%;
+  border: 1px solid rgba(232,96,28,0.12);
+}
+.hero-inner {
+  width: 100%;
+  padding-block: clamp(2rem, 4.5vw, 3.8rem);
+}
+.contact-hero h1 {
+  max-width: 780px;
+  letter-spacing: 0;
+}
+.contact-hero p {
+  max-width: 620px;
+  font-size: clamp(0.95rem, 0.9rem + 0.28vw, 1.08rem);
+}
+.contact-hero .hero-inner,
+.hero-accent {
+  z-index: 2;
+}
+.page-level {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  line-height: 1.25;
+}
+.breadcrumb {
+  line-height: 1.8;
+}
+.breadcrumb a,
+a,
+button,
+.submit-btn,
+.radio-item,
+.pi-form .check-item,
+.faq-q {
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+}
+
+.garanties {
+  display: grid;
+  gap: 0.55rem;
+  max-width: 660px;
+}
+.garantie-item {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.45rem 0.68rem 0.45rem 0.5rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.055);
+  backdrop-filter: blur(10px);
+}
+.garantie-item span {
+  color: rgba(255,255,255,0.78);
+}
+.g-icon {
+  width: 28px;
+  height: 28px;
+  background: rgba(232,96,28,0.22);
+  border: 1px solid rgba(232,96,28,0.24);
+}
+
+.contact-main {
+  padding-block: clamp(1.9rem, 3.6vw, 3.4rem);
+}
+.section-title {
+  letter-spacing: 0;
+}
+.form-card,
+.info-card,
+.horaires-card,
+.faq-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.form-card {
+  border: 1px solid #e4ebf1;
+  border-left: 4px solid rgba(232,96,28,0.42);
+  box-shadow: 0 18px 48px rgba(13,27,42,0.1);
+}
+.form-card::before,
+.info-card::before,
+.horaires-card::before,
+.faq-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 3px;
+  background: var(--orange);
+  transition: width 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.form-card:hover::before,
+.info-card:hover::before,
+.horaires-card:hover::before,
+.faq-item:hover::before {
+  width: 100%;
+}
+.form-title {
+  font-size: clamp(1.45rem, 1.1rem + 1.2vw, 1.85rem);
+  letter-spacing: 0;
+}
+.form-sub {
+  color: #5a6e80;
+  line-height: 1.6;
+}
+
+.field {
+  position: relative;
+}
+.field label,
+.field-legend {
+  transition: color 0.25s ease;
+}
+.field:focus-within > label,
+.field:focus-within > .field-legend,
+.pi-form fieldset:focus-within .field-legend {
+  color: var(--orange);
+}
+.field input,
+.field select,
+.field textarea {
+  min-height: 48px;
+  border-radius: 6px;
+  background: #fbfcfd;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+.field textarea {
+  min-height: 130px;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  background: white;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(232,96,28,0.13);
+}
+.field input:hover,
+.field select:hover,
+.field textarea:hover {
+  border-color: #b9c8d5;
+}
+
+.radio-group {
+  gap: 0.5rem;
+}
+.radio-item,
+.pi-form .check-item {
+  display: flex;
+  border-color: #e1e8ef;
+  background: #fbfcfd;
+}
+.field .radio-item,
+.field .check-item {
+  display: flex;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.field .radio-item input,
+.field .check-item input,
+.pi-form input[type="radio"],
+.pi-form input[type="checkbox"] {
+  width: auto !important;
+  min-width: 16px !important;
+  height: auto !important;
+  min-height: 0 !important;
+  flex: 0 0 auto !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+.radio-item:hover,
+.pi-form .check-item:hover,
+.radio-item:focus-within,
+.pi-form .check-item:focus-within {
+  background: white;
+  border-color: rgba(232,96,28,0.45);
+  box-shadow: 0 10px 28px rgba(13,27,42,0.07);
+  transform: translateY(-2px);
+}
+.radio-item span {
+  line-height: 1.45;
+}
+.submit-btn {
+  min-height: 54px;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(232,96,28,0.24);
+}
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px rgba(232,96,28,0.32);
+}
+.form-note {
+  color: #6b7d8e;
+}
+
+.contact-infos {
+  display: grid;
+  gap: 1rem;
+}
+.info-card {
+  background: var(--navy);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 18px 42px rgba(13,27,42,0.12);
+}
+.info-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+.info-card > * {
+  position: relative;
+  z-index: 1;
+}
+.info-icon {
+  border: 1px solid rgba(232,96,28,0.2);
+}
+.info-item .value {
+  line-height: 1.45;
+}
+.horaires-card {
+  border: 1px solid #e4ebf1;
+  box-shadow: 0 10px 32px rgba(13,27,42,0.06);
+}
+.horaire-row {
+  gap: 0.75rem;
+}
+.horaire-row .time {
+  white-space: nowrap;
+}
+
+.faq-rapide {
+  padding-block: clamp(1.9rem, 3.6vw, 3.4rem);
+}
+.faq-item {
+  border: 1px solid #e4ebf1;
+  box-shadow: 0 8px 26px rgba(13,27,42,0.045);
+}
+.faq-q:hover {
+  color: var(--orange);
+}
+.faq-item.open {
+  border-color: rgba(232,96,28,0.4);
+}
+.faq-a {
+  color: #4f6374;
+}
+
+@media (min-width: 760px) {
+  .garanties {
+    grid-template-columns: repeat(3, minmax(0, max-content));
+    align-items: center;
+  }
+}
+@media (min-width: 920px) {
+  .contact-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 0.8rem 2rem;
+    align-items: start;
+  }
+  .contact-main > .section-tag,
+  .contact-main > .section-title {
+    grid-column: 1 / -1;
+  }
+  .form-card {
+    grid-column: 1;
+  }
+  .contact-infos {
+    grid-column: 2;
+    margin-top: 0;
+    position: sticky;
+    top: 86px;
+  }
+}
+@media (max-width: 639px) {
+  .contact-hero {
+    min-height: auto;
+  }
+  .hero-accent {
+    right: -120px;
+    opacity: 0.7;
+  }
+  .form-card {
+    padding: 1.2rem 1rem;
+  }
+  .horaire-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .radio-item,
+  .pi-form .check-item {
+    align-items: flex-start;
+  }
+}
+@media (hover: none) {
+  .form-card::before,
+  .info-card::before,
+  .horaires-card::before,
+  .faq-item::before {
+    width: 42px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .radio-item,
+  .pi-form .check-item,
+  .submit-btn,
+  .form-card,
+  .info-card,
+  .horaires-card,
+  .faq-item {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+</style>
+
+<!-- ══ Identité visuelle & favicons ══ -->
+<link rel="icon" type="image/x-icon" href="favicon.ico?v=3"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<meta name="theme-color" content="#0d1b2a"/>
+
+<!-- ══ Feuille de style partagée — modifier ICI = modifié sur TOUTES les pages ══ -->
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+<!-- ══════════ BARRE DE PROGRESSION DE LECTURE ══════════ -->
+<div class="pi-progress" aria-hidden="true"><div class="pi-progress__bar"></div></div>
+
+<a class="pi-skip" href="#contenu">Aller au contenu</a>
+
+<!-- ══════════ NAVIGATION (identique sur toutes les pages) ══════════
+     Pour ajouter une entrée au menu : voir GUIDE-CLIENT.md
+     ═════════════════════════════════════════════════════════════ -->
+<nav class="pi-nav">
+  <a class="pi-nav__logo" href="index.html" aria-label="Parcours Industrie — accueil">
+    <img src="logo-blanc.svg" alt="Parcours Industrie" width="86" height="36"/>
+  </a>
+
+  <ul class="pi-nav__menu">
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="vae/index.html">VAE</a>
+      <div class="pi-nav__sub pi-nav__sub--mega">
+        <span class="pi-nav__sub-title">Électricité & Énergie</span>
+        <a href="vae/cap-electricien.html">VAE CAP Électricien</a>
+        <a href="vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
+        <a href="vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+        <a href="vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+        <span class="pi-nav__sub-title">Maintenance industrielle</span>
+        <a href="vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+        <a href="vae/bac-pro-mei.html">VAE Bac pro MEI</a>
+        <a href="vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
+        <a href="vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+        <span class="pi-nav__sub-title">Réseaux & Cybersécurité</span>
+        <a href="vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
+        <a href="vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+        <a href="vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+        <span class="pi-nav__sub-title">Sécurité</span>
+        <a href="vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+        <a href="vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+        <a href="vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+        <span class="pi-nav__sub-title">Production & Automatisme</span>
+        <a href="vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
+        <a href="vae/bts-cprp.html">VAE BTS CPRP</a>
+        <span class="pi-nav__sub-title">Enseignement supérieur</span>
+        <a href="vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
+        <a href="vae/master-industrie.html">VAE Master industrie</a>
+        <a href="vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+        <a class="pi-nav__sub-all" href="vae/index.html">→ Toutes les filières VAE</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="bilan/index.html">Bilan</a></li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="reconversion/index.html">Reconversion</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="reconversion/index.html">→ Reconversion : vue d'ensemble</a>
+        <a href="reconversion/electricite.html">Électricité & Énergie</a>
+        <a href="reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+        <a href="reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+        <a href="reconversion/securite-privee.html">Sécurité privée</a>
+        <a href="reconversion/btp.html">BTP & Construction</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="orientation/index.html">Orientation</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="orientation/index.html">→ Orientation : vue d'ensemble</a>
+        <a href="orientation/collegiens.html">Collégiens — après la 3e</a>
+        <a href="orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+        <a href="orientation/adultes.html">Adultes en reconversion</a>
+        <a href="orientation/parents.html">Parents — comprendre la voie pro</a>
+        <a href="orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="coaching/index.html">Coaching</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="coaching/index.html">→ Coaching : vue d'ensemble</a>
+        <a href="coaching/cv-technicien.html">CV technicien</a>
+        <a href="coaching/lettre-motivation.html">Lettre de motivation</a>
+        <a href="coaching/entretien-embauche.html">Entretien d'embauche</a>
+        <a href="coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+        <a href="coaching/outplacement.html">Outplacement technicien</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="entreprises/index.html">Entreprises</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="entreprises/index.html">→ Entreprises : vue d'ensemble</a>
+        <a href="entreprises/vae-collective.html">VAE collective</a>
+        <a href="entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+        <a href="entreprises/conseil-rh.html">Conseil RH externalisé</a>
+      </div>
+    </li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="ingenierie/index.html">Ingénierie</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="ingenierie/index.html">→ Ingénierie : vue d'ensemble</a>
+        <a href="ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
+        <a href="ingenierie/titre-rncp.html">Création titre RNCP</a>
+        <a href="ingenierie/qualiopi.html">Certification Qualiopi</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="blog/index.html">Blog</a></li>
+  </ul>
+
+  <a class="pi-nav__cta" href="contact.html">Diagnostic gratuit</a>
+
+  <button class="pi-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="pi-mobile" id="menu-mobile">
+  <a class="pi-mobile__head" href="index.html">Accueil</a>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">VAE<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="vae/index.html"><strong>VAE — vue d'ensemble</strong></a>
+      <a href="vae/cap-electricien.html">VAE CAP Électricien</a>
+      <a href="vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
+      <a href="vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
+      <a href="vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+      <a href="vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
+      <a href="vae/bac-pro-mei.html">VAE Bac pro MEI</a>
+      <a href="vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
+      <a href="vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+      <a href="vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
+      <a href="vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
+      <a href="vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+      <a href="vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
+      <a href="vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
+      <a href="vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+      <a href="vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
+      <a href="vae/bts-cprp.html">VAE BTS CPRP</a>
+      <a href="vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
+      <a href="vae/master-industrie.html">VAE Master industrie</a>
+      <a href="vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="bilan/index.html">Bilan</a></div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Reconversion<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="reconversion/index.html"><strong>Reconversion — vue d'ensemble</strong></a>
+      <a href="reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="reconversion/btp.html">BTP & Construction</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Orientation<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="orientation/index.html"><strong>Orientation — vue d'ensemble</strong></a>
+      <a href="orientation/collegiens.html">Collégiens — après la 3e</a>
+      <a href="orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
+      <a href="orientation/adultes.html">Adultes en reconversion</a>
+      <a href="orientation/parents.html">Parents — comprendre la voie pro</a>
+      <a href="orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Coaching<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="coaching/index.html"><strong>Coaching — vue d'ensemble</strong></a>
+      <a href="coaching/cv-technicien.html">CV technicien</a>
+      <a href="coaching/lettre-motivation.html">Lettre de motivation</a>
+      <a href="coaching/entretien-embauche.html">Entretien d'embauche</a>
+      <a href="coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
+      <a href="coaching/outplacement.html">Outplacement technicien</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Entreprises<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="entreprises/index.html"><strong>Entreprises — vue d'ensemble</strong></a>
+      <a href="entreprises/vae-collective.html">VAE collective</a>
+      <a href="entreprises/formation-tuteurs.html">Formation de tuteurs</a>
+      <a href="entreprises/conseil-rh.html">Conseil RH externalisé</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group">
+    <button class="pi-mobile__head" data-toggle aria-expanded="false">Ingénierie<span class="chev"></span></button>
+    <div class="pi-mobile__sub">
+      <a href="ingenierie/index.html"><strong>Ingénierie — vue d'ensemble</strong></a>
+      <a href="ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
+      <a href="ingenierie/titre-rncp.html">Création titre RNCP</a>
+      <a href="ingenierie/qualiopi.html">Certification Qualiopi</a>
+    </div>
+  </div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="blog/index.html">Blog</a></div>
+  <a class="pi-mobile__cta" href="contact.html">Diagnostic gratuit →</a>
+</div>
+
+<span id="contenu"></span>
+
+<!-- HERO -->
+<div class="contact-hero">
+  <div class="hero-bg">
+    <img data-cms-image="contact_hero" loading="lazy" decoding="async" src="images/contact/contact-diagnostic-industrie.png" alt="Diagnostic professionnel pour projet industriel">
+  </div>
+  <div class="hero-accent"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> › Contact</div>
+    <div class="page-level">📅 Diagnostic gratuit</div>
+    <h1>Parlons de<br>votre <em>projet</em></h1>
+    <p>Prenez rendez-vous pour un diagnostic gratuit de 30 minutes. On analyse votre situation et on voit comment vous aider.</p>
+    <div class="garanties">
+      <div class="garantie-item"><div class="g-icon">✓</div><span>Gratuit et sans engagement</span></div>
+      <div class="garantie-item"><div class="g-icon">💻</div><span>Visio ou déplacement — France entière</span></div>
+      <div class="garantie-item"><div class="g-icon">⚡</div><span>Réponse sous 24h</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="contact-main" id="form">
+
+  <!-- FORMULAIRE -->
+  <div class="section-tag">Prendre rendez-vous</div>
+  <h2 class="section-title">Diagnostic gratuit</h2>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FORMULAIRE DE CONTACT — Netlify Forms
+       ───────────────────────────────────────────────────────────────
+       · data-netlify="true"  → Netlify détecte le formulaire au déploiement
+       · name="contact"       → nom sous lequel les réponses apparaissent
+                                dans Netlify → Forms
+       · data-netlify-honeypot → piège à robots spammeurs (champ invisible)
+       · action="/merci.html"  → page affichée après envoi
+       Pour recevoir les réponses par email :
+       Netlify → Forms → Settings → Form notifications → Email notification
+       ═══════════════════════════════════════════════════════════════ -->
+  <form
+    class="form-card pi-form"
+    name="contact"
+    method="POST"
+    action="/merci.html"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+  >
+    <input type="hidden" name="form-name" value="contact"/>
+    <input type="hidden" name="sujet" value="Demande de diagnostic gratuit"/>
+
+    <!-- Piège anti-spam : invisible pour un humain, rempli par les robots -->
+    <p class="pi-hp" aria-hidden="true">
+      <label>Ne pas remplir ce champ : <input name="bot-field" tabindex="-1" autocomplete="off"/></label>
+    </p>
+
+    <div class="form-title">Demande de diagnostic</div>
+    <div class="form-sub">Remplissez ce formulaire — on vous rappelle sous 24h pour fixer un créneau.</div>
+
+    <!-- Barre de progression du remplissage (animée par assets/main.js) -->
+    <div class="pi-form__progress" aria-hidden="true"><span></span></div>
+    <div class="pi-form__progress-label">0 % complété</div>
+
+    <div class="field">
+      <label for="nom">Prénom et nom *</label>
+      <input type="text" id="nom" name="nom" placeholder="Ex : Thomas Martin" required autocomplete="name"/>
+      <span class="field__error">Merci d'indiquer votre nom.</span>
+    </div>
+
+    <div class="field">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="thomas.martin@email.fr" required autocomplete="email"/>
+      <span class="field__error">Merci d'indiquer une adresse email valide.</span>
+    </div>
+
+    <div class="field">
+      <label for="telephone">Téléphone</label>
+      <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" autocomplete="tel"
+             pattern="[0-9 +().-]{6,20}"/>
+      <span class="field__error">Format de téléphone non reconnu.</span>
+    </div>
+
+    <fieldset class="field" style="border:none;padding:0;margin:0 0 1.1rem">
+      <legend class="field-legend">Vous êtes *</legend>
+      <div class="radio-group">
+        <label class="radio-item"><input type="radio" name="statut" value="Salarié(e) métiers techniques" required/> <span>👷 Salarié(e) dans les métiers techniques</span></label>
+        <label class="radio-item"><input type="radio" name="statut" value="Demandeur d'emploi"/> <span>🔍 Demandeur d'emploi en reconversion</span></label>
+        <label class="radio-item"><input type="radio" name="statut" value="Indépendant / artisan"/> <span>🔧 Travailleur indépendant / artisan</span></label>
+        <label class="radio-item"><input type="radio" name="statut" value="Responsable RH / Entreprise"/> <span>🏭 Responsable RH / Entreprise</span></label>
+      </div>
+      <span class="field__error">Merci de sélectionner votre situation.</span>
+    </fieldset>
+
+    <div class="field">
+      <label for="domaine">Votre domaine métier</label>
+      <select id="domaine" name="domaine">
+        <option value="">-- Sélectionnez --</option>
+        <option>Électricité / Énergie</option>
+        <option>Maintenance industrielle</option>
+        <option>Réseaux / Cybersécurité</option>
+        <option>Sécurité privée</option>
+        <option>Production / Automatisme</option>
+        <option>BTP / Construction</option>
+        <option>Autre métier technique</option>
+      </select>
+    </div>
+
+    <fieldset class="field" style="border:none;padding:0;margin:0 0 1.1rem">
+      <legend class="field-legend">Vous souhaitez *</legend>
+      <div class="radio-group">
+        <label class="radio-item"><input type="radio" name="besoin" value="VAE — obtenir un diplôme" required/> <span>🏆 Obtenir un diplôme par VAE</span></label>
+        <label class="radio-item"><input type="radio" name="besoin" value="Bilan de compétences"/> <span>🎯 Faire un bilan de compétences</span></label>
+        <label class="radio-item"><input type="radio" name="besoin" value="Reconversion"/> <span>🔄 Préparer une reconversion</span></label>
+        <label class="radio-item"><input type="radio" name="besoin" value="Accompagnement entreprise"/> <span>🏭 Accompagnement pour mon entreprise</span></label>
+        <label class="radio-item"><input type="radio" name="besoin" value="Ne sait pas encore"/> <span>❓ Je ne sais pas encore, j'ai besoin de conseils</span></label>
+      </div>
+      <span class="field__error">Merci d'indiquer votre besoin.</span>
+    </fieldset>
+
+    <div class="field">
+      <label for="message">Dites-nous en plus (optionnel)</label>
+      <textarea id="message" name="message" placeholder="Décrivez votre situation, vos questions, vos objectifs..."></textarea>
+    </div>
+
+    <!-- Consentement RGPD — obligatoire dès lors que des données
+         personnelles sont collectées et stockées par Netlify Forms -->
+    <div class="field">
+      <label class="check-item" style="text-transform:none;letter-spacing:0;font-weight:400">
+        <input type="checkbox" name="consentement" value="oui" required/>
+        <span>J'accepte que mes données soient utilisées pour être recontacté(e) au sujet de ma demande. Elles ne sont ni revendues ni transmises à des tiers.
+        <a href="politique-confidentialite.html" class="pi-link">Politique de confidentialité</a>.</span>
+      </label>
+      <span class="field__error">Votre accord est nécessaire pour envoyer le formulaire.</span>
+    </div>
+
+    <button type="submit" class="submit-btn">📅 Envoyer ma demande de diagnostic →</button>
+    <div class="form-note">Vos données sont confidentielles et ne sont jamais transmises à des tiers.<br>Réponse garantie sous 24h ouvrées.</div>
+  </form>
+
+  <!-- INFOS -->
+  <div class="contact-infos">
+    <div class="info-card">
+      <h3>Informations de contact</h3>
+      <div class="info-items">
+        <div class="info-item"><div class="info-icon">📧</div><div><div class="label">Email</div><div class="value">contact@parcours-industrie.fr</div></div></div>
+        <div class="info-item"><div class="info-icon">💻</div><div><div class="label">Mode de contact</div><div class="value">Visio (Zoom / Teams / Meet) ou déplacement</div></div></div>
+        <div class="info-item"><div class="info-icon">🗺️</div><div><div class="label">Zone d'intervention</div><div class="value">France entière — visio partout, déplacement possible selon mission</div></div></div>
+      </div>
+    </div>
+
+    <div class="horaires-card">
+      <h3>Disponibilités</h3>
+      <div class="horaire-row"><span class="day">Lundi – Vendredi</span><span class="time">8h – 20h</span><span class="available">✓ Disponible</span></div>
+      <div class="horaire-row"><span class="day">Samedi</span><span class="time">9h – 17h</span><span class="available">✓ Disponible</span></div>
+      <div class="horaire-row"><span class="day">Dimanche</span><span class="time">—</span><span style="font-size:0.75rem;color:#aaa">Fermé</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ RAPIDE -->
+<div class="faq-rapide">
+  <div class="section-tag">Questions rapides</div>
+  <h2 class="section-title">Avant de nous écrire</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Le diagnostic est vraiment gratuit ?</div>
+    <div class="faq-a">Oui, complètement gratuit et sans engagement. C'est un échange de 30 minutes pour comprendre votre situation et voir si on peut vous aider. Si votre projet n'est pas dans notre domaine, on vous redirige vers la bonne structure.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Je ne sais pas encore si la VAE est faite pour moi. Vous pouvez m'aider ?</div>
+    <div class="faq-a">C'est exactement l'objectif du diagnostic. On analyse votre parcours, on identifie si la VAE correspond à votre situation, et on vous explique toutes les options possibles (VAE, bilan, reconversion, formation).</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Combien de temps pour obtenir une réponse ?</div>
+    <div class="faq-a">On répond à toutes les demandes sous 24h ouvrées. Le week-end, la réponse peut arriver le lundi matin.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Vous accompagnez tous les diplômes techniques ?</div>
+    <div class="faq-a">On se concentre sur les diplômes des filières techniques et industrielles : électricité, maintenance, réseaux, cybersécurité, sécurité privée, production. Si votre diplôme est dans un autre domaine, contactez-nous quand même — on vous dira honnêtement si on peut vous aider.</div>
+  </div>
+</div>
+
+<!-- ══ Moteur d'animations partagé ══ -->
+<script src="assets/main.js" defer></script>
+
+<!-- ══════════ PIED DE PAGE (identique sur toutes les pages) ══════════ -->
+<footer class="pi-footer">
+  <div class="pi-footer__inner">
+    <div class="pi-footer__brand">
+      <img src="logo-blanc.svg" alt="Parcours Industrie" width="81" height="34"/>
+      <p>Cabinet spécialisé VAE, bilan de compétences, reconversion et orientation pour les métiers techniques et industriels.</p>
+      <p>Accompagnement en visio ou déplacement · France entière<br>Diagnostic gratuit sans engagement</p>
+      <a class="pi-btn" href="contact.html" style="display:inline-block;margin-top:0.6rem;background:var(--orange);color:#fff;padding:0.6rem 1.1rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em">Prendre rendez-vous</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Nos prestations</h4>
+      <a href="vae/index.html">VAE métiers techniques</a>
+      <a href="bilan/index.html">Bilan de compétences</a>
+      <a href="reconversion/index.html">Reconversion professionnelle</a>
+      <a href="orientation/index.html">Orientation</a>
+      <a href="coaching/index.html">Coaching & Emploi</a>
+      <a href="ingenierie/index.html">Ingénierie de formation</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Filières</h4>
+      <a href="reconversion/electricite.html">Électricité & Énergie</a>
+      <a href="reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
+      <a href="reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
+      <a href="reconversion/securite-privee.html">Sécurité privée</a>
+      <a href="reconversion/btp.html">BTP & Construction</a>
+      <a href="vae/index.html">Toutes les filières VAE</a>
+    </div>
+    <div class="pi-footer__col">
+      <h4>Le cabinet</h4>
+      <a href="a-propos.html">À propos</a>
+      <a href="entreprises/index.html">Entreprises & organismes</a>
+      <a href="blog/index.html">Blog & conseils</a>
+      <a href="contact.html">Contact</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </div>
+
+  <div class="pi-footer__bottom">
+    <div>© 2026 parcours-industrie.fr — Tous droits réservés</div>
+    <div><a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<button class="pi-totop" aria-label="Revenir en haut de la page">↑</button>
+
+</body>
+</html>

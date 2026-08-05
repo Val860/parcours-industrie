@@ -1,0 +1,22 @@
+{
+  "avis": [
+    {
+      "visible": true,
+      "nom": "Karim A.",
+      "initiales": "KA",
+      "profil": "Électricien",
+      "service": "VAE Bac pro MELEC",
+      "texte": "Après 12 ans comme électricien sans diplôme, j'ai enfin mon Bac pro MELEC. L'accompagnement était précis, concret et adapté à mon profil. Je recommande à tous les techniciens.",
+      "note": 5
+    },
+    {
+      "visible": true,
+      "nom": "Stéphane L.",
+      "initiales": "SL",
+      "profil": "Technicien maintenance",
+      "service": "Bilan de compétences",
+      "texte": "Le bilan de compétences m'a permis de structurer mon projet de reconversion. En 3 mois j'avais un plan clair pour passer chef d'équipe maintenance.",
+      "note": 5
+    }
+  ]
+}
