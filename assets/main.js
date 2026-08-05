@@ -626,7 +626,8 @@
     form.addEventListener('change', updateProgress);
     updateProgress();
 
-    // Affiche les messages d'erreur seulement après une tentative d'envoi
+    // Netlify Forms doit garder l'envoi HTML natif.
+    // On bloque uniquement si les champs obligatoires sont invalides.
     form.addEventListener('submit', function (e) {
       form.classList.add('was-validated');
       if (!form.checkValidity()) {
