@@ -70,6 +70,7 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico?v=4"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=4"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<link rel="manifest" href="manifest.webmanifest"/>
 <meta name="theme-color" content="#0d1b2a"/>
 
 <!-- ══ Feuille de style partagée — modifier ICI = modifié sur TOUTES les pages ══ -->
@@ -87,7 +88,7 @@
      ═════════════════════════════════════════════════════════════ -->
 <nav class="pi-nav">
   <a class="pi-nav__logo" href="index.html" aria-label="Parcours Industrie — accueil">
-    <img src="logo-blanc.svg" alt="Parcours Industrie" width="86" height="36"/>
+    <img fetchpriority="high" decoding="async" loading="eager" src="logo-blanc.svg" alt="Parcours Industrie" width="86" height="36"/>
   </a>
 
   <ul class="pi-nav__menu">
@@ -312,7 +313,7 @@
 <footer class="pi-footer">
   <div class="pi-footer__inner">
     <div class="pi-footer__brand">
-      <img src="logo-blanc.svg" alt="Parcours Industrie" width="81" height="34"/>
+      <img decoding="async" loading="lazy" src="logo-blanc.svg" alt="Parcours Industrie" width="81" height="34"/>
       <p>Cabinet spécialisé VAE, bilan de compétences, reconversion et orientation pour les métiers techniques et industriels.</p>
       <p>Accompagnement 100 % en visio · France entière<br>Diagnostic gratuit sans engagement</p>
       <a class="pi-btn" href="contact.html" style="display:inline-block;margin-top:0.6rem;background:var(--orange);color:#fff;padding:0.6rem 1.1rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em">Prendre rendez-vous</a>
@@ -347,7 +348,7 @@
   </div>
 
   <div class="pi-footer__bottom">
-    <div>© 2026 parcours-industrie.fr — Tous droits réservés</div>
+    <div>© 2026 parcours-industrie.com — Tous droits réservés</div>
     <div><a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="contact.html">Contact</a></div>
   </div>
 </footer>

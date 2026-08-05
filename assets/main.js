@@ -221,7 +221,7 @@
       ? '<div class="article-meta"><span>' + meta + '</span><span class="article-read">Lire l&rsquo;article →</span></div>'
       : '<div class="article-footer"><span class="article-date">' + escapeHtml((article.date || '') + ' · ' + (article.lecture || '')) + '</span><span class="read-link">Lire l&rsquo;article →</span></div>';
     return '<a href="' + escapeHtml(articleUrl(article)) + '" class="' + cls + '" data-cat="' + escapeHtml(article.categorie || 'actualités') + '" style="display:block;text-decoration:none;">' +
-      '<img loading="lazy" decoding="async" src="' + escapeHtml(assetPath(article.image || 'images/blog/blog-article-metiers-industrie.png')) + '" alt="' + escapeHtml(article.alt || article.titre) + '" class="' + imgCls + '"/>' +
+      '<img loading="lazy" decoding="async" src="' + escapeHtml(assetPath(article.image || 'images/blog/blog-article-metiers-industrie.jpg')) + '" alt="' + escapeHtml(article.alt || article.titre) + '" class="' + imgCls + '"/>' +
       '<div class="' + bodyCls + '">' +
       '<span class="article-cat">' + escapeHtml(article.categorie || 'Actualités') + '</span>' +
       (featured ? '<h2>' : '<h3>') + escapeHtml(article.titre) + (featured ? '</h2>' : '</h3>') +
@@ -254,7 +254,32 @@
         return item.visible !== false && item.slug === slug;
       })[0];
       if (!article) return;
-      document.title = article.titre + ' | Parcours Industrie';
+
+      /* ── Métadonnées propres à l'article ────────────────────────────
+         Sans cela, les 7 articles partagent le title, la description et
+         le canonical de la coquille « article.html ». Google les réunit
+         alors en une seule page vide et n'en indexe aucun.
+         On réécrit donc les balises à partir de l'article chargé.      */
+      var titreSeo = article.titre + ' | Parcours Industrie';
+      document.title = titreSeo;
+
+      function majBalise(selecteur, attribut, valeur) {
+        var el = document.querySelector(selecteur);
+        if (el && valeur) el.setAttribute(attribut, valeur);
+      }
+      var urlArticle = 'https://parcours-industrie.com/blog/article?slug=' +
+                       encodeURIComponent(article.slug || '');
+
+      majBalise('link[rel="canonical"]', 'href', urlArticle);
+      majBalise('meta[name="description"]', 'content', article.resume);
+      majBalise('meta[property="og:title"]', 'content', titreSeo);
+      majBalise('meta[property="og:description"]', 'content', article.resume);
+      majBalise('meta[property="og:url"]', 'content', urlArticle);
+      majBalise('meta[property="og:type"]', 'content', 'article');
+      if (article.image) {
+        majBalise('meta[property="og:image"]', 'content',
+                  'https://parcours-industrie.com/' + String(article.image).replace(/^\//, ''));
+      }
       page.querySelector('[data-cms-article-title]').textContent = article.titre;
       page.querySelector('[data-cms-article-category]').textContent = article.categorie || 'Article';
       page.querySelector('[data-cms-article-meta]').textContent = (article.date || '') + ' · ' + (article.lecture || '');

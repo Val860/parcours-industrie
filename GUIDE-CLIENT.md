@@ -13,7 +13,7 @@ sur le web.
 ```
 parcours-industrie/
 │
-├── index.html                  ← page d'accueil        →  parcours-industrie.fr
+├── index.html                  ← page d'accueil        →  parcours-industrie.com
 ├── contact.html                                        →  /contact
 ├── a-propos.html                                       →  /a-propos
 ├── mentions-legales.html
@@ -98,7 +98,7 @@ https://votre-site.netlify.app/admin/
 ou, après branchement du nom de domaine :
 
 ```
-https://parcours-industrie.fr/admin/
+https://parcours-industrie.com/admin/
 ```
 
 Le CMS permet de modifier sans coder :
@@ -185,7 +185,7 @@ Nom en minuscules, sans accent ni espace, sans préfixe :
 
 ```xml
   <url>
-    <loc>https://parcours-industrie.fr/blog/vae-maintenance-industrielle</loc>
+    <loc>https://parcours-industrie.com/blog/vae-maintenance-industrielle</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

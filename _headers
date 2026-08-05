@@ -1,0 +1,71 @@
+# ═══════════════════════════════════════════════════════════════════
+#  EN-TÊTES HTTP — Parcours Industrie
+#
+#  Netlify applique ces règles à la livraison des fichiers.
+#  Format : un chemin, puis les en-têtes indentés de deux espaces.
+#
+#  ⚠️  Aucune règle « Content-Security-Policy » ici, volontairement :
+#      l'interface /admin/ charge Decap CMS depuis unpkg.com et le
+#      widget Netlify Identity depuis identity.netlify.com. Une CSP
+#      stricte bloquerait les deux et rendrait le CMS inutilisable.
+# ═══════════════════════════════════════════════════════════════════
+
+/*
+  # Empêche le navigateur de deviner un type de fichier différent
+  # de celui annoncé — évite qu'une image soit exécutée comme script.
+  X-Content-Type-Options: nosniff
+
+  # Le site ne peut être affiché dans un cadre que par lui-même :
+  # protection contre le détournement de clics.
+  X-Frame-Options: SAMEORIGIN
+
+  # Transmet le domaine référent, jamais l'URL complète, vers l'extérieur.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Le site n'a besoin ni de la caméra, ni du micro, ni de la position.
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+
+  # Impose HTTPS pendant un an. Netlify fournit déjà le certificat.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# ── Pages HTML : jamais mises en cache durablement ──
+#    Le client publie depuis le CMS : une page doit refléter la
+#    dernière version dès le rechargement.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ── Feuille de style et script partagés ──
+#    Une heure de cache, puis revalidation : le client peut modifier
+#    assets/style.css et voir l'effet le jour même.
+/assets/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# ── Images ──
+#    Sept jours. Volontairement pas un an : le CMS permet de remplacer
+#    une image en conservant son nom de fichier.
+/images/*
+  Cache-Control: public, max-age=604800
+
+# ── Icônes et logo ──
+/*.svg
+  Cache-Control: public, max-age=604800
+/favicon.ico
+  Cache-Control: public, max-age=604800
+/apple-touch-icon.png
+  Cache-Control: public, max-age=604800
+
+# ── Interface d'administration ──
+#    Bloquée dans robots.txt, mais un fichier robots n'empêche pas
+#    l'indexation d'une URL découverte autrement. Cet en-tête, lui,
+#    l'interdit formellement.
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+# ── Contenus JSON pilotés par le CMS ──
+/content/*
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=0, must-revalidate

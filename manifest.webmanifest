@@ -1,0 +1,30 @@
+{
+  "name": "Parcours Industrie",
+  "short_name": "Parcours Ind.",
+  "description": "Cabinet spécialisé VAE, bilan de compétences, reconversion et orientation pour les métiers techniques et industriels.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f1eb",
+  "theme_color": "#0d1b2a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

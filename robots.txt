@@ -1,10 +1,19 @@
-# robots.txt — parcours-industrie.fr
+# robots.txt — parcours-industrie.com
 
 User-agent: *
 Allow: /
 
-# Pages sans intérêt pour l'indexation
-Disallow: /merci
-Disallow: /TEMPLATE-ARTICLE
+# ── Zones privées ou techniques, jamais indexées ──
+Disallow: /admin/
+Disallow: /.netlify/
+Disallow: /api/
+Disallow: /content/
 
-Sitemap: https://parcours-industrie.fr/sitemap.xml
+# ── Pages sans valeur pour la recherche ──
+Disallow: /merci
+Disallow: /merci.html
+
+# ── Fichiers de travail ──
+Disallow: /*.json$
+
+Sitemap: https://parcours-industrie.com/sitemap.xml
