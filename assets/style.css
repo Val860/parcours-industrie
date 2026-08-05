@@ -19,7 +19,7 @@
   --gray: #8a9aaa;
   --text: #1a2634;
 
-  --pi-nav-h: 70px;
+  --pi-nav-h: 86px;
   --pi-ease: cubic-bezier(0.16, 1, 0.3, 1);
   --pi-fast: 0.25s var(--pi-ease);
   --pi-slow: 0.7s var(--pi-ease);
@@ -87,16 +87,16 @@ nav.pi-nav.is-scrolled {
   .pi-nav__logo:hover { transform: translateY(-1px); }
 }
 .pi-nav__logo img {
-  height: clamp(44px, 4.2vw, 52px);
+  height: clamp(62px, 5.6vw, 76px);
   width: auto;
-  max-width: clamp(150px, 20vw, 210px);
+  max-width: clamp(210px, 26vw, 310px);
   display: block;
 }
 
 @media (max-width: 560px) {
   .pi-nav__logo img {
-    height: 42px;
-    max-width: 148px;
+    height: 48px;
+    max-width: 178px;
   }
 }
 
@@ -477,13 +477,13 @@ body.pi-menu-open {
   .pi-mobile__cta { font-size: 0.82rem; }
 }
 
-@media (min-width: 1060px) {
+@media (min-width: 1280px) {
   .pi-nav__menu { display: flex; }
   .pi-nav__cta { display: inline-block; }
   .pi-burger { display: none; }
   .pi-mobile { display: none; }
 }
-@media (min-width: 1260px) {
+@media (min-width: 1440px) {
   .pi-nav__link { font-size: 1rem; padding: 0.45rem 0.78rem; }
   .pi-nav__cta { padding: 0.6rem 1.25rem; font-size: 0.8rem; }
 }
