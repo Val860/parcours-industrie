@@ -101,9 +101,18 @@ nav.pi-nav.is-scrolled {
 }
 
 /* Les anciennes pages avaient parfois 62px écrit en dur dans leur hero.
-   On relie ces valeurs à la vraie hauteur de navigation. */
+   On relie cette valeur à la vraie hauteur de navigation. */
 .page-hero { padding-top: var(--pi-nav-h) !important; }
-.page-hero-overlay { inset: var(--pi-nav-h) 0 0 0 !important; }
+
+/* ⚠️ Ne PAS ajouter ici « .page-hero-overlay { inset: … } ».
+   Deux mises en page coexistent sur le site :
+     · 44 pages  → overlay en position:absolute, avec son propre inset :
+                   le dégagement sous la navigation est déjà géré.
+     · a-propos  → overlay en position:relative, dégagé par le
+                   padding-top du .page-hero ci-dessus.
+   Sur un élément en position:relative, « inset » ne cale pas l'élément :
+   il le DÉCALE de 62 px vers le bas. Le bandeau étant en overflow:hidden,
+   le bas du titre était alors rogné (« vos métiers » coupé en deux). */
 
 /* Badges orange des héros : largeur sur mesure du texte, jamais étirée. */
 .page-level {
