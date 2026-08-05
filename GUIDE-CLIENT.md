@@ -104,8 +104,32 @@ https://parcours-industrie.com/admin/
 Le CMS permet de modifier sans coder :
 
 - **Avis clients** : nom affiché, profil, service, texte, note, afficher/masquer
+- **Informations de contact** : email, téléphone, adresse, zone d'intervention,
+  délai de réponse et horaires de disponibilité
 - **Articles de blog** : titre, résumé, image, catégorie, date, contenu
 - **Images principales** : accueil, contact, merci, blog
+
+### Modifier les informations de contact
+
+`/admin/` → **Contenus du site** → **Informations de contact**
+
+| Champ | Où il apparaît |
+|---|---|
+| Adresse email | page Contact, cliquable pour écrire |
+| Téléphone | page Contact, **seulement si la case « Afficher » est cochée** |
+| Adresse postale | idem, masquée par défaut |
+| Mode de contact | badge du bandeau + bloc « Informations de contact » |
+| Zone d'intervention | bloc « Informations de contact » |
+| Délai de réponse | badge du bandeau + mention sous le formulaire |
+| Disponibilités | tableau des horaires — une ligne par période |
+
+Pour ajouter une période (jours fériés, fermeture d'été), cliquez sur
+**Ajouter** sous la liste Disponibilités. Décochez « Ouvert » pour afficher
+« Fermé » au lieu de « ✓ Disponible ».
+
+> L'adresse email du cabinet est en **.fr** (`contact@parcours-industrie.fr`)
+> alors que le site est en **.com**. C'est volontaire : la boîte mail et le
+> site n'utilisent pas le même domaine.
 
 Les images envoyées depuis le CMS sont rangées dans :
 

@@ -89,6 +89,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);heigh
 .horaire-row .day{color:#6a7e90;}
 .horaire-row .time{font-weight:700;color:var(--navy);}
 .horaire-row .available{color:var(--orange);font-size:0.75rem;font-weight:700;}
+.horaire-row .ferme{font-size:0.75rem;color:#aaa;}
+.info-item .value a{color:inherit;text-decoration:none;}
+.info-item .value a:hover{color:var(--orange-light);}
 
 /* FAQ RAPIDE */
 .faq-rapide{background:var(--cream);padding:2.5rem 1.4rem;}
@@ -684,8 +687,8 @@ button,
     <p>Prenez rendez-vous pour un diagnostic gratuit de 30 minutes. On analyse votre situation et on voit comment vous aider.</p>
     <div class="garanties">
       <div class="garantie-item"><div class="g-icon">✓</div><span>Gratuit et sans engagement</span></div>
-      <div class="garantie-item"><div class="g-icon">💻</div><span>Visio ou déplacement — France entière</span></div>
-      <div class="garantie-item"><div class="g-icon">⚡</div><span>Réponse sous 24h</span></div>
+      <div class="garantie-item"><div class="g-icon">💻</div><span data-cms-contact-mode-court>Visio ou déplacement — France entière</span></div>
+      <div class="garantie-item"><div class="g-icon">⚡</div><span data-cms-contact-delai-court>Réponse sous 24h</span></div>
     </div>
   </div>
 </div>
@@ -804,25 +807,32 @@ button,
     </div>
 
     <button type="submit" class="submit-btn">📅 Envoyer ma demande de diagnostic →</button>
-    <div class="form-note">Vos données sont confidentielles et ne sont jamais transmises à des tiers.<br>Réponse garantie sous 24h ouvrées.</div>
+    <div class="form-note">Vos données sont confidentielles et ne sont jamais transmises à des tiers.<br><span data-cms-contact-delai>Réponse garantie sous 24h ouvrées</span>.</div>
   </form>
 
   <!-- INFOS -->
   <div class="contact-infos">
     <div class="info-card">
       <h3>Informations de contact</h3>
-      <div class="info-items">
-        <div class="info-item"><div class="info-icon">📧</div><div><div class="label">Email</div><div class="value">contact@parcours-industrie.com</div></div></div>
-        <div class="info-item"><div class="info-icon">💻</div><div><div class="label">Mode de contact</div><div class="value">Visio (Zoom / Teams / Meet) ou déplacement</div></div></div>
-        <div class="info-item"><div class="info-icon">🗺️</div><div><div class="label">Zone d'intervention</div><div class="value">France entière — visio partout, déplacement possible selon mission</div></div></div>
+      <!-- Ces informations sont modifiables depuis le CMS :
+           /admin/ → Contenus du site → Informations de contact.
+           Le texte écrit ici reste affiché si le CMS ne répond pas. -->
+      <div class="info-items" data-cms-contact-infos>
+        <div class="info-item"><div class="info-icon">📧</div><div><div class="label">Email</div><div class="value"><a href="mailto:contact@parcours-industrie.fr" data-cms-contact-email>contact@parcours-industrie.fr</a></div></div></div>
+        <div class="info-item" data-cms-contact-telephone hidden><div class="info-icon">📞</div><div><div class="label">Téléphone</div><div class="value"><a href="tel:" data-cms-contact-telephone-valeur></a></div></div></div>
+        <div class="info-item" data-cms-contact-adresse hidden><div class="info-icon">📍</div><div><div class="label">Adresse</div><div class="value" data-cms-contact-adresse-valeur></div></div></div>
+        <div class="info-item"><div class="info-icon">💻</div><div><div class="label">Mode de contact</div><div class="value" data-cms-contact-mode>Visio (Zoom / Teams / Meet) ou déplacement</div></div></div>
+        <div class="info-item"><div class="info-icon">🗺️</div><div><div class="label">Zone d'intervention</div><div class="value" data-cms-contact-zone>France entière — visio partout, déplacement possible selon mission</div></div></div>
       </div>
     </div>
 
     <div class="horaires-card">
       <h3>Disponibilités</h3>
+      <div data-cms-contact-horaires>
       <div class="horaire-row"><span class="day">Lundi – Vendredi</span><span class="time">8h – 20h</span><span class="available">✓ Disponible</span></div>
       <div class="horaire-row"><span class="day">Samedi</span><span class="time">9h – 17h</span><span class="available">✓ Disponible</span></div>
-      <div class="horaire-row"><span class="day">Dimanche</span><span class="time">—</span><span style="font-size:0.75rem;color:#aaa">Fermé</span></div>
+      <div class="horaire-row"><span class="day">Dimanche</span><span class="time">—</span><span class="ferme">Fermé</span></div>
+      </div>
     </div>
   </div>
 </div>

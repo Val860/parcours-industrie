@@ -1,0 +1,27 @@
+{
+  "email": "contact@parcours-industrie.fr",
+  "telephone": "",
+  "afficher_telephone": false,
+  "mode_contact": "Visio (Zoom / Teams / Meet) ou déplacement",
+  "zone_intervention": "France entière — visio partout, déplacement possible selon mission",
+  "adresse": "",
+  "afficher_adresse": false,
+  "delai_reponse": "Réponse garantie sous 24h ouvrées",
+  "disponibilites": [
+    {
+      "jours": "Lundi – Vendredi",
+      "horaires": "8h – 20h",
+      "ouvert": true
+    },
+    {
+      "jours": "Samedi",
+      "horaires": "9h – 17h",
+      "ouvert": true
+    },
+    {
+      "jours": "Dimanche",
+      "horaires": "—",
+      "ouvert": false
+    }
+  ]
+}

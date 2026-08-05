@@ -29,6 +29,60 @@ collections:
               - { label: "Avis", name: "texte", widget: "text" }
               - { label: "Note", name: "note", widget: "number", value_type: "int", min: 1, max: 5, default: 5 }
 
+      - name: "contact"
+        label: "Informations de contact"
+        file: "content/contact-infos.json"
+        format: "json"
+        fields:
+          - label: "Adresse email"
+            name: "email"
+            widget: "string"
+            hint: "Affichée sur la page Contact et cliquable pour écrire un message."
+
+          - label: "Numéro de téléphone"
+            name: "telephone"
+            widget: "string"
+            required: false
+            hint: "Exemple : 06 12 34 56 78. Laisser vide si vous ne souhaitez pas l'afficher."
+          - label: "Afficher le téléphone sur le site"
+            name: "afficher_telephone"
+            widget: "boolean"
+            default: false
+            hint: "Le numéro n'apparaît que si cette case est cochée ET le champ ci-dessus rempli."
+
+          - label: "Adresse postale"
+            name: "adresse"
+            widget: "text"
+            required: false
+            hint: "Utile seulement si vous recevez du public."
+          - label: "Afficher l'adresse sur le site"
+            name: "afficher_adresse"
+            widget: "boolean"
+            default: false
+
+          - label: "Mode de contact"
+            name: "mode_contact"
+            widget: "string"
+            hint: "Exemple : Visio (Zoom / Teams / Meet) ou déplacement."
+          - label: "Zone d'intervention"
+            name: "zone_intervention"
+            widget: "string"
+            hint: "Exemple : France entière — visio partout, déplacement selon mission."
+          - label: "Délai de réponse annoncé"
+            name: "delai_reponse"
+            widget: "string"
+            hint: "Affiché sous le formulaire. Exemple : Réponse garantie sous 24h ouvrées."
+
+          - label: "Disponibilités"
+            name: "disponibilites"
+            widget: "list"
+            summary: "{{fields.jours}} — {{fields.horaires}}"
+            hint: "Une ligne par période. L'ordre affiché est celui de cette liste."
+            fields:
+              - { label: "Jours", name: "jours", widget: "string", hint: "Exemple : Lundi – Vendredi" }
+              - { label: "Horaires", name: "horaires", widget: "string", hint: "Exemple : 8h – 20h. Mettre — si fermé." }
+              - { label: "Ouvert", name: "ouvert", widget: "boolean", default: true, hint: "Décoché, la ligne affiche « Fermé »." }
+
       - name: "articles"
         label: "Articles de blog"
         file: "content/blog/articles.json"

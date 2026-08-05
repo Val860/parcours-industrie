@@ -293,12 +293,91 @@
     }).catch(function () {});
   }
 
+  /* ── INFORMATIONS DE CONTACT PILOTÉES PAR LE CMS ────────────────
+     Email, téléphone, adresse, zone d'intervention et disponibilités
+     sont modifiables depuis /admin/ sans toucher au HTML.
+     Si le fichier ne charge pas, le contenu écrit dans contact.html
+     reste affiché : la page n'est jamais vide.                      */
+  function initCmsContact() {
+    var bloc = document.querySelector('[data-cms-contact-infos]');
+    var horaires = document.querySelector('[data-cms-contact-horaires]');
+    if (!bloc && !horaires) return Promise.resolve();
+
+    return fetchJson('content/contact-infos.json').then(function (data) {
+      if (!data) return;
+
+      function texte(selecteur, valeur) {
+        var el = document.querySelector(selecteur);
+        if (el && valeur) el.textContent = valeur;
+      }
+
+      // ── Email ──
+      var lienEmail = document.querySelector('[data-cms-contact-email]');
+      if (lienEmail && data.email) {
+        lienEmail.textContent = data.email;
+        lienEmail.setAttribute('href', 'mailto:' + data.email);
+      }
+
+      // ── Téléphone : affiché seulement si renseigné ET coché ──
+      var ligneTel = document.querySelector('[data-cms-contact-telephone]');
+      if (ligneTel) {
+        var afficherTel = data.afficher_telephone && data.telephone;
+        ligneTel.hidden = !afficherTel;
+        if (afficherTel) {
+          var lienTel = ligneTel.querySelector('[data-cms-contact-telephone-valeur]');
+          if (lienTel) {
+            lienTel.textContent = data.telephone;
+            lienTel.setAttribute('href', 'tel:' + data.telephone.replace(/[^0-9+]/g, ''));
+          }
+        }
+      }
+
+      // ── Adresse postale : même principe ──
+      var ligneAdr = document.querySelector('[data-cms-contact-adresse]');
+      if (ligneAdr) {
+        var afficherAdr = data.afficher_adresse && data.adresse;
+        ligneAdr.hidden = !afficherAdr;
+        if (afficherAdr) {
+          texte('[data-cms-contact-adresse-valeur]', data.adresse);
+        }
+      }
+
+      texte('[data-cms-contact-mode]', data.mode_contact);
+      texte('[data-cms-contact-zone]', data.zone_intervention);
+      texte('[data-cms-contact-delai]', data.delai_reponse);
+
+      // ── Badges du bandeau de titre ──
+      // Ils répètent le délai et le mode de contact en version courte.
+      // Sans cette reprise, modifier « 24h » en « 48h » dans le CMS
+      // laissait le bandeau afficher l'ancienne valeur, en contradiction
+      // avec le texte sous le formulaire.
+      texte('[data-cms-contact-delai-court]', data.delai_reponse);
+      texte('[data-cms-contact-mode-court]', data.mode_contact);
+
+      // ── Disponibilités ──
+      if (horaires && Array.isArray(data.disponibilites) && data.disponibilites.length) {
+        horaires.innerHTML = data.disponibilites.map(function (ligne) {
+          var etat = ligne.ouvert
+            ? '<span class="available">✓ Disponible</span>'
+            : '<span class="ferme">Fermé</span>';
+          return '<div class="horaire-row">'
+               + '<span class="day">' + escapeHtml(ligne.jours || '') + '</span>'
+               + '<span class="time">' + escapeHtml(ligne.horaires || '—') + '</span>'
+               + etat + '</div>';
+        }).join('');
+      }
+    }).catch(function (error) {
+      console.warn('[CMS contact] Informations non chargées, contenu HTML conservé.', error);
+    });
+  }
+
   function initCmsContent() {
     return Promise.all([
       initCmsImages(),
       initCmsTestimonials(),
       initCmsBlogList(),
-      initCmsArticlePage()
+      initCmsArticlePage(),
+      initCmsContact()
     ]);
   }
 
