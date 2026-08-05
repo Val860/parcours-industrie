@@ -182,9 +182,32 @@
 /apropos                                     /a-propos   301
 /blog                                        /blog/   301
 /preparation-entretien-motivation            /orientation/entretien-motivation   301
-/blog/vae-electricien                        /blog/vae-electricien   301
 /diagnostic                                  /contact   301
 /rendez-vous                                 /contact   301
 
-# ── Page 404 personnalisée ──
-/*                                           /404.html   404
+# ══════════════════════════════════════════════════════════════════
+#  PAGE 404
+#
+#  AUCUNE RÈGLE N'EST NÉCESSAIRE ICI.
+#  Netlify sert automatiquement le fichier 404.html à la racine pour
+#  toute adresse qui ne correspond à aucun fichier ni à aucune règle.
+#
+#  ⚠️  NE JAMAIS AJOUTER DE RÈGLE JOKER DU TYPE :
+#          /*        /404.html     404
+#          /*        /index.html   200
+#
+#  Un joker « /* » capture TOUTES les adresses, y compris les routes
+#  système de Netlify :
+#          /.netlify/identity/*    → connexion au CMS
+#          /.netlify/git/*         → Git Gateway (lecture/écriture GitHub)
+#          /.netlify/functions/*   → fonctions serverless
+#
+#  Résultat : l'interface /admin/ ne peut plus se connecter et Decap CMS
+#  affiche « Failed to load settings from /.netlify/identity ».
+#  C'est exactement le problème qu'une règle « /* /404.html 404 »
+#  présente ici a provoqué.
+#
+#  Si un jour un joker devient indispensable, il faut IMPÉRATIVEMENT
+#  le faire précéder de cette ligne d'exclusion :
+#          /.netlify/*   /.netlify/:splat   200
+# ══════════════════════════════════════════════════════════════════
