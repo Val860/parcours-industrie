@@ -17,15 +17,6 @@
       "service": "Bilan de compétences",
       "texte": "Le bilan de compétences m'a permis de structurer mon projet de reconversion. En 3 mois j'avais un plan clair pour passer chef d'équipe maintenance.",
       "note": 5
-    },
-    {
-      "visible": true,
-      "note": 5,
-      "nom": "slimane",
-      "initiales": "SB",
-      "profil": "Technicien maintenance",
-      "texte": "Le bilan de compétences m'a permis de structurer mon projet de reconversion. En 3 mois j'avais un plan clair pour passer chef d'équipe maintenance.",
-      "service": "Bilan de compétences"
     }
   ]
 }
