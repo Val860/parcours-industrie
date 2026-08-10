@@ -216,7 +216,6 @@
     var imgCls = featured ? 'article-featured-img' : 'article-card-img';
     var bodyCls = featured ? 'article-featured-body' : 'article-card-body';
     var meta = escapeHtml((article.lecture || '5 min') + ' de lecture · ' + (article.date || ''));
-    var soon = featured ? '' : '<div class="article-soon">Article CMS</div>';
     var footer = featured
       ? '<div class="article-meta"><span>' + meta + '</span><span class="article-read">Lire l&rsquo;article →</span></div>'
       : '<div class="article-footer"><span class="article-date">' + escapeHtml((article.date || '') + ' · ' + (article.lecture || '')) + '</span><span class="read-link">Lire l&rsquo;article →</span></div>';
@@ -225,7 +224,7 @@
       '<div class="' + bodyCls + '">' +
       '<span class="article-cat">' + escapeHtml(article.categorie || 'Actualités') + '</span>' +
       (featured ? '<h2>' : '<h3>') + escapeHtml(article.titre) + (featured ? '</h2>' : '</h3>') +
-      '<p>' + escapeHtml(article.resume) + '</p>' + soon + footer +
+      '<p>' + escapeHtml(article.resume) + '</p>' + footer +
       '</div></a>';
   }
 
@@ -253,7 +252,13 @@
       var article = (data.articles || []).filter(function (item) {
         return item.visible !== false && item.slug === slug;
       })[0];
-      if (!article) return;
+      if (!article) {
+        document.title = 'Article introuvable | Parcours Industrie';
+        page.querySelector('[data-cms-article-title]').textContent = 'Article introuvable';
+        page.querySelector('[data-cms-article-summary]').textContent = 'Cet article n’est pas publié ou n’existe plus.';
+        page.querySelector('[data-cms-article-body]').innerHTML = '<p><a href="./">Retourner aux articles publiés</a></p>';
+        return;
+      }
 
       /* ── Métadonnées propres à l'article ────────────────────────────
          Sans cela, les 7 articles partagent le title, la description et
@@ -425,6 +430,7 @@
       var open = panel.classList.toggle('is-open');
       burger.classList.toggle('is-open', open);
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
       document.body.classList.toggle('pi-menu-open', open);
     });
 
@@ -686,6 +692,28 @@
 
     var bar = form.querySelector('.pi-form__progress span');
     var label = form.querySelector('.pi-form__progress-label');
+    var subject = form.querySelector('[data-contact-subject]');
+
+    function selectRadio(selector) {
+      var input = form.querySelector(selector);
+      if (input) input.checked = true;
+    }
+
+    // Les liens contextuels peuvent présélectionner un motif sans bloquer
+    // l'utilisateur, qui reste libre de modifier tous les choix.
+    var requestType = new URLSearchParams(window.location.search).get('demande');
+    if (requestType === 'devis') {
+      selectRadio('[data-contact-type="devis"]');
+      selectRadio('input[name="statut"][value="Responsable RH / Entreprise"]');
+      selectRadio('input[name="besoin"][value="Accompagnement entreprise"]');
+    } else if (requestType === 'question') {
+      selectRadio('[data-contact-type="question"]');
+    }
+
+    function updateSubject() {
+      var selected = form.querySelector('input[name="type_demande"]:checked');
+      if (subject && selected) subject.value = selected.value;
+    }
 
     function requiredGroups() {
       var groups = [];
@@ -727,7 +755,11 @@
     }
 
     form.addEventListener('input', updateProgress);
-    form.addEventListener('change', updateProgress);
+    form.addEventListener('change', function () {
+      updateSubject();
+      updateProgress();
+    });
+    updateSubject();
     updateProgress();
 
     // Netlify Forms doit garder l'envoi HTML natif.

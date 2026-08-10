@@ -1,0 +1,11 @@
+.DS_Store
+RAPPORT-AUDIT-AVANT-LIVRAISON.md
+RAPPORT-CORRECTIONS-FINALES.md
+
+# Fichiers de travail non destinés au site public
+.claude/
+_archive/
+icon/
+scripts/
+GUIDE-CLIENT.md
+README.md

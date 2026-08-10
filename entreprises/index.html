@@ -17,6 +17,8 @@
   <meta name="twitter:title" content="Solutions entreprises industrie – Parcours Industrie"/>
   <meta name="twitter:description" content="VAE collective, conseil RH externalisé et ingénierie de formation pour les entreprises industrielles. Devis gratuit."/>
   <link rel="canonical" href="https://parcours-industrie.com/entreprises/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0d1b2a;--steel:#1c3a52;--orange:#e8601c;--orange-light:#f07b3a;--cream:#f5f1eb;--light:#ffffff;--text:#1a2634;}
@@ -73,11 +75,9 @@ section{padding:3rem 1.4rem;}
 
 .contact-box{background:white;border-radius:8px;padding:1.5rem;margin-top:1.5rem;border:2px solid #e0e8f0;}
 .contact-box h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:var(--navy);margin-bottom:0.8rem;}
-.contact-field{margin-bottom:1rem;}
-.contact-field label{display:block;font-size:0.8rem;font-weight:700;color:var(--navy);margin-bottom:0.3rem;letter-spacing:0.04em;}
-.contact-field input,.contact-field textarea,.contact-field select{width:100%;padding:0.75rem;border:1.5px solid #d0dce8;border-radius:4px;font-family:'Lato',sans-serif;font-size:0.9rem;color:var(--text);background:var(--cream);}
-.contact-field textarea{height:100px;resize:vertical;}
-.submit-btn{width:100%;background:var(--orange);color:white;border:none;padding:1rem;font-family:'Lato',sans-serif;font-weight:700;font-size:0.95rem;border-radius:4px;cursor:pointer;}
+.contact-box p{font-size:0.9rem;color:#5a6e80;line-height:1.65;}
+.contact-box .serv-list{margin-bottom:1.2rem;}
+.submit-btn{display:block;width:100%;background:var(--orange);color:white;border:none;padding:1rem;font-family:'Lato',sans-serif;font-weight:700;font-size:0.95rem;border-radius:4px;cursor:pointer;text-align:center;text-decoration:none;}
 
 footer{background:var(--navy);color:rgba(255,255,255,0.45);padding:2rem 1.4rem;font-size:0.78rem;line-height:1.8;}
 .footer-logo{display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;text-decoration:none;}
@@ -253,22 +253,6 @@ button,
 .stat-item .num { font-size: clamp(1.6rem, 1.15rem + 1.7vw, 2.35rem); }
 
 .contact-box { max-width: 760px; }
-.contact-field label { transition: color 0.25s ease; }
-.contact-field:focus-within label { color: var(--orange); }
-.contact-field input,
-.contact-field textarea,
-.contact-field select {
-  min-height: 46px;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, transform 0.25s ease;
-}
-.contact-field input:focus,
-.contact-field textarea:focus,
-.contact-field select:focus {
-  outline: none;
-  background: white;
-  border-color: var(--orange);
-  box-shadow: 0 0 0 3px rgba(232,96,28,0.12);
-}
 .submit-btn:hover,
 .btn-white:hover {
   transform: translateY(-2px);
@@ -336,6 +320,9 @@ button,
 
 <!-- ══ Feuille de style partagée — modifier ICI = modifié sur TOUTES les pages ══ -->
 <link rel="stylesheet" href="../assets/style.css"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Parcours Industrie","url":"https://parcours-industrie.com/","email":"contact@parcours-industrie.fr"}
+</script>
 </head>
 <body>
 
@@ -348,98 +335,96 @@ button,
      Pour ajouter une entrée au menu : voir GUIDE-CLIENT.md
      ═════════════════════════════════════════════════════════════ -->
 <nav class="pi-nav">
-  <a class="pi-nav__logo" href="../index.html" aria-label="Parcours Industrie — accueil">
+  <a class="pi-nav__logo" href="../" aria-label="Parcours Industrie — accueil">
     <img fetchpriority="high" decoding="async" loading="eager" src="../logo-blanc.svg" alt="Parcours Industrie" width="86" height="36"/>
   </a>
 
   <ul class="pi-nav__menu">
     <li class="pi-nav__item pi-nav__item--has-sub">
-      <a class="pi-nav__link" href="../vae/index.html">VAE</a>
+      <a class="pi-nav__link" href="../vae/">VAE</a>
       <div class="pi-nav__sub pi-nav__sub--mega">
         <span class="pi-nav__sub-title">Électricité & Énergie</span>
-        <a href="../vae/cap-electricien.html">VAE CAP Électricien</a>
-        <a href="../vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
-        <a href="../vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
-        <a href="../vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
+        <a href="../vae/cap-electricien">VAE CAP Électricien</a>
+        <a href="../vae/bac-pro-melec">VAE Bac pro MELEC</a>
+        <a href="../vae/bts-electrotechnique">VAE BTS Électrotechnique</a>
+        <a href="../vae/bac-pro-tmsec">VAE Bac pro MEE</a>
         <span class="pi-nav__sub-title">Maintenance industrielle</span>
-        <a href="../vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
-        <a href="../vae/bac-pro-mei.html">VAE Bac pro MEI</a>
-        <a href="../vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
-        <a href="../vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
+        <a href="../vae/bac-pro-mspc">VAE Bac pro MSPC</a>
+        <a href="../vae/bts-maintenance-industrielle">VAE BTS Maintenance ind.</a>
         <span class="pi-nav__sub-title">Réseaux & Cybersécurité</span>
-        <a href="../vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
-        <a href="../vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
-        <a href="../vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
+        <a href="../vae/bac-pro-ciel">VAE Bac pro CIEL</a>
+        <a href="../vae/bts-ciel-ir">VAE BTS CIEL option IR</a>
+        <a href="../vae/bts-ciel-ec">VAE BTS CIEL option B</a>
         <span class="pi-nav__sub-title">Sécurité</span>
-        <a href="../vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
-        <a href="../vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
-        <a href="../vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
+        <a href="../vae/cap-agent-securite">VAE CAP Agent de sécurité</a>
+        <a href="../vae/bac-pro-securite-prevention">VAE Bac pro Métiers sécurité</a>
+        <a href="../vae/bts-metiers-securite">VAE BTS Métiers sécurité</a>
         <span class="pi-nav__sub-title">Production & Automatisme</span>
-        <a href="../vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
-        <a href="../vae/bts-cprp.html">VAE BTS CPRP</a>
+        <a href="../vae/bac-pro-pspa">VAE Bac pro PLP</a>
+        <a href="../vae/bts-cprp">VAE BTS CPRP</a>
         <span class="pi-nav__sub-title">Enseignement supérieur</span>
-        <a href="../vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
-        <a href="../vae/master-industrie.html">VAE Master industrie</a>
-        <a href="../vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
-        <a class="pi-nav__sub-all" href="../vae/index.html">→ Toutes les filières VAE</a>
+        <a href="../vae/licence-pro-industrie">VAE Licence pro industrie</a>
+        <a href="../vae/master-industrie">VAE Master industrie</a>
+        <a href="../vae/diplome-ingenieur">VAE Diplôme d'ingénieur</a>
+        <a class="pi-nav__sub-all" href="../vae/">→ Toutes les filières VAE</a>
       </div>
     </li>
-    <li class="pi-nav__item"><a class="pi-nav__link" href="../bilan/index.html">Bilan de compétences</a></li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="../bilan/">Bilan de compétences</a></li>
     <li class="pi-nav__item pi-nav__item--has-sub">
-      <a class="pi-nav__link" href="../reconversion/index.html">Reconversion</a>
+      <a class="pi-nav__link" href="../reconversion/">Reconversion</a>
       <div class="pi-nav__sub">
-        <a class="pi-nav__sub-all" href="../reconversion/index.html">→ Reconversion : vue d'ensemble</a>
-        <a href="../reconversion/electricite.html">Électricité & Énergie</a>
-        <a href="../reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
-        <a href="../reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
-        <a href="../reconversion/securite-privee.html">Sécurité privée</a>
-        <a href="../reconversion/btp.html">BTP & Construction</a>
-      </div>
-    </li>
-    <li class="pi-nav__item pi-nav__item--has-sub">
-      <a class="pi-nav__link" href="../orientation/index.html">Orientation</a>
-      <div class="pi-nav__sub">
-        <a class="pi-nav__sub-all" href="../orientation/index.html">→ Orientation : vue d'ensemble</a>
-        <a href="../orientation/collegiens.html">Collégiens — après la 3e</a>
-        <a href="../orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
-        <a href="../orientation/adultes.html">Adultes en reconversion</a>
-        <a href="../orientation/parents.html">Parents — comprendre la voie pro</a>
-        <a href="../orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+        <a class="pi-nav__sub-all" href="../reconversion/">→ Reconversion : vue d'ensemble</a>
+        <a href="../reconversion/electricite">Électricité & Énergie</a>
+        <a href="../reconversion/maintenance-industrielle">Maintenance industrielle</a>
+        <a href="../reconversion/reseaux-cybersecurite">Réseaux & Cybersécurité</a>
+        <a href="../reconversion/securite-privee">Sécurité privée</a>
+        <a href="../reconversion/btp">BTP & Construction</a>
       </div>
     </li>
     <li class="pi-nav__item pi-nav__item--has-sub">
-      <a class="pi-nav__link" href="../coaching/index.html">Coaching</a>
+      <a class="pi-nav__link" href="../orientation/">Orientation</a>
       <div class="pi-nav__sub">
-        <a class="pi-nav__sub-all" href="../coaching/index.html">→ Coaching : vue d'ensemble</a>
-        <a href="../coaching/cv-technicien.html">CV technicien</a>
-        <a href="../coaching/lettre-motivation.html">Lettre de motivation</a>
-        <a href="../coaching/entretien-embauche.html">Entretien d'embauche</a>
-        <a href="../coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
-        <a href="../coaching/outplacement.html">Outplacement technicien</a>
+        <a class="pi-nav__sub-all" href="../orientation/">→ Orientation : vue d'ensemble</a>
+        <a href="../orientation/collegiens">Collégiens — après la 3e</a>
+        <a href="../orientation/lyceens">Lycéens — Parcoursup, BTS</a>
+        <a href="../orientation/adultes">Adultes en reconversion</a>
+        <a href="../orientation/parents">Parents — comprendre la voie pro</a>
+        <a href="../orientation/entretien-motivation">Entretiens motivation BTS & écoles</a>
       </div>
     </li>
     <li class="pi-nav__item pi-nav__item--has-sub">
-      <a class="pi-nav__link is-active" href="index.html" aria-current="page">Entreprises</a>
+      <a class="pi-nav__link" href="../coaching/">Coaching</a>
       <div class="pi-nav__sub">
-        <a class="pi-nav__sub-all" href="index.html">→ Entreprises : vue d'ensemble</a>
-        <a href="vae-collective.html">VAE collective</a>
-        <a href="formation-tuteurs.html">Formation de tuteurs</a>
-        <a href="conseil-rh.html">Conseil RH externalisé</a>
+        <a class="pi-nav__sub-all" href="../coaching/">→ Coaching : vue d'ensemble</a>
+        <a href="../coaching/cv-technicien">CV technicien</a>
+        <a href="../coaching/lettre-motivation">Lettre de motivation</a>
+        <a href="../coaching/entretien-embauche">Entretien d'embauche</a>
+        <a href="../coaching/prise-de-poste">Prise de poste chef d'équipe</a>
+        <a href="../coaching/outplacement">Outplacement technicien</a>
       </div>
     </li>
     <li class="pi-nav__item pi-nav__item--has-sub">
-      <a class="pi-nav__link" href="../ingenierie/index.html">Ingénierie</a>
+      <a class="pi-nav__link is-active" href="./" aria-current="page">Entreprises</a>
       <div class="pi-nav__sub">
-        <a class="pi-nav__sub-all" href="../ingenierie/index.html">→ Ingénierie : vue d'ensemble</a>
-        <a href="../ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
-        <a href="../ingenierie/titre-rncp.html">Création titre RNCP</a>
-        <a href="../ingenierie/qualiopi.html">Certification Qualiopi</a>
+        <a class="pi-nav__sub-all" href="./">→ Entreprises : vue d'ensemble</a>
+        <a href="vae-collective">VAE collective</a>
+        <a href="formation-tuteurs">Formation de tuteurs</a>
+        <a href="conseil-rh">Conseil RH externalisé</a>
       </div>
     </li>
-    <li class="pi-nav__item"><a class="pi-nav__link" href="../blog/index.html">Blog</a></li>
+    <li class="pi-nav__item pi-nav__item--has-sub">
+      <a class="pi-nav__link" href="../ingenierie/">Ingénierie</a>
+      <div class="pi-nav__sub">
+        <a class="pi-nav__sub-all" href="../ingenierie/">→ Ingénierie : vue d'ensemble</a>
+        <a href="../ingenierie/ouverture-diplome">Ouverture de diplôme</a>
+        <a href="../ingenierie/titre-rncp">Création titre RNCP</a>
+        <a href="../ingenierie/qualiopi">Certification Qualiopi</a>
+      </div>
+    </li>
+    <li class="pi-nav__item"><a class="pi-nav__link" href="../blog/">Blog</a></li>
   </ul>
 
-  <a class="pi-nav__cta" href="../contact.html">Diagnostic gratuit</a>
+  <a class="pi-nav__cta" href="../contact">Diagnostic gratuit</a>
 
   <button class="pi-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
     <span></span><span></span><span></span>
@@ -447,94 +432,92 @@ button,
 </nav>
 
 <div class="pi-mobile" id="menu-mobile">
-  <a class="pi-mobile__head" href="../index.html">Accueil</a>
+  <a class="pi-mobile__head" href="../">Accueil</a>
   <div class="pi-mobile__group">
     <button class="pi-mobile__head" data-toggle aria-expanded="false">VAE<span class="chev"></span></button>
     <div class="pi-mobile__sub">
-      <a href="../vae/index.html"><strong>VAE — vue d'ensemble</strong></a>
-      <a href="../vae/cap-electricien.html">VAE CAP Électricien</a>
-      <a href="../vae/bac-pro-melec.html">VAE Bac pro MELEC</a>
-      <a href="../vae/bts-electrotechnique.html">VAE BTS Électrotechnique</a>
-      <a href="../vae/bac-pro-tmsec.html">VAE Bac pro TMSEC</a>
-      <a href="../vae/cap-maintenance-equipements.html">VAE CAP Maintenance équip.</a>
-      <a href="../vae/bac-pro-mei.html">VAE Bac pro MEI</a>
-      <a href="../vae/bac-pro-mspc.html">VAE Bac pro MSPC</a>
-      <a href="../vae/bts-maintenance-industrielle.html">VAE BTS Maintenance ind.</a>
-      <a href="../vae/bac-pro-ciel.html">VAE Bac pro CIEL</a>
-      <a href="../vae/bts-ciel-ir.html">VAE BTS CIEL option IR</a>
-      <a href="../vae/bts-ciel-ec.html">VAE BTS CIEL option EC</a>
-      <a href="../vae/cap-agent-securite.html">VAE CAP Agent de sécurité</a>
-      <a href="../vae/bac-pro-securite-prevention.html">VAE Bac pro Sécurité Prév.</a>
-      <a href="../vae/bts-metiers-securite.html">VAE BTS Métiers sécurité</a>
-      <a href="../vae/bac-pro-pspa.html">VAE Bac pro PSPA</a>
-      <a href="../vae/bts-cprp.html">VAE BTS CPRP</a>
-      <a href="../vae/licence-pro-industrie.html">VAE Licence pro industrie</a>
-      <a href="../vae/master-industrie.html">VAE Master industrie</a>
-      <a href="../vae/diplome-ingenieur.html">VAE Diplôme d'ingénieur</a>
+      <a href="../vae/"><strong>VAE — vue d'ensemble</strong></a>
+      <a href="../vae/cap-electricien">VAE CAP Électricien</a>
+      <a href="../vae/bac-pro-melec">VAE Bac pro MELEC</a>
+      <a href="../vae/bts-electrotechnique">VAE BTS Électrotechnique</a>
+      <a href="../vae/bac-pro-tmsec">VAE Bac pro MEE</a>
+      <a href="../vae/bac-pro-mspc">VAE Bac pro MSPC</a>
+      <a href="../vae/bts-maintenance-industrielle">VAE BTS Maintenance ind.</a>
+      <a href="../vae/bac-pro-ciel">VAE Bac pro CIEL</a>
+      <a href="../vae/bts-ciel-ir">VAE BTS CIEL option IR</a>
+      <a href="../vae/bts-ciel-ec">VAE BTS CIEL option B</a>
+      <a href="../vae/cap-agent-securite">VAE CAP Agent de sécurité</a>
+      <a href="../vae/bac-pro-securite-prevention">VAE Bac pro Métiers sécurité</a>
+      <a href="../vae/bts-metiers-securite">VAE BTS Métiers sécurité</a>
+      <a href="../vae/bac-pro-pspa">VAE Bac pro PLP</a>
+      <a href="../vae/bts-cprp">VAE BTS CPRP</a>
+      <a href="../vae/licence-pro-industrie">VAE Licence pro industrie</a>
+      <a href="../vae/master-industrie">VAE Master industrie</a>
+      <a href="../vae/diplome-ingenieur">VAE Diplôme d'ingénieur</a>
     </div>
   </div>
-  <div class="pi-mobile__group"><a class="pi-mobile__head" href="../bilan/index.html">Bilan de compétences</a></div>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="../bilan/">Bilan de compétences</a></div>
   <div class="pi-mobile__group">
     <button class="pi-mobile__head" data-toggle aria-expanded="false">Reconversion<span class="chev"></span></button>
     <div class="pi-mobile__sub">
-      <a href="../reconversion/index.html"><strong>Reconversion — vue d'ensemble</strong></a>
-      <a href="../reconversion/electricite.html">Électricité & Énergie</a>
-      <a href="../reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
-      <a href="../reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
-      <a href="../reconversion/securite-privee.html">Sécurité privée</a>
-      <a href="../reconversion/btp.html">BTP & Construction</a>
+      <a href="../reconversion/"><strong>Reconversion — vue d'ensemble</strong></a>
+      <a href="../reconversion/electricite">Électricité & Énergie</a>
+      <a href="../reconversion/maintenance-industrielle">Maintenance industrielle</a>
+      <a href="../reconversion/reseaux-cybersecurite">Réseaux & Cybersécurité</a>
+      <a href="../reconversion/securite-privee">Sécurité privée</a>
+      <a href="../reconversion/btp">BTP & Construction</a>
     </div>
   </div>
   <div class="pi-mobile__group">
     <button class="pi-mobile__head" data-toggle aria-expanded="false">Orientation<span class="chev"></span></button>
     <div class="pi-mobile__sub">
-      <a href="../orientation/index.html"><strong>Orientation — vue d'ensemble</strong></a>
-      <a href="../orientation/collegiens.html">Collégiens — après la 3e</a>
-      <a href="../orientation/lyceens.html">Lycéens — Parcoursup, BTS</a>
-      <a href="../orientation/adultes.html">Adultes en reconversion</a>
-      <a href="../orientation/parents.html">Parents — comprendre la voie pro</a>
-      <a href="../orientation/entretien-motivation.html">Entretiens motivation BTS & écoles</a>
+      <a href="../orientation/"><strong>Orientation — vue d'ensemble</strong></a>
+      <a href="../orientation/collegiens">Collégiens — après la 3e</a>
+      <a href="../orientation/lyceens">Lycéens — Parcoursup, BTS</a>
+      <a href="../orientation/adultes">Adultes en reconversion</a>
+      <a href="../orientation/parents">Parents — comprendre la voie pro</a>
+      <a href="../orientation/entretien-motivation">Entretiens motivation BTS & écoles</a>
     </div>
   </div>
   <div class="pi-mobile__group">
     <button class="pi-mobile__head" data-toggle aria-expanded="false">Coaching<span class="chev"></span></button>
     <div class="pi-mobile__sub">
-      <a href="../coaching/index.html"><strong>Coaching — vue d'ensemble</strong></a>
-      <a href="../coaching/cv-technicien.html">CV technicien</a>
-      <a href="../coaching/lettre-motivation.html">Lettre de motivation</a>
-      <a href="../coaching/entretien-embauche.html">Entretien d'embauche</a>
-      <a href="../coaching/prise-de-poste.html">Prise de poste chef d'équipe</a>
-      <a href="../coaching/outplacement.html">Outplacement technicien</a>
+      <a href="../coaching/"><strong>Coaching — vue d'ensemble</strong></a>
+      <a href="../coaching/cv-technicien">CV technicien</a>
+      <a href="../coaching/lettre-motivation">Lettre de motivation</a>
+      <a href="../coaching/entretien-embauche">Entretien d'embauche</a>
+      <a href="../coaching/prise-de-poste">Prise de poste chef d'équipe</a>
+      <a href="../coaching/outplacement">Outplacement technicien</a>
     </div>
   </div>
   <div class="pi-mobile__group">
     <button class="pi-mobile__head" data-toggle aria-expanded="false">Entreprises<span class="chev"></span></button>
     <div class="pi-mobile__sub">
-      <a href="index.html"><strong>Entreprises — vue d'ensemble</strong></a>
-      <a href="vae-collective.html">VAE collective</a>
-      <a href="formation-tuteurs.html">Formation de tuteurs</a>
-      <a href="conseil-rh.html">Conseil RH externalisé</a>
+      <a href="./"><strong>Entreprises — vue d'ensemble</strong></a>
+      <a href="vae-collective">VAE collective</a>
+      <a href="formation-tuteurs">Formation de tuteurs</a>
+      <a href="conseil-rh">Conseil RH externalisé</a>
     </div>
   </div>
   <div class="pi-mobile__group">
     <button class="pi-mobile__head" data-toggle aria-expanded="false">Ingénierie<span class="chev"></span></button>
     <div class="pi-mobile__sub">
-      <a href="../ingenierie/index.html"><strong>Ingénierie — vue d'ensemble</strong></a>
-      <a href="../ingenierie/ouverture-diplome.html">Ouverture de diplôme</a>
-      <a href="../ingenierie/titre-rncp.html">Création titre RNCP</a>
-      <a href="../ingenierie/qualiopi.html">Certification Qualiopi</a>
+      <a href="../ingenierie/"><strong>Ingénierie — vue d'ensemble</strong></a>
+      <a href="../ingenierie/ouverture-diplome">Ouverture de diplôme</a>
+      <a href="../ingenierie/titre-rncp">Création titre RNCP</a>
+      <a href="../ingenierie/qualiopi">Certification Qualiopi</a>
     </div>
   </div>
-  <div class="pi-mobile__group"><a class="pi-mobile__head" href="../blog/index.html">Blog</a></div>
-  <a class="pi-mobile__cta" href="../contact.html">Diagnostic gratuit →</a>
+  <div class="pi-mobile__group"><a class="pi-mobile__head" href="../blog/">Blog</a></div>
+  <a class="pi-mobile__cta" href="../contact">Diagnostic gratuit →</a>
 </div>
 
-<span id="contenu"></span>
+<main id="contenu">
 
 <div class="page-hero">
-  <img width="1600" height="900" loading="lazy" decoding="async" src="../images/entreprises/entreprises-equipe-technique-certification.jpg" alt="Industrie entreprise" class="page-hero-img"/>
+  <img width="1600" height="900" loading="eager" fetchpriority="high" decoding="async" src="../images/entreprises/entreprises-equipe-technique-certification.jpg" alt="Industrie entreprise" class="page-hero-img"/>
   <div class="page-hero-overlay">
-    <div class="breadcrumb"><a href="../index.html">Accueil</a> › Entreprises</div>
+    <div class="breadcrumb"><a href="../">Accueil</a> › Entreprises</div>
     <div class="page-level">🏭 Solutions entreprises</div>
     <h1>Certifiez vos <em>salariés</em><br>techniques</h1>
     <p>Programmes VAE collectifs, bilans de compétences et cartographie des compétences pour les équipes techniques et industrielles.</p>
@@ -549,8 +532,8 @@ button,
   <div class="why-grid">
     <div class="why-card"><div class="why-icon">📜</div><div><h4>Conformité réglementaire</h4><p>Certains secteurs (électricité, sécurité) exigent des diplômes pour exercer légalement certaines activités.</p></div></div>
     <div class="why-card"><div class="why-icon">💼</div><div><h4>Évolutions internes</h4><p>Permettre à vos techniciens d'évoluer vers chef d'équipe ou responsable grâce à une certification officielle.</p></div></div>
-    <div class="why-card"><div class="why-icon">🤝</div><div><h4>Fidélisation des talents</h4><p>Un salarié à qui l'entreprise offre une reconnaissance officielle est un salarié qui reste et s'engage.</p></div></div>
-    <div class="why-card"><div class="why-icon">💰</div><div><h4>Financement OPCO</h4><p>Les programmes de certification peuvent être financés par votre OPCO, avec peu ou pas de reste à charge pour l'entreprise.</p></div></div>
+    <div class="why-card"><div class="why-icon">🤝</div><div><h4>Reconnaissance des compétences</h4><p>La certification peut soutenir la valorisation des parcours et les perspectives d'évolution interne.</p></div></div>
+    <div class="why-card"><div class="why-icon">💰</div><div><h4>Financement OPCO</h4><p>Une prise en charge peut être étudiée avec votre OPCO selon la branche, le dispositif, le budget disponible et les critères applicables.</p></div></div>
   </div>
   <figure class="vae-context-visual">
     <img width="1600" height="900" loading="lazy" decoding="async" src="../images/entreprises/entreprises-cartographie-competences-atelier.jpg" alt="Cartographie des compétences en atelier industriel">
@@ -671,18 +654,16 @@ button,
 <section class="cream">
   <div class="section-tag">Contactez-nous</div>
   <h2 class="section-title">Parlons de votre projet</h2>
-  <p class="section-sub">Remplissez ce formulaire et nous vous répondons sous 24h pour organiser un échange téléphonique ou visio.</p>
+  <p class="section-sub">Décrivez votre projet dans notre formulaire de contact. Nous revenons habituellement vers vous sous 24 à 48h ouvrées pour préciser le besoin et préparer votre devis.</p>
   <div class="contact-box">
-    <h3>Demande de devis entreprise</h3>
-    <div class="contact-field"><label>Entreprise *</label><input type="text" placeholder="Nom de votre entreprise"/></div>
-    <div class="contact-field"><label>Votre nom *</label><input type="text" placeholder="Prénom et nom"/></div>
-    <div class="contact-field"><label>Email professionnel *</label><input type="email" placeholder="votre@entreprise.fr"/></div>
-    <div class="contact-field"><label>Secteur d'activité</label>
-      <select><option>Électricité / Énergie</option><option>Maintenance industrielle</option><option>Réseaux / Cybersécurité</option><option>Sécurité privée</option><option>Production / Automatisme</option><option>BTP</option><option>Autre</option></select>
-    </div>
-    <div class="contact-field"><label>Nombre de salariés concernés</label><input type="text" placeholder="Ex : 8 techniciens"/></div>
-    <div class="contact-field"><label>Votre besoin</label><textarea placeholder="Décrivez votre projet : diplômes visés, contexte, délais..."></textarea></div>
-    <button class="submit-btn">Envoyer ma demande →</button>
+    <h3>Demandez votre devis entreprise</h3>
+    <p>Le formulaire de contact s'ouvrira avec la demande de devis et le profil entreprise déjà sélectionnés. Vous pourrez modifier ces choix si nécessaire.</p>
+    <ul class="serv-list">
+      <li>VAE collective et accompagnement des salariés</li>
+      <li>Conseil RH, cartographie des compétences et formation</li>
+      <li>Réponse personnalisée habituellement sous 24 à 48h ouvrées</li>
+    </ul>
+    <a class="submit-btn" href="../contact?demande=devis#form">Demander un devis entreprise →</a>
   </div>
 </section>
 
@@ -690,46 +671,48 @@ button,
 <script src="../assets/main.js" defer></script>
 
 <!-- ══════════ PIED DE PAGE (identique sur toutes les pages) ══════════ -->
+</main>
+
 <footer class="pi-footer">
   <div class="pi-footer__inner">
     <div class="pi-footer__brand">
       <img decoding="async" loading="lazy" src="../logo-blanc.svg" alt="Parcours Industrie" width="81" height="34"/>
       <p>Cabinet spécialisé VAE, bilan de compétences, reconversion et orientation pour les métiers techniques et industriels.</p>
       <p>Accompagnement 100 % en visio · France entière<br>Diagnostic gratuit sans engagement</p>
-      <a class="pi-btn" href="../contact.html" style="display:inline-block;margin-top:0.6rem;background:var(--orange);color:#fff;padding:0.6rem 1.1rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em">Prendre rendez-vous</a>
+      <a class="pi-btn" href="../contact" style="display:inline-block;margin-top:0.6rem;background:var(--orange);color:#fff;padding:0.6rem 1.1rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em">Prendre rendez-vous</a>
     </div>
     <div class="pi-footer__col">
       <h4>Nos prestations</h4>
-      <a href="../vae/index.html">VAE métiers techniques</a>
-      <a href="../bilan/index.html">Bilan de compétences</a>
-      <a href="../reconversion/index.html">Reconversion professionnelle</a>
-      <a href="../orientation/index.html">Orientation</a>
-      <a href="../coaching/index.html">Coaching & Emploi</a>
-      <a href="../ingenierie/index.html">Ingénierie de formation</a>
+      <a href="../vae/">VAE métiers techniques</a>
+      <a href="../bilan/">Bilan de compétences</a>
+      <a href="../reconversion/">Reconversion professionnelle</a>
+      <a href="../orientation/">Orientation</a>
+      <a href="../coaching/">Coaching & Emploi</a>
+      <a href="../ingenierie/">Ingénierie de formation</a>
     </div>
     <div class="pi-footer__col">
       <h4>Filières</h4>
-      <a href="../reconversion/electricite.html">Électricité & Énergie</a>
-      <a href="../reconversion/maintenance-industrielle.html">Maintenance industrielle</a>
-      <a href="../reconversion/reseaux-cybersecurite.html">Réseaux & Cybersécurité</a>
-      <a href="../reconversion/securite-privee.html">Sécurité privée</a>
-      <a href="../reconversion/btp.html">BTP & Construction</a>
-      <a href="../vae/index.html">Toutes les filières VAE</a>
+      <a href="../reconversion/electricite">Électricité & Énergie</a>
+      <a href="../reconversion/maintenance-industrielle">Maintenance industrielle</a>
+      <a href="../reconversion/reseaux-cybersecurite">Réseaux & Cybersécurité</a>
+      <a href="../reconversion/securite-privee">Sécurité privée</a>
+      <a href="../reconversion/btp">BTP & Construction</a>
+      <a href="../vae/">Toutes les filières VAE</a>
     </div>
     <div class="pi-footer__col">
       <h4>Le cabinet</h4>
-      <a href="../a-propos.html">À propos</a>
-      <a href="index.html">Entreprises & organismes</a>
-      <a href="../blog/index.html">Blog & conseils</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../mentions-legales.html">Mentions légales</a>
-      <a href="../politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../a-propos">À propos</a>
+      <a href="./">Entreprises & organismes</a>
+      <a href="../blog/">Blog & conseils</a>
+      <a href="../contact">Contact</a>
+      <a href="../mentions-legales">Mentions légales</a>
+      <a href="../politique-confidentialite">Politique de confidentialité</a>
     </div>
   </div>
 
   <div class="pi-footer__bottom">
     <div>© 2026 parcours-industrie.com — Tous droits réservés</div>
-    <div><a href="../mentions-legales.html">Mentions légales</a> · <a href="../politique-confidentialite.html">Confidentialité</a> · <a href="../contact.html">Contact</a></div>
+    <div><a href="../mentions-legales">Mentions légales</a> · <a href="../politique-confidentialite">Confidentialité</a> · <a href="../contact">Contact</a></div>
   </div>
 </footer>
 

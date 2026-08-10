@@ -9,13 +9,13 @@
       "resume": "Vous travaillez dans l'électricité depuis plusieurs années mais vous n'avez pas de diplôme officiel ? La VAE peut tout changer. On vous explique comment ça marche concrètement.",
       "image": "/images/blog/blog-article-vae-electricien.jpg",
       "alt": "VAE électricien",
-      "date": "Juillet 2025",
+      "date": "Mis à jour en août 2026",
       "lecture": "5 min",
-      "url": "vae-electricien.html",
+      "url": "vae-electricien",
       "contenu": ""
     },
     {
-      "visible": true,
+      "visible": false,
       "featured": false,
       "titre": "Se reconvertir dans la maintenance industrielle — le guide complet",
       "slug": "reconversion-maintenance-industrielle",
@@ -25,11 +25,11 @@
       "alt": "Reconversion maintenance",
       "date": "Juillet 2025",
       "lecture": "6 min",
-      "url": "../reconversion/maintenance-industrielle.html",
+      "url": "../reconversion/maintenance-industrielle",
       "contenu": ""
     },
     {
-      "visible": true,
+      "visible": false,
       "featured": false,
       "titre": "Préparer son entretien de motivation BTS CIEL",
       "slug": "entretien-motivation-bts-ciel",
@@ -39,11 +39,11 @@
       "alt": "BTS CIEL entretien",
       "date": "Juillet 2025",
       "lecture": "4 min",
-      "url": "../orientation/entretien-motivation.html",
+      "url": "../orientation/entretien-motivation",
       "contenu": ""
     },
     {
-      "visible": true,
+      "visible": false,
       "featured": false,
       "titre": "Bilan de compétences pour techniciens — tout ce qu'il faut savoir",
       "slug": "bilan-competences-techniciens",
@@ -53,11 +53,11 @@
       "alt": "Bilan de compétences",
       "date": "Juin 2025",
       "lecture": "5 min",
-      "url": "../bilan/index.html",
+      "url": "../bilan/",
       "contenu": ""
     },
     {
-      "visible": true,
+      "visible": false,
       "featured": false,
       "titre": "Alternance dans les métiers techniques — comment bien choisir ?",
       "slug": "alternance-metiers-techniques",
@@ -67,11 +67,11 @@
       "alt": "Alternance industrie",
       "date": "Juin 2025",
       "lecture": "4 min",
-      "url": "../orientation/lyceens.html",
+      "url": "../orientation/lyceens",
       "contenu": ""
     },
     {
-      "visible": true,
+      "visible": false,
       "featured": false,
       "titre": "Chef d'équipe sans diplôme — comment faire reconnaître son expérience ?",
       "slug": "chef-equipe-sans-diplome",
@@ -81,11 +81,11 @@
       "alt": "Chef équipe",
       "date": "Juin 2025",
       "lecture": "5 min",
-      "url": "../coaching/prise-de-poste.html",
+      "url": "../coaching/prise-de-poste",
       "contenu": ""
     },
     {
-      "visible": true,
+      "visible": false,
       "featured": false,
       "titre": "Les métiers industriels qui recrutent en 2025",
       "slug": "metiers-industriels-recrutent",
@@ -95,7 +95,7 @@
       "alt": "Métiers industrie 2025",
       "date": "Mai 2025",
       "lecture": "3 min",
-      "url": "../reconversion/index.html",
+      "url": "../reconversion/",
       "contenu": ""
     }
   ]
