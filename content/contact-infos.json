@@ -4,8 +4,8 @@
   "afficher_telephone": false,
   "mode_contact": "Visio (Zoom / Teams / Meet) ou déplacement",
   "zone_intervention": "France entière — visio partout, déplacement possible selon mission",
-  "adresse": "",
-  "afficher_adresse": false,
+  "adresse": "Marseille",
+  "afficher_adresse": true,
   "delai_reponse": "Réponse habituelle sous 24 à 48h ouvrées",
   "disponibilites": [
     {
