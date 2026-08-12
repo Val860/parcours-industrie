@@ -1,0 +1,1847 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "parcours-industrie-COMPLET",
+    "languages": [
+      "config",
+      "css",
+      "html",
+      "javascript",
+      "json",
+      "markdown",
+      "text",
+      "toml",
+      "unknown",
+      "xml",
+      "yaml"
+    ],
+    "frameworks": [
+      "Decap CMS",
+      "Netlify"
+    ],
+    "description": "Site web statique de Parcours Industrie présentant ses services d'accompagnement, de VAE, d'orientation, de reconversion, de coaching et d'ingénierie, avec déploiement Netlify et administration de contenu via Decap CMS.",
+    "analyzedAt": "2026-08-12T08:16:17.929Z",
+    "gitCommitHash": "bae722dd5408c525ecbf7eca4d9c10b310975b31"
+  },
+  "nodes": [
+    {
+      "id": "service:_headers",
+      "type": "service",
+      "name": "_headers",
+      "filePath": "_headers",
+      "summary": "Définit les en-têtes HTTP appliqués par Netlify au site, notamment les protections de sécurité, les politiques de cache et les directives X-Robots-Tag pour l’administration et les contenus CMS.",
+      "tags": [
+        "infrastructure",
+        "netlify",
+        "sécurité",
+        "cache-http",
+        "indexation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Le format déclaratif propre à Netlify associe chaque motif de chemin à un ensemble d’en-têtes HTTP indentés."
+    },
+    {
+      "id": "service:_redirects",
+      "type": "service",
+      "name": "_redirects",
+      "filePath": "_redirects",
+      "summary": "Centralise 164 règles Netlify pour servir les pages sous des URL propres, rediriger définitivement les anciennes adresses et préserver les routes système nécessaires au CMS.",
+      "tags": [
+        "infrastructure",
+        "netlify",
+        "routage",
+        "redirections",
+        "seo-technique"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Le fichier combine des réécritures 200 conservant l’URL visible et des redirections 301 de consolidation canonique."
+    },
+    {
+      "id": "config:admin/config.yml",
+      "type": "config",
+      "name": "config.yml",
+      "filePath": "admin/config.yml",
+      "summary": "Configure Decap CMS avec Git Gateway, l’interface française, le stockage des médias et les collections permettant d’éditer les avis, les coordonnées, les articles et l’inventaire d’images.",
+      "tags": [
+        "configuration",
+        "decap-cms",
+        "gestion-contenu",
+        "git-gateway",
+        "médias"
+      ],
+      "complexity": "complex",
+      "languageNotes": "La configuration YAML décrit des widgets imbriqués et mappe directement chaque collection vers un fichier JSON versionné."
+    },
+    {
+      "id": "config:content/avis-clients.json",
+      "type": "config",
+      "name": "avis-clients.json",
+      "filePath": "content/avis-clients.json",
+      "summary": "Stocke la liste éditable des témoignages clients affichés par le moteur CMS du site; la collection est actuellement vide.",
+      "tags": [
+        "configuration",
+        "contenu-cms",
+        "témoignages",
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:content/blog/articles.json",
+      "type": "config",
+      "name": "articles.json",
+      "filePath": "content/blog/articles.json",
+      "summary": "Contient les sept articles pilotés par Decap CMS avec leurs slugs, métadonnées, résumés, images et corps de contenu utilisés par la liste et la page dynamique du blog.",
+      "tags": [
+        "configuration",
+        "contenu-cms",
+        "blog",
+        "métadonnées",
+        "json"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:content/contact-infos.json",
+      "type": "config",
+      "name": "contact-infos.json",
+      "filePath": "content/contact-infos.json",
+      "summary": "Regroupe les coordonnées, modalités de contact, zone d’intervention, délai de réponse et disponibilités injectés dynamiquement dans la page de contact.",
+      "tags": [
+        "configuration",
+        "contenu-cms",
+        "coordonnées",
+        "disponibilités",
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:content/site-images.json",
+      "type": "config",
+      "name": "site-images.json",
+      "filePath": "content/site-images.json",
+      "summary": "Inventorie 180 images du site réparties en onze rubriques, avec identifiants, chemins, textes alternatifs et informations de secours exploités par Decap CMS et le JavaScript client.",
+      "tags": [
+        "configuration",
+        "contenu-cms",
+        "inventaire-images",
+        "accessibilité",
+        "json"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:manifest.webmanifest",
+      "type": "config",
+      "name": "manifest.webmanifest",
+      "filePath": "manifest.webmanifest",
+      "summary": "Décrit l’installation web de Parcours Industrie avec son nom, sa description, ses couleurs, son périmètre et ses trois formats d’icônes.",
+      "tags": [
+        "configuration",
+        "webmanifest",
+        "pwa",
+        "identité-visuelle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:netlify.toml",
+      "type": "config",
+      "name": "netlify.toml",
+      "filePath": "netlify.toml",
+      "summary": "Configure un déploiement Netlify statique depuis la racine du projet et redirige l’adresse /admin vers sa variante avec barre oblique finale.",
+      "tags": [
+        "configuration",
+        "netlify",
+        "déploiement",
+        "redirection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:robots.txt",
+      "type": "document",
+      "name": "robots.txt",
+      "filePath": "robots.txt",
+      "summary": "Autorise l’exploration des pages publiques, exclut les zones techniques, le CMS, les JSON et la page de remerciement, puis déclare l’emplacement absolu du sitemap XML.",
+      "tags": [
+        "documentation",
+        "robots",
+        "indexation",
+        "seo-technique",
+        "sitemap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:sitemap.xml",
+      "type": "config",
+      "name": "sitemap.xml",
+      "filePath": "sitemap.xml",
+      "summary": "Répertorie 50 URL publiques canoniques du domaine parcours-industrie.com avec dates de modification, fréquences de changement et priorités d’exploration.",
+      "tags": [
+        "configuration",
+        "sitemap",
+        "seo-technique",
+        "indexation",
+        "xml"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:images/README-IMAGES.md",
+      "type": "document",
+      "name": "README-IMAGES.md",
+      "filePath": "images/README-IMAGES.md",
+      "summary": "Explique l’organisation des images par rubrique, leur remplacement via le CMS ou le système de fichiers, ainsi que les recommandations de format, de poids et de texte alternatif.",
+      "tags": [
+        "documentation",
+        "images",
+        "organisation",
+        "cms",
+        "accessibilité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:images/uploads/.gitkeep",
+      "type": "file",
+      "name": ".gitkeep",
+      "filePath": "images/uploads/.gitkeep",
+      "summary": "Conserve dans Git le répertoire vide destiné aux images téléversées depuis Decap CMS.",
+      "tags": [
+        "médias",
+        "cms",
+        "répertoire",
+        "git"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:assets/main.js",
+      "type": "file",
+      "name": "main.js",
+      "filePath": "assets/main.js",
+      "summary": "Fournit sans framework le moteur client partagé qui charge les contenus JSON du CMS, adapte les métadonnées du blog et gère navigation, animations, formulaires, filtres, FAQ, onglets et accessibilité interactive.",
+      "tags": [
+        "entry-point",
+        "comportement-client",
+        "contenu-cms",
+        "event-handler",
+        "accessibilité"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Le JavaScript est encapsulé dans une IIFE en mode strict et repose sur les API natives du navigateur, les Promises et IntersectionObserver."
+    },
+    {
+      "id": "file:assets/netlify-identity-callback.js",
+      "type": "file",
+      "name": "netlify-identity-callback.js",
+      "filePath": "assets/netlify-identity-callback.js",
+      "summary": "Détecte les jetons Netlify Identity présents dans le fragment d’URL, charge dynamiquement le client d’identité, traite le callback d’authentification puis redirige l’utilisateur vers le CMS.",
+      "tags": [
+        "authentification",
+        "netlify-identity",
+        "callback",
+        "event-handler",
+        "cms"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Le module combine une IIFE et un import dynamique ESM afin de ne charger la dépendance distante que lorsqu’un jeton est détecté."
+    },
+    {
+      "id": "file:assets/style.css",
+      "type": "file",
+      "name": "style.css",
+      "filePath": "assets/style.css",
+      "summary": "Définit le système visuel partagé du site, incluant navigation responsive, composants, animations, formulaires, états accessibles et adaptations aux préférences de mouvement réduit.",
+      "tags": [
+        "feuille-de-style",
+        "design-system",
+        "responsive",
+        "animations",
+        "accessibilité"
+      ],
+      "complexity": "complex",
+      "languageNotes": "La feuille CSS centralise les variables de thème et combine media queries, transitions et classes d’état manipulées par le JavaScript."
+    },
+    {
+      "id": "file:404.html",
+      "type": "file",
+      "name": "404.html",
+      "filePath": "404.html",
+      "summary": "Présente une page d’erreur 404 non indexable qui oriente les visiteurs vers les principaux accompagnements et conserve la navigation commune du site.",
+      "tags": [
+        "page-html",
+        "erreur-404",
+        "noindex",
+        "navigation",
+        "seo-technique"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:admin/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "admin/index.html",
+      "summary": "Initialise l’interface privée Decap CMS, charge Netlify Identity et interdit explicitement l’indexation et le suivi de cette page d’administration.",
+      "tags": [
+        "page-html",
+        "administration",
+        "decap-cms",
+        "authentification",
+        "noindex"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "Page d’accueil indexable présentant l’offre Parcours Industrie autour de la VAE, du bilan de compétences, de la reconversion et de l’orientation, avec données structurées et métadonnées sociales.",
+      "tags": [
+        "page-html",
+        "accueil",
+        "seo",
+        "offre-services",
+        "données-structurées"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:a-propos.html",
+      "type": "file",
+      "name": "a-propos.html",
+      "filePath": "a-propos.html",
+      "summary": "Page publique indexable expliquant l’expertise, l’approche métier et le positionnement de Parcours Industrie dans la VAE et la reconversion des professionnels techniques.",
+      "tags": [
+        "page-html",
+        "à-propos",
+        "seo",
+        "expertise",
+        "offre-services"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:contact.html",
+      "type": "file",
+      "name": "contact.html",
+      "filePath": "contact.html",
+      "summary": "Page publique de prise de contact et de diagnostic gratuit, combinant coordonnées pilotées par le CMS, formulaire Netlify anti-spam, validation progressive et données structurées.",
+      "tags": [
+        "page-html",
+        "contact",
+        "formulaire",
+        "netlify-forms",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:mentions-legales.html",
+      "type": "file",
+      "name": "mentions-legales.html",
+      "filePath": "mentions-legales.html",
+      "summary": "Expose les mentions légales relatives à l’éditeur, l’hébergeur, la propriété intellectuelle et les données personnelles, avec une directive noindex, nofollow.",
+      "tags": [
+        "page-html",
+        "mentions-légales",
+        "conformité",
+        "noindex",
+        "données-personnelles"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:politique-confidentialite.html",
+      "type": "file",
+      "name": "politique-confidentialite.html",
+      "filePath": "politique-confidentialite.html",
+      "summary": "Décrit la collecte, l’usage, la conservation et la protection des données personnelles conformément au RGPD, tout en restant exclue de l’indexation.",
+      "tags": [
+        "page-html",
+        "confidentialité",
+        "rgpd",
+        "noindex",
+        "conformité"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:merci.html",
+      "type": "file",
+      "name": "merci.html",
+      "filePath": "merci.html",
+      "summary": "Confirme l’envoi réussi d’une demande, propose des liens de poursuite de navigation et empêche l’indexation de cette page transactionnelle.",
+      "tags": [
+        "page-html",
+        "confirmation",
+        "formulaire",
+        "noindex",
+        "conversion"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:bilan/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "bilan/index.html",
+      "summary": "Page publique indexable dédiée au bilan de compétences pour les techniciens et professionnels industriels, détaillant bénéfices, déroulement, financement et prise de contact.",
+      "tags": [
+        "page-html",
+        "bilan-compétences",
+        "seo",
+        "offre-services",
+        "industrie"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:blog/article.html",
+      "type": "file",
+      "name": "article.html",
+      "filePath": "blog/article.html",
+      "summary": "Gabarit HTML générique d’un article de blog alimenté dynamiquement par le CMS, avec emplacements pour le titre, la catégorie, l’image, le résumé et le corps de l’article. La page est volontairement marquée noindex tant qu’elle ne représente pas un article publié distinct.",
+      "tags": [
+        "gabarit-cms",
+        "article-blog",
+        "contenu-dynamique",
+        "seo"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:blog/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "blog/index.html",
+      "summary": "Page d’index du blog consacrée aux conseils sur la VAE, la reconversion et l’orientation dans les métiers techniques. Elle présente un article vedette, une liste d’articles pilotée par le CMS et des filtres par catégorie.",
+      "tags": [
+        "blog",
+        "liste-articles",
+        "filtres",
+        "cms",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:blog/vae-electricien.html",
+      "type": "file",
+      "name": "vae-electricien.html",
+      "filePath": "blog/vae-electricien.html",
+      "summary": "Article éditorial détaillant la démarche de VAE pour les électriciens et les diplômes accessibles, du CAP au BTS. Il sert de contenu d’acquisition organique autour de la reconnaissance de l’expérience professionnelle.",
+      "tags": [
+        "article-blog",
+        "vae",
+        "electricite",
+        "diplome",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:coaching/cv-technicien.html",
+      "type": "file",
+      "name": "cv-technicien.html",
+      "filePath": "coaching/cv-technicien.html",
+      "summary": "Page de service proposant la refonte et l’optimisation ATS d’un CV de technicien pour les métiers techniques et industriels. Elle détaille la promesse, les livrables et le parcours d’accompagnement vers la prise de contact.",
+      "tags": [
+        "page-service",
+        "coaching-carriere",
+        "cv-technicien",
+        "conversion",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:coaching/entretien-embauche.html",
+      "type": "file",
+      "name": "entretien-embauche.html",
+      "filePath": "coaching/entretien-embauche.html",
+      "summary": "Page de service présentant la préparation aux entretiens d’embauche pour les professionnels des métiers techniques. Elle met en avant la simulation d’entretien, le travail de posture et la négociation salariale en visioconférence.",
+      "tags": [
+        "page-service",
+        "coaching-carriere",
+        "entretien-embauche",
+        "conversion",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:coaching/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "coaching/index.html",
+      "summary": "Page pilier regroupant les prestations de coaching emploi pour les métiers techniques : CV, lettre de motivation, entretien, prise de poste et outplacement. Elle oriente les visiteurs vers les offres spécialisées et vers un diagnostic gratuit.",
+      "tags": [
+        "page-pilier",
+        "coaching-carriere",
+        "emploi",
+        "navigation-services",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:coaching/lettre-motivation.html",
+      "type": "file",
+      "name": "lettre-motivation.html",
+      "filePath": "coaching/lettre-motivation.html",
+      "summary": "Page de service dédiée à la rédaction personnalisée de lettres de motivation pour les postes techniques et industriels. Elle décrit une prestation sur mesure adaptée au poste et à l’entreprise ciblés.",
+      "tags": [
+        "page-service",
+        "coaching-carriere",
+        "lettre-motivation",
+        "conversion",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:coaching/outplacement.html",
+      "type": "file",
+      "name": "outplacement.html",
+      "filePath": "coaching/outplacement.html",
+      "summary": "Page de service d’outplacement pour techniciens confrontés à un licenciement ou une rupture conventionnelle. Elle présente un accompagnement structuré jusqu’au retour à l’emploi dans un environnement technique ou industriel.",
+      "tags": [
+        "page-service",
+        "outplacement",
+        "retour-emploi",
+        "coaching-carriere",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:coaching/prise-de-poste.html",
+      "type": "file",
+      "name": "prise-de-poste.html",
+      "filePath": "coaching/prise-de-poste.html",
+      "summary": "Page de coaching destinée aux nouveaux chefs d’équipe et responsables techniques pendant leurs premiers mois de prise de fonction. Elle met l’accent sur la légitimité managériale, la posture et le plan des 90 premiers jours.",
+      "tags": [
+        "page-service",
+        "prise-de-poste",
+        "management",
+        "coaching-carriere",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:entreprises/conseil-rh.html",
+      "type": "file",
+      "name": "conseil-rh.html",
+      "filePath": "entreprises/conseil-rh.html",
+      "summary": "Page B2B présentant une offre de conseil RH externalisé pour les TPE et PME industrielles sans direction des ressources humaines interne. Elle conduit les décideurs vers une demande de diagnostic ou de devis.",
+      "tags": [
+        "page-service",
+        "conseil-rh",
+        "entreprises-industrielles",
+        "b2b",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:entreprises/formation-tuteurs.html",
+      "type": "file",
+      "name": "formation-tuteurs.html",
+      "filePath": "entreprises/formation-tuteurs.html",
+      "summary": "Page B2B décrivant une formation sur mesure pour les tuteurs et maîtres d’apprentissage des entreprises industrielles. Elle valorise l’acquisition de méthodes pédagogiques adaptées à l’accompagnement des alternants.",
+      "tags": [
+        "page-service",
+        "formation-tuteurs",
+        "alternance",
+        "b2b",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:entreprises/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "entreprises/index.html",
+      "summary": "Page pilier des solutions proposées aux entreprises industrielles : VAE collective, bilan de compétences, cartographie des compétences, conseil RH et formation. Elle sert de point d’entrée B2B vers les différentes offres et la demande de devis.",
+      "tags": [
+        "page-pilier",
+        "solutions-entreprises",
+        "b2b",
+        "navigation-services",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:entreprises/vae-collective.html",
+      "type": "file",
+      "name": "vae-collective.html",
+      "filePath": "entreprises/vae-collective.html",
+      "summary": "Page B2B présentant un programme collectif de VAE pour certifier les compétences de salariés techniciens. Elle aborde l’accompagnement complet, le financement OPCO et l’adaptation du dispositif à l’entreprise.",
+      "tags": [
+        "page-service",
+        "vae-collective",
+        "certification-salaries",
+        "b2b",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:ingenierie/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "ingenierie/index.html",
+      "summary": "Page pilier de l’offre d’ingénierie de formation couvrant la conception de programmes, l’ouverture de diplômes, la création de titres RNCP et la préparation Qualiopi. Elle cible les organismes et établissements des filières techniques et industrielles.",
+      "tags": [
+        "page-pilier",
+        "ingenierie-formation",
+        "certification",
+        "navigation-services",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:ingenierie/ouverture-diplome.html",
+      "type": "file",
+      "name": "ouverture-diplome.html",
+      "filePath": "ingenierie/ouverture-diplome.html",
+      "summary": "Page de service accompagnant l’ouverture de sections CAP, Bac professionnel ou BTS dans les métiers techniques. Elle couvre le dossier rectoral, l’habilitation et l’organisation pédagogique nécessaires au lancement.",
+      "tags": [
+        "page-service",
+        "ouverture-diplome",
+        "dossier-rectorat",
+        "ingenierie-formation",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:ingenierie/qualiopi.html",
+      "type": "file",
+      "name": "qualiopi.html",
+      "filePath": "ingenierie/qualiopi.html",
+      "summary": "Page de service destinée aux organismes de formation préparant la certification Qualiopi. Elle présente le diagnostic qualité, la mise en conformité et la simulation d’audit.",
+      "tags": [
+        "page-service",
+        "qualiopi",
+        "audit-qualite",
+        "organisme-formation",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:ingenierie/titre-rncp.html",
+      "type": "file",
+      "name": "titre-rncp.html",
+      "filePath": "ingenierie/titre-rncp.html",
+      "summary": "Page de service consacrée à la création d’un titre professionnel enregistré au RNCP pour des métiers techniques. Elle décrit la conception du référentiel et la constitution du dossier France Compétences.",
+      "tags": [
+        "page-service",
+        "titre-rncp",
+        "france-competences",
+        "ingenierie-certification",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:orientation/adultes.html",
+      "type": "file",
+      "name": "adultes.html",
+      "filePath": "orientation/adultes.html",
+      "summary": "Page d’accompagnement à l’orientation pour les adultes souhaitant se reconvertir vers les métiers techniques. Elle aide à identifier un métier, une formation et des pistes de financement adaptées au projet.",
+      "tags": [
+        "page-service",
+        "orientation-adultes",
+        "reconversion",
+        "metiers-industriels",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:orientation/collegiens.html",
+      "type": "file",
+      "name": "collegiens.html",
+      "filePath": "orientation/collegiens.html",
+      "summary": "Page d’orientation destinée aux collégiens, notamment après la classe de troisième. Elle explique les choix entre voie générale et professionnelle ainsi qu’entre CAP et Bac professionnel dans les filières industrielles.",
+      "tags": [
+        "page-service",
+        "orientation-collegiens",
+        "voie-professionnelle",
+        "filiere-industrielle",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:orientation/entretien-motivation.html",
+      "type": "file",
+      "name": "entretien-motivation.html",
+      "filePath": "orientation/entretien-motivation.html",
+      "summary": "Page de préparation aux entretiens de motivation pour intégrer un BTS technique, une école d’ingénieurs ou une formation en alternance. Elle structure l’accompagnement autour de l’argumentaire, de la posture et de la simulation.",
+      "tags": [
+        "page-service",
+        "entretien-motivation",
+        "admission",
+        "alternance",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:orientation/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "orientation/index.html",
+      "summary": "Page pilier de l’accompagnement à l’orientation dans les filières techniques, du collège à la reconversion adulte. Elle regroupe les parcours par public et les services liés aux candidatures et entretiens.",
+      "tags": [
+        "page-pilier",
+        "orientation",
+        "filieres-industrielles",
+        "navigation-services",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:orientation/lyceens.html",
+      "type": "file",
+      "name": "lyceens.html",
+      "filePath": "orientation/lyceens.html",
+      "summary": "Page d’orientation pour les lycéens issus notamment de CAP ou de Bac professionnel. Elle traite du choix d’un BTS, de Parcoursup et de la recherche d’une alternance dans les filières industrielles.",
+      "tags": [
+        "page-service",
+        "orientation-lyceens",
+        "parcoursup",
+        "alternance",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:orientation/parents.html",
+      "type": "file",
+      "name": "parents.html",
+      "filePath": "orientation/parents.html",
+      "summary": "Page d’information et d’accompagnement destinée aux parents dont l’enfant envisage la voie professionnelle. Elle clarifie les filières techniques et industrielles afin de faciliter les décisions d’orientation familiale.",
+      "tags": [
+        "page-service",
+        "orientation-parents",
+        "voie-professionnelle",
+        "information-familles",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:reconversion/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "reconversion/index.html",
+      "summary": "Page pilier présentant l’accompagnement à la reconversion vers des métiers techniques tels que l’électricité, la maintenance, les réseaux et la cybersécurité. Elle guide le visiteur vers un plan d’action personnalisé sans repartir de zéro.",
+      "tags": [
+        "page-pilier",
+        "reconversion",
+        "metiers-industriels",
+        "accompagnement-carriere",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "vae/index.html",
+      "summary": "Page pilier de l’accompagnement VAE pour obtenir un CAP, un Bac professionnel ou un BTS grâce à l’expérience dans les métiers industriels. Elle présente le dispositif, les spécialités couvertes et le diagnostic initial gratuit.",
+      "tags": [
+        "page-pilier",
+        "vae",
+        "diplome-experience",
+        "metiers-industriels",
+        "seo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:reconversion/btp.html",
+      "type": "file",
+      "name": "btp.html",
+      "filePath": "reconversion/btp.html",
+      "summary": "Page de filière consacrée à la reconversion dans le BTP et la construction, présentant les besoins du secteur, les diplômes accessibles et l'accompagnement proposé.",
+      "tags": [
+        "page-reconversion",
+        "btp",
+        "orientation",
+        "accompagnement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:reconversion/electricite.html",
+      "type": "file",
+      "name": "electricite.html",
+      "filePath": "reconversion/electricite.html",
+      "summary": "Page de filière dédiée à la reconversion vers les métiers de l'électricité et de l'énergie, avec informations sur les débouchés, formations et modalités d'accompagnement.",
+      "tags": [
+        "page-reconversion",
+        "electricite",
+        "energie",
+        "accompagnement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:reconversion/maintenance-industrielle.html",
+      "type": "file",
+      "name": "maintenance-industrielle.html",
+      "filePath": "reconversion/maintenance-industrielle.html",
+      "summary": "Page de filière expliquant les parcours de reconversion vers la maintenance industrielle, les certifications pertinentes et l'accompagnement spécialisé.",
+      "tags": [
+        "page-reconversion",
+        "maintenance-industrielle",
+        "formation",
+        "accompagnement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:reconversion/reseaux-cybersecurite.html",
+      "type": "file",
+      "name": "reseaux-cybersecurite.html",
+      "filePath": "reconversion/reseaux-cybersecurite.html",
+      "summary": "Page de filière présentant la reconversion vers les réseaux informatiques et la cybersécurité industrielle, ainsi que les certifications, débouchés et solutions d'accompagnement.",
+      "tags": [
+        "page-reconversion",
+        "reseaux",
+        "cybersecurite",
+        "accompagnement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:reconversion/securite-privee.html",
+      "type": "file",
+      "name": "securite-privee.html",
+      "filePath": "reconversion/securite-privee.html",
+      "summary": "Page de filière orientant les candidats à une reconversion dans la sécurité privée vers les métiers, diplômes et exigences de carte professionnelle adaptés.",
+      "tags": [
+        "page-reconversion",
+        "securite-privee",
+        "orientation",
+        "accompagnement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bac-pro-ciel.html",
+      "type": "file",
+      "name": "bac-pro-ciel.html",
+      "filePath": "vae/bac-pro-ciel.html",
+      "summary": "Fiche VAE du Bac professionnel CIEL détaillant le diplôme, les compétences évaluées, les profils concernés, les débouchés et le parcours d'accompagnement.",
+      "tags": [
+        "page-vae",
+        "bac-pro",
+        "ciel",
+        "certification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bac-pro-mei.html",
+      "type": "file",
+      "name": "bac-pro-mei.html",
+      "filePath": "vae/bac-pro-mei.html",
+      "summary": "Ancienne URL du Bac pro MEI conservée comme page de transition vers le Bac pro MSPC qui lui succède, avec redirection immédiate, canonique cible et consigne noindex.",
+      "tags": [
+        "page-vae",
+        "redirection",
+        "certification-remplacee",
+        "noindex"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bac-pro-melec.html",
+      "type": "file",
+      "name": "bac-pro-melec.html",
+      "filePath": "vae/bac-pro-melec.html",
+      "summary": "Fiche VAE du Bac professionnel MELEC présentant les compétences en métiers de l'électricité, les profils éligibles, les débouchés et l'accompagnement au dossier.",
+      "tags": [
+        "page-vae",
+        "bac-pro",
+        "melec",
+        "electricite"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bac-pro-mspc.html",
+      "type": "file",
+      "name": "bac-pro-mspc.html",
+      "filePath": "vae/bac-pro-mspc.html",
+      "summary": "Fiche VAE du Bac professionnel MSPC couvrant la maintenance des systèmes de production connectés, les compétences attendues, les débouchés et l'accompagnement.",
+      "tags": [
+        "page-vae",
+        "bac-pro",
+        "mspc",
+        "maintenance-industrielle"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bac-pro-pspa.html",
+      "type": "file",
+      "name": "bac-pro-pspa.html",
+      "filePath": "vae/bac-pro-pspa.html",
+      "summary": "Fiche VAE consacrée au Bac professionnel Pilotage de ligne de production, avec compétences évaluées, conditions de profil, débouchés et étapes d'accompagnement.",
+      "tags": [
+        "page-vae",
+        "bac-pro",
+        "pilotage-production",
+        "certification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bac-pro-securite-prevention.html",
+      "type": "file",
+      "name": "bac-pro-securite-prevention.html",
+      "filePath": "vae/bac-pro-securite-prevention.html",
+      "summary": "Fiche VAE du Bac professionnel Métiers de la sécurité décrivant les compétences de prévention et d'intervention, les profils concernés et l'accompagnement.",
+      "tags": [
+        "page-vae",
+        "bac-pro",
+        "metiers-securite",
+        "certification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bac-pro-tmsec.html",
+      "type": "file",
+      "name": "bac-pro-tmsec.html",
+      "filePath": "vae/bac-pro-tmsec.html",
+      "summary": "Fiche VAE du Bac professionnel Maintenance et efficacité énergétique, présentant les compétences techniques, les profils éligibles, les débouchés et le suivi proposé.",
+      "tags": [
+        "page-vae",
+        "bac-pro",
+        "efficacite-energetique",
+        "maintenance"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bts-ciel-ec.html",
+      "type": "file",
+      "name": "bts-ciel-ec.html",
+      "filePath": "vae/bts-ciel-ec.html",
+      "summary": "Fiche VAE du BTS CIEL option B Électronique et communications, détaillant les compétences, l'expérience attendue, les débouchés et le parcours d'accompagnement.",
+      "tags": [
+        "page-vae",
+        "bts",
+        "ciel",
+        "electronique"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bts-ciel-ir.html",
+      "type": "file",
+      "name": "bts-ciel-ir.html",
+      "filePath": "vae/bts-ciel-ir.html",
+      "summary": "Fiche VAE du BTS CIEL option Informatique et réseaux, présentant le référentiel de compétences, les profils, les métiers visés et l'accompagnement.",
+      "tags": [
+        "page-vae",
+        "bts",
+        "ciel",
+        "informatique-reseaux"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bts-cprp.html",
+      "type": "file",
+      "name": "bts-cprp.html",
+      "filePath": "vae/bts-cprp.html",
+      "summary": "Fiche VAE du BTS Conception des processus de réalisation de produits, avec compétences de conception et production, débouchés et accompagnement au diplôme.",
+      "tags": [
+        "page-vae",
+        "bts",
+        "cprp",
+        "production-industrielle"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bts-electrotechnique.html",
+      "type": "file",
+      "name": "bts-electrotechnique.html",
+      "filePath": "vae/bts-electrotechnique.html",
+      "summary": "Fiche VAE du BTS Électrotechnique expliquant les compétences évaluées, les profils expérimentés admissibles, les débouchés et l'accompagnement.",
+      "tags": [
+        "page-vae",
+        "bts",
+        "electrotechnique",
+        "certification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bts-maintenance-industrielle.html",
+      "type": "file",
+      "name": "bts-maintenance-industrielle.html",
+      "filePath": "vae/bts-maintenance-industrielle.html",
+      "summary": "Fiche VAE du BTS Maintenance des systèmes option A, centrée sur la maintenance des systèmes de production, les compétences, débouchés et étapes du parcours.",
+      "tags": [
+        "page-vae",
+        "bts",
+        "maintenance-systemes",
+        "industrie"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/bts-metiers-securite.html",
+      "type": "file",
+      "name": "bts-metiers-securite.html",
+      "filePath": "vae/bts-metiers-securite.html",
+      "summary": "Fiche VAE du BTS Management opérationnel de la sécurité présentant les responsabilités visées, les compétences évaluées, les débouchés et l'accompagnement.",
+      "tags": [
+        "page-vae",
+        "bts",
+        "metiers-securite",
+        "management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/cap-agent-securite.html",
+      "type": "file",
+      "name": "cap-agent-securite.html",
+      "filePath": "vae/cap-agent-securite.html",
+      "summary": "Fiche VAE du CAP Agent de sécurité décrivant les compétences de surveillance et prévention, les profils éligibles, les débouchés et l'accompagnement.",
+      "tags": [
+        "page-vae",
+        "cap",
+        "agent-securite",
+        "certification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/cap-electricien.html",
+      "type": "file",
+      "name": "cap-electricien.html",
+      "filePath": "vae/cap-electricien.html",
+      "summary": "Fiche VAE du CAP Électricien détaillant les compétences d'installation électrique, l'expérience requise, les débouchés et le soutien au dossier.",
+      "tags": [
+        "page-vae",
+        "cap",
+        "electricien",
+        "certification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/cap-maintenance-equipements.html",
+      "type": "file",
+      "name": "cap-maintenance-equipements.html",
+      "filePath": "vae/cap-maintenance-equipements.html",
+      "summary": "Ancienne URL de certification en maintenance conservée pour orienter vers le catalogue VAE actif, avec redirection vers la rubrique, canonique cible et consigne noindex.",
+      "tags": [
+        "page-vae",
+        "redirection",
+        "certification-inactive",
+        "noindex"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/diplome-ingenieur.html",
+      "type": "file",
+      "name": "diplome-ingenieur.html",
+      "filePath": "vae/diplome-ingenieur.html",
+      "summary": "Page VAE dédiée aux diplômes d'ingénieur délivrés par le CNAM, l'ICAM et d'autres écoles habilitées, précisant profils, durée et accompagnement du parcours.",
+      "tags": [
+        "page-vae",
+        "diplome-ingenieur",
+        "bac-plus-cinq",
+        "accompagnement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/licence-pro-industrie.html",
+      "type": "file",
+      "name": "licence-pro-industrie.html",
+      "filePath": "vae/licence-pro-industrie.html",
+      "summary": "Page VAE présentant les licences professionnelles industrielles de niveau Bac+3 en électrotechnique, maintenance, réseaux et énergie, ainsi que l'accompagnement proposé.",
+      "tags": [
+        "page-vae",
+        "licence-professionnelle",
+        "industrie",
+        "bac-plus-trois"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:vae/master-industrie.html",
+      "type": "file",
+      "name": "master-industrie.html",
+      "filePath": "vae/master-industrie.html",
+      "summary": "Page VAE consacrée aux Masters techniques et industriels de niveau Bac+5, notamment en management industriel, génie électrique, cybersécurité et HSE.",
+      "tags": [
+        "page-vae",
+        "master",
+        "industrie",
+        "bac-plus-cinq"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:_headers",
+      "target": "file:index.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:_headers",
+      "target": "file:admin/index.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:_headers",
+      "target": "file:assets/main.js",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:_headers",
+      "target": "file:assets/style.css",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:_redirects",
+      "target": "file:a-propos.html",
+      "type": "routes",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:_redirects",
+      "target": "file:contact.html",
+      "type": "routes",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:_redirects",
+      "target": "file:mentions-legales.html",
+      "type": "routes",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:_redirects",
+      "target": "file:politique-confidentialite.html",
+      "type": "routes",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:_redirects",
+      "target": "file:merci.html",
+      "type": "routes",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:_redirects",
+      "target": "file:bilan/index.html",
+      "type": "routes",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:admin/config.yml",
+      "target": "config:content/avis-clients.json",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:admin/config.yml",
+      "target": "config:content/blog/articles.json",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:admin/config.yml",
+      "target": "config:content/contact-infos.json",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:admin/config.yml",
+      "target": "config:content/site-images.json",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:content/avis-clients.json",
+      "target": "file:assets/main.js",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:content/blog/articles.json",
+      "target": "file:assets/main.js",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:content/contact-infos.json",
+      "target": "file:assets/main.js",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:content/site-images.json",
+      "target": "file:assets/main.js",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:manifest.webmanifest",
+      "target": "file:index.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:netlify.toml",
+      "target": "file:admin/index.html",
+      "type": "routes",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:robots.txt",
+      "target": "config:sitemap.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:robots.txt",
+      "target": "file:admin/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:sitemap.xml",
+      "target": "file:index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:sitemap.xml",
+      "target": "file:a-propos.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:sitemap.xml",
+      "target": "file:contact.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:sitemap.xml",
+      "target": "file:bilan/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:images/README-IMAGES.md",
+      "target": "config:content/site-images.json",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:admin/config.yml",
+      "target": "file:images/uploads/.gitkeep",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:assets/main.js",
+      "target": "config:content/avis-clients.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:assets/main.js",
+      "target": "config:content/blog/articles.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:assets/main.js",
+      "target": "config:content/contact-infos.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:assets/main.js",
+      "target": "config:content/site-images.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:404.html",
+      "target": "file:assets/main.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:404.html",
+      "target": "file:assets/style.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:admin/index.html",
+      "target": "file:assets/netlify-identity-callback.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:assets/main.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:assets/style.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:assets/netlify-identity-callback.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:a-propos.html",
+      "target": "file:assets/main.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:a-propos.html",
+      "target": "file:assets/style.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:contact.html",
+      "target": "file:assets/main.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:contact.html",
+      "target": "file:assets/style.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:mentions-legales.html",
+      "target": "file:assets/main.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:mentions-legales.html",
+      "target": "file:assets/style.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:politique-confidentialite.html",
+      "target": "file:assets/main.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:politique-confidentialite.html",
+      "target": "file:assets/style.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:merci.html",
+      "target": "file:assets/main.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:merci.html",
+      "target": "file:assets/style.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:bilan/index.html",
+      "target": "file:assets/main.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:bilan/index.html",
+      "target": "file:assets/style.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:contact.html",
+      "target": "config:content/contact-infos.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:reconversion/btp.html",
+      "target": "file:reconversion/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:reconversion/electricite.html",
+      "target": "file:reconversion/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:reconversion/maintenance-industrielle.html",
+      "target": "file:reconversion/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:reconversion/reseaux-cybersecurite.html",
+      "target": "file:reconversion/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:reconversion/securite-privee.html",
+      "target": "file:reconversion/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bac-pro-ciel.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bac-pro-mei.html",
+      "target": "file:vae/bac-pro-mspc.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bac-pro-melec.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bac-pro-mspc.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bac-pro-pspa.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bac-pro-securite-prevention.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bac-pro-tmsec.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bts-ciel-ec.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bts-ciel-ir.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bts-cprp.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bts-electrotechnique.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bts-maintenance-industrielle.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/bts-metiers-securite.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/cap-agent-securite.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/cap-electricien.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/cap-maintenance-equipements.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/diplome-ingenieur.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/licence-pro-industrie.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:vae/master-industrie.html",
+      "target": "file:vae/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:pages-publiques",
+      "name": "Pages publiques",
+      "description": "Regroupe les pages HTML indexables de présentation, de contact et d’accompagnement en bilan, coaching, orientation, reconversion, ingénierie, entreprises et VAE.",
+      "nodeIds": [
+        "file:404.html",
+        "file:a-propos.html",
+        "file:bilan/index.html",
+        "file:coaching/cv-technicien.html",
+        "file:coaching/entretien-embauche.html",
+        "file:coaching/index.html",
+        "file:coaching/lettre-motivation.html",
+        "file:coaching/outplacement.html",
+        "file:coaching/prise-de-poste.html",
+        "file:contact.html",
+        "file:entreprises/conseil-rh.html",
+        "file:entreprises/formation-tuteurs.html",
+        "file:entreprises/index.html",
+        "file:entreprises/vae-collective.html",
+        "file:index.html",
+        "file:ingenierie/index.html",
+        "file:ingenierie/ouverture-diplome.html",
+        "file:ingenierie/qualiopi.html",
+        "file:ingenierie/titre-rncp.html",
+        "file:mentions-legales.html",
+        "file:merci.html",
+        "file:orientation/adultes.html",
+        "file:orientation/collegiens.html",
+        "file:orientation/entretien-motivation.html",
+        "file:orientation/index.html",
+        "file:orientation/lyceens.html",
+        "file:orientation/parents.html",
+        "file:politique-confidentialite.html",
+        "file:reconversion/btp.html",
+        "file:reconversion/electricite.html",
+        "file:reconversion/index.html",
+        "file:reconversion/maintenance-industrielle.html",
+        "file:reconversion/reseaux-cybersecurite.html",
+        "file:reconversion/securite-privee.html",
+        "file:vae/bac-pro-ciel.html",
+        "file:vae/bac-pro-mei.html",
+        "file:vae/bac-pro-melec.html",
+        "file:vae/bac-pro-mspc.html",
+        "file:vae/bac-pro-pspa.html",
+        "file:vae/bac-pro-securite-prevention.html",
+        "file:vae/bac-pro-tmsec.html",
+        "file:vae/bts-ciel-ec.html",
+        "file:vae/bts-ciel-ir.html",
+        "file:vae/bts-cprp.html",
+        "file:vae/bts-electrotechnique.html",
+        "file:vae/bts-maintenance-industrielle.html",
+        "file:vae/bts-metiers-securite.html",
+        "file:vae/cap-agent-securite.html",
+        "file:vae/cap-electricien.html",
+        "file:vae/cap-maintenance-equipements.html",
+        "file:vae/diplome-ingenieur.html",
+        "file:vae/index.html",
+        "file:vae/licence-pro-industrie.html",
+        "file:vae/master-industrie.html"
+      ]
+    },
+    {
+      "id": "layer:blog-editorial",
+      "name": "Blog éditorial",
+      "description": "Contient la liste du blog, le gabarit d’article piloté par le CMS et l’article statique consacré à la VAE d’électricien.",
+      "nodeIds": [
+        "file:blog/article.html",
+        "file:blog/index.html",
+        "file:blog/vae-electricien.html"
+      ]
+    },
+    {
+      "id": "layer:ressources-frontend",
+      "name": "Ressources frontend et médias",
+      "description": "Rassemble les styles, scripts partagés, intégration Netlify Identity et fichiers de support au catalogue d’images du site.",
+      "nodeIds": [
+        "document:images/README-IMAGES.md",
+        "file:assets/main.js",
+        "file:assets/netlify-identity-callback.js",
+        "file:assets/style.css",
+        "file:images/uploads/.gitkeep"
+      ]
+    },
+    {
+      "id": "layer:cms-contenu",
+      "name": "CMS et contenu éditable",
+      "description": "Réunit l’interface et la configuration Decap CMS ainsi que les données JSON éditables pour le blog, les avis, les coordonnées et les images.",
+      "nodeIds": [
+        "config:admin/config.yml",
+        "config:content/avis-clients.json",
+        "config:content/blog/articles.json",
+        "config:content/contact-infos.json",
+        "config:content/site-images.json",
+        "file:admin/index.html"
+      ]
+    },
+    {
+      "id": "layer:referencement-configuration-web",
+      "name": "Référencement et configuration web",
+      "description": "Centralise le sitemap, les directives robots et le manifeste web qui décrivent l’exposition du site aux moteurs et aux navigateurs.",
+      "nodeIds": [
+        "config:manifest.webmanifest",
+        "config:sitemap.xml",
+        "document:robots.txt"
+      ]
+    },
+    {
+      "id": "layer:infrastructure-netlify",
+      "name": "Infrastructure Netlify",
+      "description": "Définit le déploiement Netlify, les en-têtes HTTP et les règles de réécriture ou de redirection qui servent les URL publiques et protègent les routes techniques.",
+      "nodeIds": [
+        "config:netlify.toml",
+        "service:_headers",
+        "service:_redirects"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Vue d’ensemble",
+      "description": "Commencez par la page d’accueil, point d’entrée public du site et synthèse de l’offre Parcours Industrie. Elle montre l’organisation des parcours, la navigation vers les rubriques et les principales métadonnées communes aux pages indexables.",
+      "nodeIds": [
+        "file:index.html"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Ressources partagées",
+      "description": "Le JavaScript et la feuille de style partagés assurent le comportement transversal, le chargement des données CMS et l’identité visuelle des pages. Ces fichiers expliquent comment un ensemble de pages statiques conserve une expérience cohérente sans framework frontend.",
+      "nodeIds": [
+        "file:assets/main.js",
+        "file:assets/style.css",
+        "file:assets/netlify-identity-callback.js"
+      ],
+      "languageLesson": "Le projet combine HTML statique, CSS responsive et JavaScript natif : les pages restent directement lisibles par les moteurs, tandis que le script enrichit les contenus après chargement."
+    },
+    {
+      "order": 3,
+      "title": "Parcours de services",
+      "description": "Les pages d’entrée VAE, orientation, reconversion et coaching structurent les grandes familles d’accompagnement. Elles servent de hubs éditoriaux et distribuent l’internaute vers des pages spécialisées dotées de métadonnées SEO propres.",
+      "nodeIds": [
+        "file:vae/index.html",
+        "file:orientation/index.html",
+        "file:reconversion/index.html",
+        "file:coaching/index.html"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Fiches spécialisées",
+      "description": "Les fiches VAE et reconversion ciblent des diplômes ou métiers précis avec une URL canonique, un title et une description dédiés. Étudier quelques exemples permet de comprendre le patron réutilisé dans tout le catalogue public.",
+      "nodeIds": [
+        "file:vae/cap-electricien.html",
+        "file:vae/bts-maintenance-industrielle.html",
+        "file:reconversion/electricite.html",
+        "file:reconversion/maintenance-industrielle.html"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Blog éditorial",
+      "description": "Le blog associe une page de liste, un article statique indexable et un gabarit dynamique volontairement exclu de l’indexation. Cette distinction évite d’indexer une coquille sans contenu tout en conservant une base éditoriale administrable.",
+      "nodeIds": [
+        "file:blog/index.html",
+        "file:blog/vae-electricien.html",
+        "file:blog/article.html"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "CMS et données",
+      "description": "Decap CMS décrit les collections éditables et alimente les fichiers JSON consommés par le frontend. Les articles, avis, coordonnées et images peuvent ainsi évoluer sans transformer les routes techniques en pages destinées aux moteurs.",
+      "nodeIds": [
+        "config:admin/config.yml",
+        "config:content/blog/articles.json",
+        "config:content/contact-infos.json",
+        "config:content/site-images.json",
+        "file:admin/index.html"
+      ],
+      "languageLesson": "Le YAML décrit les champs du CMS, tandis que les fichiers JSON stockent les valeurs publiées ; cette séparation conserve des pages HTML crawlables et des données éditables."
+    },
+    {
+      "order": 7,
+      "title": "Contrôle du référencement",
+      "description": "Le sitemap énumère les URL canoniques publiques et robots.txt autorise leur exploration tout en bloquant les zones techniques. Ensemble, ils donnent aux moteurs une liste cohérente de 50 pages à découvrir et les exclusions à respecter.",
+      "nodeIds": [
+        "config:sitemap.xml",
+        "document:robots.txt",
+        "config:manifest.webmanifest"
+      ],
+      "languageLesson": "Un sitemap XML facilite la découverte des URL, alors que robots.txt contrôle l’exploration ; la décision d’indexation d’une page repose sur ses directives robots et ses signaux canoniques."
+    },
+    {
+      "order": 8,
+      "title": "Livraison Netlify",
+      "description": "La configuration Netlify publie directement le dépôt, applique les URL propres et ajoute des en-têtes de sécurité et d’indexation aux zones sensibles. Ces fichiers relient les chemins canoniques visibles dans les pages aux fichiers HTML réellement servis.",
+      "nodeIds": [
+        "config:netlify.toml",
+        "service:_redirects",
+        "service:_headers"
+      ]
+    }
+  ]
+}

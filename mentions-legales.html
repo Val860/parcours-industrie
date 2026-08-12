@@ -22,18 +22,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);heigh
 
 /* BANDEAU PROJET */
 .project-banner{
-  margin-top:62px;
+  margin-top:var(--pi-nav-h, 86px);
   background:var(--orange);
-  padding:0.9rem 1.4rem;
+  padding:1rem 1.4rem;
   text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 .project-banner p{
   font-size:0.88rem;
   color:white;
   font-weight:600;
   letter-spacing:0.03em;
+  line-height:1.55;
+  max-width:1100px;
+  margin:0 auto;
 }
 .project-banner span{
+  display:inline-flex;
+  align-items:center;
   background:rgba(255,255,255,0.2);
   padding:0.15rem 0.6rem;
   border-radius:3px;
@@ -113,9 +121,13 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:1rem 0;
 .legal-section h3{letter-spacing:0;}
 .legal-section p{color:#43525f;}
 .legal-section a:hover{color:var(--orange-light);}
-.project-banner{margin-top:62px;}
+.project-banner{margin-top:var(--pi-nav-h, 86px);}
 .project-banner+.content{padding-top:clamp(1.8rem,3vw,2.6rem);}
-@media(max-width:639px){.content{padding-inline:1.2rem;}}
+@media(max-width:639px){
+  .content{padding-inline:1.2rem;}
+  .project-banner{padding:0.9rem 1rem;}
+  .project-banner span{margin:0 0.35rem 0.35rem 0;}
+}
 
 </style>
 
@@ -326,7 +338,7 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:1rem 0;
 <!-- NAV -->
 <!-- BANDEAU PROJET -->
 <div class="project-banner">
-  <p><span>🚧 Projet en cours</span> Ce site est en phase de test et de recensement des besoins — aucune prestation n'est actuellement commercialisée.</p>
+  <p><span>🚧 Projet en cours</span> Parcours Industrie est actuellement un projet en phase de création et de test. Aucune prestation n'est encore commercialisée.</p>
 </div>
 
 <!-- CONTENU -->
@@ -335,23 +347,21 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:1rem 0;
   <h1 class="page-title">Mentions légales</h1>
   <p class="page-sub">Dernière mise à jour : août 2026</p>
 
-  <!-- INFORMATIONS SUR L'OFFRE -->
+  <!-- STATUT ACTUEL DU PROJET -->
   <div class="status-box">
-    <div class="status-badge">Informations sur les services</div>
-    <h2>Des informations à confirmer avant engagement</h2>
-    <p>Le site parcours-industrie.com présente des services d'accompagnement liés à la VAE, au bilan de compétences, à la reconversion, à l'orientation et aux besoins des entreprises des métiers techniques.</p>
-    <p style="margin-top:0.6rem">Les tarifs, durées, possibilités de financement et conditions d'accès sont indicatifs. Ils sont confirmés par écrit après l'analyse de la demande et, lorsque nécessaire, auprès du certificateur ou du financeur concerné.</p>
+    <div class="status-badge">Statut actuel du site</div>
+    <h2>Un projet en cours de création</h2>
+    <p>Parcours Industrie est, à ce jour, un projet en phase de conception, de présentation et de test. Le site a pour objectif de présenter le concept, d'étudier les besoins et de préparer une future offre d'accompagnement autour de la VAE, du bilan de compétences, de la reconversion, de l'orientation et des métiers techniques.</p>
+    <p style="margin-top:0.6rem">Aucune prestation n'est actuellement commercialisée et le contenu du site ne constitue pas encore une offre contractuelle. Les services, tarifs, durées, financements et conditions d'accès présentés sont provisoires et devront être confirmés avant toute future mise en relation ou tout engagement.</p>
   </div>
 
   <!-- ÉDITEUR -->
   <div class="legal-section">
     <h3>Éditeur du site</h3>
-    <p><strong>Informations obligatoires à compléter par le responsable du site avant toute contractualisation :</strong></p>
-    <p><strong>Porteur du projet :</strong> [Votre nom et prénom]</p>
-    <p><strong>Adresse :</strong> [Votre adresse]</p>
-    <p><strong>Email :</strong> contact@parcours-industrie.fr</p>
-    <p><strong>Forme juridique et numéro SIRET :</strong> [À compléter]</p>
-    <p><strong>Responsable de la publication :</strong> [À compléter]</p>
+    <p><strong>Statut :</strong> site édité à titre non professionnel par le porteur du projet Parcours Industrie.</p>
+    <p>Le site présente un projet en cours de création. Il ne correspond pas, à ce jour, à une entreprise immatriculée ni à une activité commerciale.</p>
+    <p><strong>Contact :</strong> <a href="mailto:contact@parcours-industrie.fr">contact@parcours-industrie.fr</a></p>
+    <p>Conformément à l'article 6, III-2, de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, l'éditeur non professionnel a choisi de préserver son anonymat. Son identification peut être obtenue auprès de l'hébergeur dans les conditions prévues par la loi.</p>
   </div>
 
   <!-- HÉBERGEMENT -->

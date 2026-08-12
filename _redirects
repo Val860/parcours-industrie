@@ -42,7 +42,8 @@
 /reconversion/reseaux-cybersecurite          /reconversion/reseaux-cybersecurite.html   200
 /reconversion/securite-privee                /reconversion/securite-privee.html   200
 /vae/bac-pro-ciel                            /vae/bac-pro-ciel.html   200
-/vae/bac-pro-mei                             /vae/bac-pro-mei.html   200
+/vae/bac-pro-mei                             /vae/bac-pro-mspc   301
+/vae/bac-pro-mei.html                        /vae/bac-pro-mspc   301
 /vae/bac-pro-melec                           /vae/bac-pro-melec.html   200
 /vae/bac-pro-mspc                            /vae/bac-pro-mspc.html   200
 /vae/bac-pro-pspa                            /vae/bac-pro-pspa.html   200
@@ -56,7 +57,8 @@
 /vae/bts-metiers-securite                    /vae/bts-metiers-securite.html   200
 /vae/cap-agent-securite                      /vae/cap-agent-securite.html   200
 /vae/cap-electricien                         /vae/cap-electricien.html   200
-/vae/cap-maintenance-equipements             /vae/cap-maintenance-equipements.html   200
+/vae/cap-maintenance-equipements             /vae/   301
+/vae/cap-maintenance-equipements.html        /vae/   301
 /vae/diplome-ingenieur                       /vae/diplome-ingenieur.html   200
 /vae/licence-pro-industrie                   /vae/licence-pro-industrie.html   200
 /vae/master-industrie                        /vae/master-industrie.html   200
@@ -134,8 +136,8 @@
 /reconversion-securite-privee.html           /reconversion/securite-privee   301
 /vae-bac-pro-ciel                            /vae/bac-pro-ciel   301
 /vae-bac-pro-ciel.html                       /vae/bac-pro-ciel   301
-/vae-bac-pro-mei                             /vae/bac-pro-mei   301
-/vae-bac-pro-mei.html                        /vae/bac-pro-mei   301
+/vae-bac-pro-mei                             /vae/bac-pro-mspc   301
+/vae-bac-pro-mei.html                        /vae/bac-pro-mspc   301
 /vae-bac-pro-melec                           /vae/bac-pro-melec   301
 /vae-bac-pro-melec.html                      /vae/bac-pro-melec   301
 /vae-bac-pro-mspc                            /vae/bac-pro-mspc   301
@@ -162,8 +164,8 @@
 /vae-cap-agent-securite.html                 /vae/cap-agent-securite   301
 /vae-cap-electricien                         /vae/cap-electricien   301
 /vae-cap-electricien.html                    /vae/cap-electricien   301
-/vae-cap-maintenance-equipements             /vae/cap-maintenance-equipements   301
-/vae-cap-maintenance-equipements.html        /vae/cap-maintenance-equipements   301
+/vae-cap-maintenance-equipements             /vae/   301
+/vae-cap-maintenance-equipements.html        /vae/   301
 /vae-diplome-ingenieur                       /vae/diplome-ingenieur   301
 /vae-diplome-ingenieur.html                  /vae/diplome-ingenieur   301
 /vae-licence-pro-industrie                   /vae/licence-pro-industrie   301
